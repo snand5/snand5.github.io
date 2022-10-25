@@ -1,6 +1,6 @@
 html{
     height:100%;
-    overflow:hidden
+    overflow:hidden;
 }
 body {
     height:100%;
@@ -9,7 +9,12 @@ body {
     color: #222;
     font-family:Helvetica,Arial,sans-serif;
     margin:0;
+    padding: 0;
     -moz-text-size-adjust:100%;
     -moz-text-size-adjust:100%;
-    text-size-adjust:100%
+    text-size-adjust:100%;
+}
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,input,legend,pre,abbr,button{
+    margin:0;
+    padding:0;
 }
