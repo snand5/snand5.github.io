@@ -1,49 +1,41 @@
-html{
-    height:100%;
-    overflow:hidden;
-    font-size: 10px;
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
-body {
-    height:100%;
-    overflow:hidden;
-    -moz-osx-font-smoothing:grayscale;
-    color: #222;
-    font-family:Helvetica,Arial,sans-serif;
-    -moz-text-size-adjust:100%;
-    -moz-text-size-adjust:100%;
-    text-size-adjust:100%;
-}
-ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,input,legend,pre,abbr,button{
-    margin:0;
-    padding:0;
-}
+
+
 h1 {
-    font-size: 60px;
-    text-align: center;
-  }
-  p, li {
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
-  }
-  html {
-    background-color: #00539F;
-  }
-  body {
-    width: 600px;
-    margin: 0 auto;
-    background-color: #FF9500;
-    padding: 0 20px 20px 20px;
-    border: 5px solid black;
-  }
-  h1 {
-    margin: 0;
-    padding: 20px 0;
-    color: #00539F;
-    text-shadow: 3px 3px 1px black;
-  }
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-  
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+
+html {
+  background-color: #00539F;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
