@@ -52,7 +52,7 @@ body {
 }
 
 input:checked+.slider {
-  background-color: #E21C90;
+  background-color: #6a41ff;
 }
 
 input:focus+.slider {
