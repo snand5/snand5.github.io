@@ -5,12 +5,12 @@ html {
 
 body {
   padding: 25px;
-  background-color: white;
-  color: black;
+  background-color: #f7f7f7;
+  color: #222;
   font-size: 25px;
 }
 
 .dark-mode {
-  background-color: black;
-  color: white;
+  background-color: #222;
+  color: #f7f7f7;
 }
