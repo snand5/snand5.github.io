@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "jsx": "react",
+      "module": "esnext",
+      "target": "es5",
+      "noImplicitAny": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    }
+  }
+  

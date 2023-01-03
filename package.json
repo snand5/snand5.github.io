@@ -1,0 +1,25 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "next": "^13.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.4"
+  }
+}
+"scripts": {
+  "dev": "node server.ts",
+  "build": "next build",
+  "start": "NODE_ENV=production node server.ts"
+},
