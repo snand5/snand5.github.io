@@ -1,24 +1,25 @@
 body {
     margin: 0;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
   }
   .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #222;
   }
   .topnav a {
-    float: left;
+    float: right;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 18px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
   }
   .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #f7f7f7;
+    color: #222;
   }
   .topnav a.active {
     background-color: #139675;
-    color: white;
+    color: #f7f7f7;
   }
