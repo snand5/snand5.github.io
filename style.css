@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
-    display: flex;
   }
   .topnav {
     overflow: hidden;
