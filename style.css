@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    display: flex;
   }
   .topnav {
     overflow: hidden;
@@ -19,6 +20,6 @@ body {
     color: black;
   }
   .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #139675;
     color: white;
   }
