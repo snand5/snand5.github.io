@@ -17,7 +17,7 @@ body {
     transition: all 0.5s ease;
   }
   .topnav a:hover {
-    background-color: #f8f8f2	;
+    background-color: #50fa7b	;
     color: #282a36;
   }
   .topnav a.active {
