@@ -1,7 +1,8 @@
-body {
+body, html {
     margin: 0;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
-    background-color: #f8f8f2	;
+    background-color: #f8f8f2;
+    height: 100%;
   }
   .topnav {
     overflow: hidden;
@@ -23,4 +24,12 @@ body {
   .topnav a.active {
     background-color: #44475a;
     color: #f7f7f7;
+  }
+  .parallax {
+    background-image: url("../Assets/img01.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
