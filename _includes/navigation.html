@@ -1,0 +1,17 @@
+<header class="header">
+    <nav class="navbar">
+        <a href="/" class="nav-logo">Shavon Nand</a>
+        <ul class="nav-menu">
+            {% for item in site.data.navigation %}
+            <li class="nav-item">
+                <a href="{{ item.link }}" class="nav-link">{{ item.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>

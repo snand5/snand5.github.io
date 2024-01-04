@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,38 +18,16 @@
     <meta itemprop="url" content="https://www.shavon.gg"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" type="text/css" href="Styles/style.css" />
-    <title>Shavon</title>
+    <title>{{ page.title }}</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="navbar">
-          <a href="https://www.shavon.gg" class="nav-logo">Shavon Nand</a>
-          <ul class="nav-menu">
-              <li class="nav-item">
-                  <a href="https://www.shavon.gg" class="nav-link">Blog</a>
-              </li>
-              <li class="nav-item">
-                  <a href="#about" class="nav-link">About</a>
-              </li>
-              <li class="nav-item">
-                  <a href="#contact" class="nav-link">Contact</a>
-              </li>
-          </ul>
-          <div class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-          </div>
-      </nav>
-  </header>
+
     <div class="parallax"></div>
-    <div id="about" style="padding-left:16px;height:100%;">
-      <h2>
-        Shavon Nand<br>Information Technology
-      </h2>
+    <div style="padding-left:16px;height:100%;">
+      <h2>Shavon Nand<br>Information Technology</h2>
+      <h1>{{ "Hello World!" | downcase }}</h1>
     </div>
-    <div id="contact" style="padding-left:16px;height:50%;background-color: #282a36;color: #f8f8f2;">
+    <div style="padding-left:16px;height:50%;background-color: #282a36;color: #f8f8f2;">
     </div>
   </body>
-  <script src="Scripts/main.js"></script>
 </html>
