@@ -125,25 +125,28 @@ a {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg); } }
 .maintitle {
-  background-image: url("/assets/images/img01.jpg");
-  height: 60%;
+  display: grid;
+  grid-template-areas: "title img";
+  height: 60vh;
+  /* Using viewport units for height */
   width: 100%;
   position: sticky;
-  background-position: center;
-  background-size: cover;
+  background-image: url("/assets/images/img01.jpg");
   background-position: center center;
+  background-size: cover;
   z-index: 0; }
-
-.maintitle:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, transparent 50%, black 100%); }
+  .maintitle:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 50%, black 100%); }
 
 .maincontent {
+  display: grid;
+  /* No explicit grid definition needed */
   margin: auto;
   width: 70%;
   border: 3px solid #fff;
@@ -152,6 +155,8 @@ a {
   color: #000; }
 
 .footercontent {
+  display: grid;
+  /* No explicit grid definition needed */
   margin: auto;
   width: 40%;
   border: 3px solid green;
@@ -159,26 +164,29 @@ a {
   bottom: 0; }
 
 footer {
+  display: grid;
+  /* No explicit grid definition needed */
   background-color: #000;
-  height: 20%;
+  height: 20vh;
+  /* Using viewport units for height */
   color: #fff;
-  padding: 10px;
-  bottom: 0; }
+  padding: 10px; }
 
 .popouttitle {
+  grid-area: title;
   padding: 15px 45px;
   background-color: #fff;
-  text-transform: uppercase;
   color: #000;
   text-transform: uppercase;
   font-size: 5rem;
   position: absolute;
   top: 38%;
   transform: translate(10%, -50%);
-  display: flexbox;
+  display: flex;
   z-index: 1; }
 
 .mainimg {
+  grid-area: img;
   padding: 60px;
   width: 600px;
   height: 350px;
@@ -187,9 +195,29 @@ footer {
   top: 38%;
   transform: translate(0, -50%);
   left: 20%;
-  display: flexbox;
+  display: flex;
   z-index: 0;
   background-image: url("/assets/images/img02.jpg");
-  background-position: center;
-  background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  background-size: cover; }
+
+.post-grid {
+  gap: 16px; }
+
+.post-card h2,
+.post-card p {
+  padding: 16px; }
+
+.post-card {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  /* Add rounded corners */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add subtle shadow */
+  transition: transform 0.2s ease-in-out;
+  /* Add hover effect */ }
+  .post-card:hover {
+    transform: translateY(-2px); }
+
+.post-card h2 {
+  margin-top: 0; }
