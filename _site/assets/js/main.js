@@ -14,3 +14,7 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+
+const d = new Date();
+let year = d.getFullYear();
+document.getElementById("year").innerHTML = "Copyright "+year;

@@ -1,9 +1,10 @@
 body, html {
     margin: 0;
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    background-color: #f8f8f2;
+    font-family: "Fira Mono", Arial, Helvetica, sans-serif;
+    background-color: #000;
     height: 100%;
     scroll-behavior: smooth;
+    color: #fff;
   }
   * {
     margin: 0;
@@ -19,12 +20,9 @@ a {
     text-decoration: none;
 }
 
-h1,h2,h3,h4,p{
-    padding-left:16px;
-}
-
 .header{
-    border-bottom: 1px solid #f8f8f2;
+    border-bottom: 1px solid #000;
+    z-index: 1;
 }
 
 .navbar {
@@ -32,6 +30,7 @@ h1,h2,h3,h4,p{
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    background-color: #101010;
 }
 
 .hamburger {
@@ -45,7 +44,7 @@ h1,h2,h3,h4,p{
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: #fff;
 }
 
 .nav-menu {
@@ -61,7 +60,7 @@ h1,h2,h3,h4,p{
 .nav-link{
     font-size: 1rem;
     font-weight: 400;
-    color: #475569;
+    color: #fff;
     display: inline-block;
     position: relative;
 }
@@ -89,21 +88,25 @@ h1,h2,h3,h4,p{
 }
 
 .nav-logo {
+    font-family: "DM Serif Display", Arial, Helvetica, sans-serif;
     font-size: 2.1rem;
-    font-weight: 700;
-    color: #ff5555;
-    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    text-transform: lowercase;
     letter-spacing: -.05em;
     
 }
 
 @media only screen and (max-width: 768px) {
+    .popouttitle{left:0;width:80%;margin: auto;text-align: center;}
+    .maintitle {padding: 0;}
     .nav-menu {
         position: fixed;
+        z-index: 2;
         left: -100%;
         top: 5rem;
         flex-direction: column;
-        background-color: #f8f8f2;
+        background-color: #101010;
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -139,11 +142,69 @@ h1,h2,h3,h4,p{
     }
 }
 
-  .parallax {
+  .maintitle {
     background-image: url("/assets/images/img01.jpg");
     height: 60%;
-    background-attachment: fixed;
+    width: 100%;
+    position: sticky;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    z-index: 0;
   }
+
+  
+.maintitle:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 50%, black 100%);
+  }
+
+  .maincontent
+  {margin: auto;width: 70%;border: 3px solid #fff;padding: 10px;background-color: #fff;color: #000;}
+
+  .footercontent
+  {margin: auto;width: 40%;border: 3px solid green;padding: 10px;bottom:0;}
+
+  footer{
+    background-color: #000;
+    height:20%;
+    color: #fff;
+    padding: 10px;
+    bottom:0;
+  }
+
+  .popouttitle
+  {
+    padding: 15px 45px;
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 5rem;
+    position: absolute;
+    top: 38%;
+    transform:translate(10%,-50%);
+    display: flexbox;
+    z-index: 1;
+}
+.mainimg{
+    padding: 60px;
+    width: 600px;
+    height:350px;
+    background-color: #fff;
+    position: absolute;
+    top: 38%;
+    transform:translate(0,-50%);
+    left:20%;
+    display: flexbox;
+    z-index: 0;
+    background-image: url("/assets/images/img02.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position: center center;
+}

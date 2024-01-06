@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Serif+Display">
     <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
     {% feed_meta %}
     {% seo %}
   </head>
   <body>
     {% include navigation.html %}
-    {{ content }}
+    <div class="maintitle"><h1 class="popouttitle">{{ page.title }}</h1><div class="mainimg"></div></div>
+    <div class="maincontent">{{ content }}</div>
+    <footer> <div class="footercontent"><p id="year"></p></div></footer>
   </body>
   <script src="/assets/js/main.js"></script>
 </html>
