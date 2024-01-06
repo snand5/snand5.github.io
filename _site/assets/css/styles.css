@@ -131,7 +131,6 @@ a {
   /* Using viewport units for height */
   width: 100%;
   position: sticky;
-  background-image: url("/assets/images/img01.jpg");
   background-position: center center;
   background-size: cover;
   z-index: 0; }
@@ -143,6 +142,19 @@ a {
     right: 0;
     bottom: 0;
     background: linear-gradient(to bottom, transparent 50%, black 100%); }
+  @media only screen and (max-width: 768px) {
+    .maintitle {
+      grid-template-areas: "title" "img";
+      height: auto;
+      /* Adjust height as needed */ }
+      .maintitle .popouttitle,
+      .maintitle .mainimg {
+        position: relative;
+        /* Remove absolute positioning */
+        top: 0;
+        transform: none;
+        width: 100%;
+        /* Ensure full width on mobile */ } }
 
 .maincontent {
   display: grid;
@@ -150,9 +162,11 @@ a {
   margin: auto;
   width: 70%;
   border: 3px solid #fff;
-  padding: 10px;
-  background-color: #fff;
-  color: #000; }
+  padding: 10px; }
+  @media only screen and (max-width: 768px) {
+    .maincontent {
+      width: 100%;
+      /* Full width on mobile */ } }
 
 .footercontent {
   display: grid;
@@ -162,6 +176,10 @@ a {
   border: 3px solid green;
   padding: 10px;
   bottom: 0; }
+  @media only screen and (max-width: 768px) {
+    .footercontent {
+      width: 100%;
+      /* Full width on mobile */ } }
 
 footer {
   display: grid;
@@ -175,31 +193,20 @@ footer {
 .popouttitle {
   grid-area: title;
   padding: 15px 45px;
-  background-color: #fff;
-  color: #000;
+  background-image: url("/assets/images/img01.jpg");
+  color: #fff;
   text-transform: uppercase;
   font-size: 5rem;
-  position: absolute;
-  top: 38%;
-  transform: translate(10%, -50%);
-  display: flex;
-  z-index: 1; }
+  /* Inherit mobile styles from .maintitle */ }
 
 .mainimg {
   grid-area: img;
   padding: 60px;
-  width: 600px;
-  height: 350px;
   background-color: #fff;
-  position: absolute;
-  top: 38%;
-  transform: translate(0, -50%);
-  left: 20%;
-  display: flex;
-  z-index: 0;
   background-image: url("/assets/images/img02.jpg");
   background-position: center center;
-  background-size: cover; }
+  background-size: cover;
+  /* Inherit mobile styles from .maintitle */ }
 
 .post-grid {
   gap: 16px; }
@@ -209,11 +216,6 @@ footer {
   padding: 16px; }
 
 .post-card {
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  /* Add rounded corners */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  /* Add subtle shadow */
   transition: transform 0.2s ease-in-out;
   /* Add hover effect */ }
   .post-card:hover {
