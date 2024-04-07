@@ -6,7 +6,13 @@ title: Latest Posts
 <section>
 {% for post in site.posts %}
 <article class="post">
-  <a href="{{ post.url }}" class="post__thumb" aria-hidden="true" tabindex="-1"><img src="/assets/images/default.jpg"  /></a>
+  <a href="{{ post.url }}" class="post__thumb" aria-hidden="true" tabindex="-1">
+    {%- if post.image -%}
+    <img src="{{- post.image | relative_url -}}" />
+    {%- else -%}
+    <img src="/assets/images/default.jpg" />
+    {%- endif -%}
+  </a>
   <div class="post__content">
     <a href="{{ post.url }}" class="post__title"><h2>{{ post.title }}</h2></a>
     <div class="post__meta"><p>Written by {{ post.author }} on {{ post.date | date_to_string }}</p></div>

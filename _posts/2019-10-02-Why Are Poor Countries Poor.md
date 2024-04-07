@@ -2,8 +2,8 @@
 layout: post
 author: John Green
 title: Why Are Poor Countries Poor?
+image: assets/images/Why Are Poor Countries Poor - YouTube - 0-0-00.jpeg
 ---
-
 [Youtube](https://youtube.com/watch?v=snj6W9c8VIo)
 
 Good morning Hank it’s Tuesday,
