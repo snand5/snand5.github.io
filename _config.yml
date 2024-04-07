@@ -4,3 +4,5 @@ plugins:
   - jekyll-seo-tag
 
 locale: en_AU
+
+url: "http://www.shavon.gg" 
