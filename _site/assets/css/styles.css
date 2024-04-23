@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  background-image: url("/assets/images/botw.jpg");
+  background-image: url("/assets/images/IMG_0805.JPG");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -135,20 +135,23 @@ section {
   color: #E4E6D1;
   display: block;
   padding: 25px;
-  width: 60%;
+  width: 75%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0.8) 100%);
   float: right;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  height: 60%;
+  height: 80%;
   overflow-y: auto;
   outline: 1px solid #F8F7E5;
   outline-offset: -4px;
-  resize: both; }
+  inline-size: 60%;
+  overflow-wrap: break-word;
+  hyphens: manual; }
 
 .featured-image-post {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  right: 0;
+  width: 20%;
   object-fit: cover;
   box-shadow: 0px 4px 8px rgba(37, 37, 37, 0.1);
   border-radius: .625rem;
