@@ -6,3 +6,16 @@ plugins:
 locale: en_AU
 
 url: "http://www.shavon.gg" 
+
+collections:
+  post_tags:
+    permalink: /tags/:name/
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+      type: post_tags
+    values:
+      permalink: "/tags/:name/"
+      layout: tag

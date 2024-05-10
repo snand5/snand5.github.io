@@ -1,11 +1,44 @@
 ---
 layout: default
 ---
-{%- if page.image -%}
-    <img src="{{- page.image | relative_url -}}" class="featured-image-post" />
-    {%- else -%}
-    <img src="/assets/images/default.jpg" class="featured-image-post" />
-{%- endif -%}
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
-{{ content }}
+<main tabindex="-1">
+<article>
+    <div class="o-grid">
+        <div class="col">
+            <div class="article-header">
+                <div class="article-header-eyebrow">{{ page.collection }}</div>
+                <h1 class="article-header-heading">{{ page.title }}</h1>
+                <ul class="article-header-metadata">
+                    <li>
+                        <span class="metadata-field">POSTED</span>
+                        <span class="metadata-value"><time>{{ page.date | date: "%B %-d, %Y" }}</time></span>
+                    </li>
+                    <li>
+                        <span class="metadata-field">BY</span>
+                        <span class="metadata-value">{{ page.author }}</span>
+                    </li>
+                </ul>
+                {%- if page.tags -%}
+                <div class="article-header-tag">
+                    <ul>
+                        {% for tag in page.tags %}
+                        <li>
+                            <a href="AHHHHHHHHHH">{{ tag }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {%- endif -%}
+                {%- if page.image -%}
+                    <img src="{{- page.image | relative_url -}}" loading="lazy"/>
+                    {%- else -%}
+                    <img src="/assets/images/default.jpg" loading="lazy"/>
+                {%- endif -%}
+            </div>
+    </div>
+</div>
+<div class="o-grid">
+    <div class="col">{{ content }}</div>
+</div>
+</article>
+</main>
