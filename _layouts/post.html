@@ -5,7 +5,7 @@ layout: default
 <article>
     <div class="o-grid">
         <div class="col">
-            <div class="article-header">
+            <header class="article-header">
                 <div class="article-header-eyebrow">{{ page.collection }}</div>
                 <h1 class="article-header-heading">{{ page.title }}</h1>
                 <ul class="article-header-metadata">
@@ -30,11 +30,17 @@ layout: default
                 </div>
                 {%- endif -%}
                 {%- if page.image -%}
-                    <img src="{{- page.image | relative_url -}}" loading="lazy"/>
+                    <figure>
+                        <img alt="{{ page.alt }}" src="{{- page.image | relative_url -}}" loading="lazy"/>
+                        <figcaption>
+                            <p class="caption">{{ page.caption }}</p>
+                            <p class="credit">Credit: {{ page.credit }}</p>
+                        </figcaption>
+                    </figure>
                     {%- else -%}
                     <img src="/assets/images/default.jpg" loading="lazy"/>
                 {%- endif -%}
-            </div>
+            </header>
     </div>
 </div>
 <div class="o-grid">

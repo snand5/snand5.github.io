@@ -3,14 +3,14 @@ layout: post
 author: John Green
 title: Why Are Poor Countries Poor?
 image: assets/images/Why Are Poor Countries Poor - YouTube - 0-0-00.jpeg
+alt: This is a test AHHHHHHHHH
+caption: Screenshot
+credit: "Person Name"
 tags: ["Sierra Leone", Ebola, Kono]
 ---
-[Youtube](https://youtube.com/watch?v=snj6W9c8VIo)
 
 Good morning Hank it’s Tuesday,
-
 So later this month we’ll be making a big announcement about working with Partners In Health Sierra Leone but before that, I thought it would be helpful to consider why Sierra Leone is so poor.
-
 Now, poverty is complex and we are not gonna get to the bottom of it in a YouTube video but I do think this can be some helpful context.
 
 Ok so, Sierra Leone, located here, is a nation of around 7.5 million people, it’s ethnically and religiously diverse- most Sierra Leoneans are descendants of people who’ve long lived in West Africa but many former slaves in the British Empire were resettled here and so there are Sierra Leoneans who trace their descendent to Canada or to England, to Nigeria and many other places.

@@ -1,0 +1,43 @@
+// _variables.scss
+
+// General
+$font-family: "Open Sans", sans-serif;
+$base-font-size: 0.9375rem;
+$base-line-height: 165%;
+$base-color: #000;
+$base-background-color: #FFF;
+$base-transition-duration: 0.5s;
+
+// Font Sizes
+$font-size-small: clamp(0.75rem, 0.75rem + ((0.1rem - 0.2rem) * 0.342), 2rem);
+$font-size-medium: clamp(1rem, 1rem + ((0.1rem - 0.2rem) * 0.342), 2.5rem);
+$font-size-large: clamp(1.25rem, 1.25rem + ((0.1rem - 0.2rem) * 0.342), 3rem);
+$font-size-x-large: clamp(1.5rem, 1.5rem + ((0.1rem - 0.2rem) * 0.342), 3.5rem);
+
+// Grid
+$grid-gutter: 20px;
+$grid-margin-mobile: 20px;
+$grid-margin: 30px;
+$grid-margin-desktop: 5vw;
+$content-max-width: 1655px;
+$fw-grid-first-padding: calc((100vw - $content-max-width) / 2);
+$column-content-max-width: $content-max-width / 12;
+$max-width-padding: calc((100vw - ($content-max-width - ($grid-gutter * 2))) / 2);
+$column-width: calc(100% / 12);
+
+// Colors
+$primary-color: #565656;
+$accent-color: #FFFFEB;
+$link-color: hsl(199, 28%, 24%);
+$focus-color: hsla(199, 28%, 24%, .7);
+$error-color: #a51c30;
+
+// Typography
+$heading-font-family: 'Yrsa', serif;
+$heading-font-size: 1.6rem;
+$heading-font-style: italic;
+$heading-line-height: 1.3;
+
+// Media Queries
+$desktop-breakpoint: 1100px;
+$large-desktop-breakpoint: 1700px;
