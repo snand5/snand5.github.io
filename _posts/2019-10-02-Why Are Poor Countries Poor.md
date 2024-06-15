@@ -9,7 +9,7 @@ credit: "Person Name"
 tags: ["Sierra Leone", Ebola, Kono]
 ---
 
-Good morning Hank it’s Tuesday,
+**Good morning Hank** it’s Tuesday,
 So later this month we’ll be making a big announcement about working with Partners In Health Sierra Leone but before that, I thought it would be helpful to consider why Sierra Leone is so poor.
 Now, poverty is complex and we are not gonna get to the bottom of it in a YouTube video but I do think this can be some helpful context.
 

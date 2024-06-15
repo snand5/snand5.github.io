@@ -8,9 +8,23 @@
     box-sizing: inherit;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #3E2C70;
+  }
+  
+  ::selection {
+    color: white;
+    background: #3E2C70;
+  }
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+body{
+    background-color:$base-background-color;
 }
 
 body, html {
@@ -37,6 +51,8 @@ a {
 
 /* Navigation */
 .navmenu {
+    max-width: $content-max-width;
+    margin: 0 auto;
     ul {
         top: 0;
         width: 100%;
@@ -46,6 +62,8 @@ a {
         list-style-type: none;
         display: inline-flex;
         background-color: $primary-color;
+        letter-spacing: 0.75px;
+        line-height: 10px;
     }
 
     li {
@@ -57,8 +75,8 @@ a {
         padding: 16px;
         text-align: right;
         text-decoration: none;
-        font-size: 1.5rem;
-        font-style: italic;
+        text-transform: uppercase;
+        font-size: 1rem;
         color: $accent-color;
         opacity: 0.8;
         transition-duration: $base-transition-duration;
@@ -74,21 +92,20 @@ a {
     }
 
     li a:focus-within::before, li a:hover::before {
-        content: "> ";
-        margin: 15px;
+        content: ">_";
     }
 }
 
 /* Post */
 .post {
+    margin:0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) 1fr;
+    grid-gap: 2rem;
     a {
         &:hover {
-            margin-bottom: 2rem;
-            font-weight: bold;
-            outline-offset: -4px;
-            color: inherit;
             color: $link-color;
-            transition: color 0.2s linear;
             text-decoration-line: none;
         }
     }
@@ -99,21 +116,12 @@ a {
 
     @media all and (min-width: 640px) {
         img {
-            display: grid;
-            grid-template-columns: minmax(250px, 1fr) 1fr;
-            grid-gap: 2rem;
-            height: auto;
-            aspect-ratio: 100/67;
+            height:100%;
+            aspect-ratio: 4/3;
             object-fit: cover;
         }
     }
 }
-
-// .post__content {
-//     @media all and (min-width: 640px) {
-//         padding: 4rem 2rem 4rem 0;
-//     }
-// }
 
 .post__title {
     h2 {
@@ -123,13 +131,12 @@ a {
         font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 0.685)), 2rem);
         // font-style: $heading-font-style;
         line-height: $heading-line-height;
-
         &::after {
             content: '';
             display: block;
             width: 100%;
-            height: 1px;
-            background-color: $base-color;
+            height: 3px;
+            background-color: $link-color;
             transition: transform 0.25s ease-out;
             transform-origin: bottom right;
         }
@@ -141,11 +148,15 @@ a {
 }
 
 .post__desc {
-    margin-bottom: 2rem;
+    height: 3rem;
+    overflow: hidden;
+    line-height: 1rem;
 }
 
 /* Section */
 section {
+    max-width: $content-max-width;
+    margin: 0 auto;
     @media all and (min-width: 1200px) {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -167,9 +178,9 @@ section {
 .article-header-heading {
     font-family: $heading-font-family;
     font-size: 2.375rem;
-    font-weight: 400;
+    font-weight: 800;
     line-height: 2.5rem;
-
+    
     @media (min-width: $desktop-breakpoint) {
         font-size: 3.25rem;
         line-height: 105%;
@@ -242,7 +253,6 @@ section {
                 border: 1px solid $primary-color;
                 border-radius: 1000px;
                 color: $primary-color;
-
                 &:focus,
                 &:hover {
                     outline-offset: 4px;
@@ -266,7 +276,6 @@ span, h1, article {
 article {
     display: block;
     text-rendering: optimizeLegibility;
-
     p {
         &:not(:last-of-type) {
             margin-bottom: 20px;
@@ -284,7 +293,6 @@ article {
         margin-left: auto;
         max-width: 100%;
         height: auto;
-        aspect-ratio: 100/67;
         object-fit: cover;
     }
 }
@@ -299,7 +307,6 @@ main {
         margin: 0 auto;
         padding-right: $grid-margin-mobile;
         padding-left: $grid-margin-mobile;
-
         @media (min-width: 750px) {
             grid-template-columns: repeat(12, 1fr);
             padding-right: $grid-margin;
@@ -316,10 +323,10 @@ main {
             padding-left: $max-width-padding;
         }
     }
-
     .col {
         grid-column: 1 / -1;
-
+        border-left: 1px solid #bfbfbf;
+        border-right: 1px solid #bfbfbf;
         @media (min-width: 750px) {
             grid-column: 2 / -2;
         }
@@ -329,21 +336,40 @@ main {
             grid-column: 3 / span 8;
         }
     }
+    .content{
+        border: 1px solid #bfbfbf;
+        padding: calc(45px - 1em) 40px;
+    }
 
     article {
         padding-bottom: 120px;
         font: inherit;
+        border: 1px solid #bfbfbf;
+    }
+
+    .content > p:first-child strong {
+        text-transform: uppercase;
+        line-height: 36px;
+        letter-spacing: 0;
+        font-family: $font-family;
     }
 
     article p {
-        font-size: $base-font-size;
+        font-size: $font-size-large;
         font-weight: 400;
         line-height: $base-line-height;
-
+        font-family:$heading-font-family;
         @media (min-width: 750px) {
-            font-size: 1.125rem;
+            font-size: 1.5rem;
             line-height: 170%;
         }
+    }
+    article h2{
+        font-size: 2.625rem;
+        letter-spacing: -0.5px;
+        line-height: 2.75rem;
+        font-weight: 400;
+        color: #0d0d0d;
     }
 }
 
@@ -354,8 +380,10 @@ main {
   img{
     box-sizing: border-box;
     height: auto;
-    max-width: 100%;
+    width: 100%;
     vertical-align: bottom;
+    aspect-ratio: 4/3;
+    object-fit: cover;
   }
   figcaption{
     line-height: 1.5;
@@ -375,9 +403,6 @@ main {
 
 .caption, .credit{
   margin: 0;
-}
-
-.credit{
-  color: $primary-color;
-  font-style: italic;
+  font-family: $font-family;
+  text-transform:uppercase;
 }

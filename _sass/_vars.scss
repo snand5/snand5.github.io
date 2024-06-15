@@ -1,11 +1,11 @@
 // _variables.scss
 
 // General
-$font-family: "Open Sans", sans-serif;
+$font-family: "IBM Plex Mono", sans-serif;
 $base-font-size: 0.9375rem;
 $base-line-height: 165%;
 $base-color: #000;
-$base-background-color: #FFF;
+$base-background-color: #ecece9;
 $base-transition-duration: 0.5s;
 
 // Font Sizes
@@ -26,14 +26,14 @@ $max-width-padding: calc((100vw - ($content-max-width - ($grid-gutter * 2))) / 2
 $column-width: calc(100% / 12);
 
 // Colors
-$primary-color: #565656;
-$accent-color: #FFFFEB;
-$link-color: hsl(199, 28%, 24%);
-$focus-color: hsla(199, 28%, 24%, .7);
-$error-color: #a51c30;
+$primary-color: #0d0d0d;
+$accent-color: #BFBFBF;
+$link-color: #6B49DC;
+$focus-color: #6B49DC;
+$error-color: #6B49DC;
 
 // Typography
-$heading-font-family: 'Yrsa', serif;
+$heading-font-family: 'STIX Two Text', serif;
 $heading-font-size: 1.6rem;
 $heading-font-style: italic;
 $heading-line-height: 1.3;

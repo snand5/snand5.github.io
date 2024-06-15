@@ -11,7 +11,7 @@ layout: default
                 <ul class="article-header-metadata">
                     <li>
                         <span class="metadata-field">POSTED</span>
-                        <span class="metadata-value"><time>{{ page.date | date: "%B %-d, %Y" }}</time></span>
+                        <span class="metadata-value"><time>{{ page.date | date: "%d %b %Y" }}</time></span>
                     </li>
                     <li>
                         <span class="metadata-field">BY</span>
@@ -34,7 +34,7 @@ layout: default
                         <img alt="{{ page.alt }}" src="{{- page.image | relative_url -}}" loading="lazy"/>
                         <figcaption>
                             <p class="caption">{{ page.caption }}</p>
-                            <p class="credit">Credit: {{ page.credit }}</p>
+                            <p class="credit">{{ page.credit }}</p>
                         </figcaption>
                     </figure>
                     {%- else -%}
@@ -44,7 +44,7 @@ layout: default
     </div>
 </div>
 <div class="o-grid">
-    <div class="col">{{ content }}</div>
+    <div class="col content">{{ content }}</div>
 </div>
 </article>
 </main>
