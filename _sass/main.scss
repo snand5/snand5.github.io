@@ -35,6 +35,9 @@ body, html {
     font-weight: 400;
     line-height: $base-line-height;
     color: $base-color;
+    text-rendering: optimizelegibility;
+    font-feature-settings: "liga","kern";
+    print-color-adjust: exact;
 }
 
 @media (min-width: 750px) {
@@ -177,10 +180,10 @@ section {
 /* Article Header */
 .article-header-heading {
     font-family: $heading-font-family;
-    font-size: 2.375rem;
     font-weight: 800;
     line-height: 2.5rem;
-    
+    font-stretch: 120%;
+    font-size: calc(36px + 44 * ((100vw - 768px) / 1152));
     @media (min-width: $desktop-breakpoint) {
         font-size: 3.25rem;
         line-height: 105%;
@@ -382,7 +385,6 @@ main {
     height: auto;
     width: 100%;
     vertical-align: bottom;
-    aspect-ratio: 4/3;
     object-fit: cover;
   }
   figcaption{

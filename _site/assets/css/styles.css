@@ -100,11 +100,14 @@ body {
 body, html {
   width: 100%;
   height: 100%;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 165%;
-  color: #000; }
+  color: #000;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "liga","kern";
+  print-color-adjust: exact; }
 
 @media (min-width: 750px) {
   body {
@@ -126,7 +129,7 @@ a {
     overflow: hidden;
     list-style-type: none;
     display: inline-flex;
-    background-color: #0d0d0d;
+    background-color: #12110c;
     letter-spacing: 0.75px;
     line-height: 10px; }
   .navmenu li {
@@ -170,7 +173,7 @@ a {
 .post__title h2 {
   display: block;
   margin: .5rem 0;
-  font-family: "STIX Two Text", serif;
+  font-family: "Roboto Flex", sans-serif;
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 0.685)), 2rem);
   line-height: 1.3; }
   .post__title h2::after {
@@ -209,10 +212,11 @@ section {
 
 /* Article Header */
 .article-header-heading {
-  font-family: "STIX Two Text", serif;
-  font-size: 2.375rem;
+  font-family: "Roboto Flex", sans-serif;
   font-weight: 800;
-  line-height: 2.5rem; }
+  line-height: 2.5rem;
+  font-stretch: 120%;
+  font-size: calc(36px + 44 * ((100vw - 768px) / 1152)); }
   @media (min-width: 1100px) {
     .article-header-heading {
       font-size: 3.25rem;
@@ -265,13 +269,13 @@ section {
       display: inline-block;
       margin: 0;
       padding: 6px 12px;
-      border: 1px solid #0d0d0d;
+      border: 1px solid #12110c;
       border-radius: 1000px;
-      color: #0d0d0d; }
+      color: #12110c; }
       .article-header-tag ul li a:focus, .article-header-tag ul li a:hover {
         outline-offset: 4px;
         color: #ecece9;
-        background-color: #0d0d0d; }
+        background-color: #12110c; }
 
 /* Utility */
 span, h1, article {
@@ -342,12 +346,12 @@ main {
     text-transform: uppercase;
     line-height: 36px;
     letter-spacing: 0;
-    font-family: "IBM Plex Mono", sans-serif; }
+    font-family: "Roboto", sans-serif; }
   main article p {
     font-size: clamp(1.25rem, 1.2158rem, 3rem);
     font-weight: 400;
     line-height: 165%;
-    font-family: "STIX Two Text", serif; }
+    font-family: "Roboto Flex", sans-serif; }
     @media (min-width: 750px) {
       main article p {
         font-size: 1.5rem;
@@ -368,7 +372,6 @@ main {
     height: auto;
     width: 100%;
     vertical-align: bottom;
-    aspect-ratio: 4/3;
     object-fit: cover; }
   .article-header figure figcaption {
     line-height: 1.5;
@@ -385,5 +388,5 @@ main {
 
 .caption, .credit {
   margin: 0;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase; }

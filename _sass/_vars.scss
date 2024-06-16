@@ -1,7 +1,7 @@
 // _variables.scss
 
 // General
-$font-family: "IBM Plex Mono", sans-serif;
+$font-family: "Roboto", sans-serif;
 $base-font-size: 0.9375rem;
 $base-line-height: 165%;
 $base-color: #000;
@@ -26,14 +26,14 @@ $max-width-padding: calc((100vw - ($content-max-width - ($grid-gutter * 2))) / 2
 $column-width: calc(100% / 12);
 
 // Colors
-$primary-color: #0d0d0d;
+$primary-color: #12110c;
 $accent-color: #BFBFBF;
 $link-color: #6B49DC;
 $focus-color: #6B49DC;
 $error-color: #6B49DC;
 
 // Typography
-$heading-font-family: 'STIX Two Text', serif;
+$heading-font-family: 'Roboto Flex', sans-serif;
 $heading-font-size: 1.6rem;
 $heading-font-style: italic;
 $heading-line-height: 1.3;
