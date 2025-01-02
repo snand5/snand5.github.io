@@ -3,10 +3,9 @@ layout: post
 author: John Green
 title: Why Are Poor Countries Poor?
 image: assets/images/Why Are Poor Countries Poor - YouTube - 0-0-00.jpeg
-alt: This is a test AHHHHHHHHH
-caption: Screenshot
-credit: "Person Name"
-tags: ["Sierra Leone", Ebola, Kono]
+alt: "YouTube thumbnail showing John Green"
+caption: "Youtube Thumbnail"
+credit: "John Green"
 ---
 
 **Good morning Hank** it’s Tuesday,

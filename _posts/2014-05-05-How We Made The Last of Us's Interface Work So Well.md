@@ -4,7 +4,8 @@ author: Alexandria Neonakis
 title: How We Made The Last of Us's Interface Work So Well
 image: assets/images/Kotaku/tbcsp7kdgpynpwxtyihr.png
 alt: How We Made The Last of Us's Interface Work So Well
-credit: "Alexandria Neonakis is a UI designer at Naughty Dog. You can find her on Twitter at @beavs. "
+caption: "Alexandria Neonakis is a UI designer at Naughty Dog. You can find her on Twitter at @beavs. "
+credit: "This is a Kotaku article"
 ---
 
 **When I started** at Naughty Dog in November of 2012, the studio never had a dedicated UI (user interface) designer or artist before. There were eight months left in development of The Last of Us and while some of the UI elements had already been roughed out, an overall design of the HUD (heads up display) had not been established, and many things were still undecided. It became my responsibility to figure out the flow of our HUD and menu systems; to work with the programmers and game designers to implement, test and iterate; and finally to skin everything to make sure it fit the established aesthetic of the game.

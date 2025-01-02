@@ -328,8 +328,6 @@ main {
     }
     .col {
         grid-column: 1 / -1;
-        border-left: 1px solid #bfbfbf;
-        border-right: 1px solid #bfbfbf;
         @media (min-width: 750px) {
             grid-column: 2 / -2;
         }
@@ -340,14 +338,12 @@ main {
         }
     }
     .content{
-        border: 1px solid #bfbfbf;
         padding: calc(45px - 1em) 40px;
     }
 
     article {
         padding-bottom: 120px;
         font: inherit;
-        border: 1px solid #bfbfbf;
     }
 
     .content > p:first-child strong {
@@ -363,16 +359,16 @@ main {
         line-height: $base-line-height;
         font-family:$heading-font-family;
         @media (min-width: 750px) {
-            font-size: 1.5rem;
+            font-size: $font-size-x-large;
             line-height: 170%;
         }
     }
     article h2{
-        font-size: 2.625rem;
+        font-size: $font-size-heading;
         letter-spacing: -0.5px;
         line-height: 2.75rem;
         font-weight: 400;
-        color: #0d0d0d;
+        color: $base-color;
     }
 }
 

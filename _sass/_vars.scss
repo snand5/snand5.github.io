@@ -2,22 +2,23 @@
 
 // General
 $font-family: "Roboto", sans-serif;
-$base-font-size: 0.9375rem;
+$base-font-size: .8rem;
 $base-line-height: 165%;
-$base-color: #000;
-$base-background-color: #ecece9;
+$base-color: #F7F7F7;
+$base-background-color: #111;
 $base-transition-duration: 0.5s;
 
 // Font Sizes
-$font-size-small: clamp(0.75rem, 0.75rem + ((0.1rem - 0.2rem) * 0.342), 2rem);
-$font-size-medium: clamp(1rem, 1rem + ((0.1rem - 0.2rem) * 0.342), 2.5rem);
-$font-size-large: clamp(1.25rem, 1.25rem + ((0.1rem - 0.2rem) * 0.342), 3rem);
-$font-size-x-large: clamp(1.5rem, 1.5rem + ((0.1rem - 0.2rem) * 0.342), 3.5rem);
+$font-size-small: clamp(0.65rem, 0.65rem + ((0.1rem - 0.2rem) * 0.342), 1.8rem);
+$font-size-medium: clamp(0.9rem, 0.9rem + ((0.1rem - 0.2rem) * 0.342), 2.2rem);
+$font-size-large: clamp(1.1rem, 1.1rem + ((0.1rem - 0.2rem) * 0.342), 2.7rem);
+$font-size-x-large: clamp(1.3rem, 1.3rem + ((0.1rem - 0.2rem) * 0.342), 3rem);
+$font-size-heading: clamp(1.8rem, 1.8rem + ((0.1rem - 0.2rem) * 0.342), 4.2rem);
 
 // Grid
-$grid-gutter: 20px;
-$grid-margin-mobile: 20px;
-$grid-margin: 30px;
+$grid-gutter: 10px;
+$grid-margin-mobile: 10px;
+$grid-margin: 20px;
 $grid-margin-desktop: 5vw;
 $content-max-width: 1655px;
 $fw-grid-first-padding: calc((100vw - $content-max-width) / 2);
