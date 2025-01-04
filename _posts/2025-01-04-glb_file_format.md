@@ -7,13 +7,17 @@ alt: "Screenshot of Google's AI Summary from a Google search of 'glb file format
 caption: "Screenshot of Google's AI Summary from a Google search of 'glb file format'"
 ---
 
-**I wanted to** look at the quality of Google's first page of search results, using search operators to exclude AI written articles and remove Google's AI Summary. Basically using `before:` and `-ai` search operators to go by each year and to remove ai summary at the top.
+**I wanted to** look at the quality of Google's first page of search results, using search operators to exclude AI written articles and remove Google's AI Summary. 
+
+Basically, using search operators, specifically `before:` and `-ai`. ChatGPT launched in 2022, so by using `before:` we can filter out results published before then, this will exclude newer articles which might be AI written. To remove the AI Overview that now appears at the top of search results we will use `-ai`.
 
 The idea came from this video:
 
 <iframe src="https://www.youtube.com/embed/-opBifFfsMY" title="Generative AI is a Parasitic Cancer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Going through and using the search operators we can see that the link for <https://www.khronos.org/Gltf>, which are the people behind glTF aren't on the first page of Google results. It only appears after I use the `-ai` search operator.
+---
+
+Going through and using the search operators we can see that the link for <https://www.khronos.org/Gltf>, which are the people behind glTF, isn't on the first page of Google results. It only appears after I use the `-ai` search operator to remove the AI Summary.
 
 ![Screenshots of Google's search results for 'glb file format' with different search operators, highlighting the links to 'glTF Overview - The Khronos Group Inc'](</assets/images/glb_file_format/glTF Overview - The Khronos Group Inc.png>)
 
@@ -29,6 +33,8 @@ ChatGPT written articles have pushed out the actual useful results, and now Goog
 
 ![Screenshot of Google's AI Summary from a Google search of 'glb file format'](</assets/images/glb_file_format/Screenshot 2025-01-04 065807.png>)
 
+---
+
 Anyways, heres some information about the "glb file format".
 
 * `.glb` is the filename extension for Binary glTF ([1]).
@@ -40,7 +46,7 @@ Anyways, heres some information about the "glb file format".
 * Link to the Specification by the Khronos Group: <https://www.khronos.org/gltf>
 * Link to the GLB File Format Specification: <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#glb-file-format-specification>
 
-
+---
 
 [1]: <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#glb-file-format-specification>
 [2]: <https://www.loc.gov/preservation/digital/formats/fdd/fdd000498.shtml>
