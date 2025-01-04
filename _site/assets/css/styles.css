@@ -201,7 +201,7 @@ section {
 /* Article Header */
 .article-header-heading {
   font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 2.5rem;
   font-stretch: 120%;
   font-size: calc(36px + 44 * ((100vw - 768px) / 1152)); }
@@ -228,7 +228,8 @@ section {
   text-align: center; }
 
 .article-header-metadata {
-  margin-top: 12px; }
+  margin-top: 12px;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
   .article-header-metadata li {
     display: inline-block;
     text-align: center; }
@@ -371,6 +372,7 @@ main {
   main a {
     color: #6B49DC; }
   main ul {
+    font-family: "Source Serif 4", Georgia, Times, serif;
     list-style-type: circle; }
 
 .article-header figure {

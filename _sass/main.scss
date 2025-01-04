@@ -169,7 +169,7 @@ section {
 /* Article Header */
 .article-header-heading {
     font-family: $font-display;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 2.5rem;
     font-stretch: 120%;
     font-size: calc(36px + 44 * ((100vw - 768px) / 1152));
@@ -201,6 +201,7 @@ section {
 
 .article-header-metadata {
     margin-top: 12px;
+    font-family: $font-sans;
     li {
         display: inline-block;
         text-align: center;
@@ -385,6 +386,7 @@ main {
         color:$link-color;
     }
     ul {
+        font-family:$font-serif;
         list-style-type: circle;
     }
 }
