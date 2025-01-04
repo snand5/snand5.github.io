@@ -16,11 +16,7 @@ The idea came from this video:
 <iframe src="https://www.youtube.com/embed/-opBifFfsMY" title="Generative AI is a Parasitic Cancer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
-## Heading
 
-fdolm
-
-### Heading 2
 Going through and using the search operators we can see that the link for <https://www.khronos.org/Gltf>, which are the people behind glTF, isn't on the first page of Google results. It only appears after I use the `-ai` search operator to remove the AI Summary.
 
 ![Screenshots of Google's search results for 'glb file format' with different search operators, highlighting the links to 'glTF Overview - The Khronos Group Inc'](</assets/images/glb_file_format/glTF Overview - The Khronos Group Inc.png>)
