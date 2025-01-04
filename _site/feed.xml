@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-04T16:55:18+10:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">glb file format</title><link href="http://localhost:4000/2025/01/04/glb_file_format.html" rel="alternate" type="text/html" title="glb file format" /><published>2025-01-04T00:00:00+10:00</published><updated>2025-01-04T00:00:00+10:00</updated><id>http://localhost:4000/2025/01/04/glb_file_format</id><content type="html" xml:base="http://localhost:4000/2025/01/04/glb_file_format.html"><![CDATA[<p>I wanted to look at the quality of Google’s first page of search results, using search operators to exclude AI written articles and remove Google’s AI Summary.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-04T17:35:56+10:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">glb file format</title><link href="http://localhost:4000/2025/01/04/glb_file_format.html" rel="alternate" type="text/html" title="glb file format" /><published>2025-01-04T00:00:00+10:00</published><updated>2025-01-04T00:00:00+10:00</updated><id>http://localhost:4000/2025/01/04/glb_file_format</id><content type="html" xml:base="http://localhost:4000/2025/01/04/glb_file_format.html"><![CDATA[<p>I wanted to look at the quality of Google’s first page of search results, using search operators to exclude AI written articles and remove Google’s AI Summary.</p>
 
 <p>Basically, using search operators, specifically <code class="language-plaintext highlighter-rouge">before:</code> and <code class="language-plaintext highlighter-rouge">-ai</code>. ChatGPT launched in 2022, so by using <code class="language-plaintext highlighter-rouge">before:</code> we can filter out results published before then, this will exclude newer articles which might be AI written. To remove the AI Overview that now appears at the top of search results we will use <code class="language-plaintext highlighter-rouge">-ai</code>.</p>
 
@@ -7,11 +7,7 @@
 <iframe src="https://www.youtube.com/embed/-opBifFfsMY" title="Generative AI is a Parasitic Cancer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 
 <hr />
-<h2 id="heading">Heading</h2>
 
-<p>fdolm</p>
-
-<h3 id="heading-2">Heading 2</h3>
 <p>Going through and using the search operators we can see that the link for <a href="https://www.khronos.org/Gltf">https://www.khronos.org/Gltf</a>, which are the people behind glTF, isn’t on the first page of Google results. It only appears after I use the <code class="language-plaintext highlighter-rouge">-ai</code> search operator to remove the AI Summary.</p>
 
 <p><img src="/assets/images/glb_file_format/glTF Overview - The Khronos Group Inc.png" alt="Screenshots of Google's search results for 'glb file format' with different search operators, highlighting the links to 'glTF Overview - The Khronos Group Inc'" /></p>
