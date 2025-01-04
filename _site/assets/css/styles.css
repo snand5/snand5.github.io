@@ -358,6 +358,17 @@ main {
     line-height: 2.75rem;
     font-weight: 400;
     color: #F7F7F7; }
+  main iframe {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 16 / 9; }
+  main code {
+    background-color: #6B49DC; }
+  main a {
+    color: #6B49DC; }
+  main ul {
+    list-style-type: circle; }
 
 .article-header figure {
   margin: 0 0 1em;

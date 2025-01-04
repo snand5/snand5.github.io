@@ -370,6 +370,21 @@ main {
         font-weight: 400;
         color: $base-color;
     }
+    iframe {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+    code {
+        background-color: $focus-color;
+    }
+    a {
+        color:$link-color;
+    }
+    ul {
+        list-style-type: circle;
+    }
 }
 
 .article-header figure {
