@@ -35,9 +35,6 @@ html {
 
 /* Set core body defaults */
 body {
-  font-family: var(--font-body);
-  font-size: var(--base-font-size);
-  line-height: var(--font-content-line-height);
   text-rendering: optimizeSpeed; }
 
 /* A elements that don't have a class get default styles */
@@ -81,15 +78,6 @@ select {
 *:before {
   box-sizing: inherit; }
 
-::-moz-selection {
-  /* Code for Firefox */
-  color: white;
-  background: #3E2C70; }
-
-::selection {
-  color: white;
-  background: #3E2C70; }
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth; }
@@ -100,7 +88,7 @@ body {
 body, html {
   width: 100%;
   height: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 165%;
@@ -173,7 +161,7 @@ a {
 .post__title h2 {
   display: block;
   margin: .5rem 0;
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 0.685)), 2rem);
   line-height: 1.3; }
   .post__title h2::after {
@@ -212,7 +200,7 @@ section {
 
 /* Article Header */
 .article-header-heading {
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 800;
   line-height: 2.5rem;
   font-stretch: 120%;
@@ -239,19 +227,21 @@ section {
   padding-top: 54px;
   text-align: center; }
 
-.article-header-metadata li {
-  display: inline-block;
-  text-align: center; }
-  .article-header-metadata li:not(:last-of-type) {
-    margin-right: 40px; }
-  .article-header-metadata li .metadata-field {
-    text-transform: uppercase; }
-  .article-header-metadata li .metadata-value {
-    font-weight: bold; }
-@media (min-width: 750px) {
-  .article-header-metadata {
-    font-size: 0.875rem;
-    line-height: 150%; } }
+.article-header-metadata {
+  margin-top: 12px; }
+  .article-header-metadata li {
+    display: inline-block;
+    text-align: center; }
+    .article-header-metadata li:not(:last-of-type) {
+      margin-right: 40px; }
+    .article-header-metadata li .metadata-field {
+      text-transform: uppercase; }
+    .article-header-metadata li .metadata-value {
+      font-weight: bold; }
+  @media (min-width: 750px) {
+    .article-header-metadata {
+      font-size: 0.875rem;
+      line-height: 150%; } }
 
 .article-header-tag {
   margin-top: 15px;
@@ -338,25 +328,28 @@ main {
   main article {
     padding-bottom: 120px;
     font: inherit; }
-  main .content > p:first-child strong {
-    text-transform: uppercase;
-    line-height: 36px;
-    letter-spacing: 0;
-    font-family: "Roboto", sans-serif; }
   main article p {
     font-size: clamp(1.1rem, 1.0658rem, 2.7rem);
     font-weight: 400;
     line-height: 165%;
-    font-family: "Roboto Flex", sans-serif; }
+    font-family: "Source Serif 4", Georgia, Times, serif; }
     @media (min-width: 750px) {
       main article p {
         font-size: clamp(1.3rem, 1.2658rem, 3rem);
         line-height: 170%; } }
   main article h2 {
-    font-size: clamp(1.8rem, 1.7658rem, 4.2rem);
-    letter-spacing: -0.5px;
+    font-size: clamp(3rem, 2.9658rem, 7rem);
+    letter-spacing: -.02em;
     line-height: 2.75rem;
-    font-weight: 400;
+    font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    color: #F7F7F7; }
+  main article h3 {
+    font-size: clamp(2.4rem, 2.3658rem, 5.5rem);
+    letter-spacing: -.02em;
+    line-height: 2.75rem;
+    font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
     color: #F7F7F7; }
   main iframe {
     width: 100%;
@@ -364,7 +357,17 @@ main {
     max-width: 100%;
     aspect-ratio: 16 / 9; }
   main code {
-    background-color: #6B49DC; }
+    background-color: #6B49DC;
+    font-family: "Source Code Pro", Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
+    border-radius: .25em;
+    font-size: .95em;
+    font-weight: 400;
+    line-height: 1em;
+    padding: .08em .1em;
+    vertical-align: baseline;
+    margin: 0 2px;
+    white-space: break-spaces;
+    letter-spacing: -.01em; }
   main a {
     color: #6B49DC; }
   main ul {
@@ -384,16 +387,15 @@ main {
     line-height: 1.5;
     margin-top: clamp(0.5rem, 1.0572rem, 1rem);
     margin-bottom: 1em;
-    font-size: clamp(0.9rem, 0.8658rem, 2.2rem);
+    font-size: clamp(1.1rem, 1.0658rem, 2.7rem);
     margin-left: auto;
     margin-right: auto;
     padding-right: clamp(1rem, 0.09619rem, 2rem);
     padding-left: clamp(1rem, 0.09619rem, 2rem); }
     .article-header figure figcaption p {
-      font-size: clamp(0.9rem, 0.8658rem, 2.2rem);
+      font-size: clamp(1.1rem, 1.0658rem, 2.7rem);
       margin-bottom: 0; }
 
 .caption, .credit {
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase; }
+  font-family: "Source Serif 4", Georgia, Times, serif; }

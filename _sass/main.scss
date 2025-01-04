@@ -8,16 +8,6 @@
     box-sizing: inherit;
 }
 
-::-moz-selection { /* Code for Firefox */
-    color: white;
-    background: #3E2C70;
-  }
-  
-  ::selection {
-    color: white;
-    background: #3E2C70;
-  }
-
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -30,7 +20,7 @@ body{
 body, html {
     width: 100%;
     height: 100%;
-    font-family: $font-family;
+    font-family: $font-sans;
     font-size: $base-font-size;
     font-weight: 400;
     line-height: $base-line-height;
@@ -130,9 +120,8 @@ a {
     h2 {
         display: block;
         margin: .5rem 0;
-        font-family: $heading-font-family;
+        font-family: $font-display;
         font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 0.685)), 2rem);
-        // font-style: $heading-font-style;
         line-height: $heading-line-height;
         &::after {
             content: '';
@@ -179,7 +168,7 @@ section {
 
 /* Article Header */
 .article-header-heading {
-    font-family: $heading-font-family;
+    font-family: $font-display;
     font-weight: 800;
     line-height: 2.5rem;
     font-stretch: 120%;
@@ -211,6 +200,7 @@ section {
 }
 
 .article-header-metadata {
+    margin-top: 12px;
     li {
         display: inline-block;
         text-align: center;
@@ -346,28 +336,30 @@ main {
         font: inherit;
     }
 
-    .content > p:first-child strong {
-        text-transform: uppercase;
-        line-height: 36px;
-        letter-spacing: 0;
-        font-family: $font-family;
-    }
-
     article p {
         font-size: $font-size-large;
         font-weight: 400;
         line-height: $base-line-height;
-        font-family:$heading-font-family;
+        font-family:$font-serif;
         @media (min-width: 750px) {
             font-size: $font-size-x-large;
             line-height: 170%;
         }
     }
     article h2{
-        font-size: $font-size-heading;
-        letter-spacing: -0.5px;
+        font-size: $font-size-h1;
+        letter-spacing: -.02em;
         line-height: 2.75rem;
-        font-weight: 400;
+        font-family:$font-display;
+        font-weight: 500;
+        color: $base-color;
+    }
+    article h3{
+        font-size: $font-size-h2;
+        letter-spacing: -.02em;
+        line-height: 2.75rem;
+        font-family:$font-display;
+        font-weight: 500;
         color: $base-color;
     }
     iframe {
@@ -378,6 +370,16 @@ main {
     }
     code {
         background-color: $focus-color;
+        font-family: $font-mono;
+        border-radius: .25em;
+        font-size: .95em;
+        font-weight: 400;
+        line-height: 1em;
+        padding: .08em .1em;
+        vertical-align: baseline;
+        margin: 0 2px;
+        white-space: break-spaces;
+        letter-spacing: -.01em;
     }
     a {
         color:$link-color;
@@ -402,13 +404,13 @@ main {
     line-height: 1.5;
     margin-top: clamp(0.5rem, 0.72rem + 0.01rem * 0.72 + 0.33rem, 1rem);
     margin-bottom: 1em;
-    font-size: $font-size-medium;
+    font-size: $font-size-large;
     margin-left: auto;
     margin-right: auto;
     padding-right: clamp(1rem, 1rem + ((0.01rem - 0.48rem) * 1.923), 2rem);
     padding-left: clamp(1rem, 1rem + ((0.01rem - 0.48rem) * 1.923), 2rem);
     p{
-      font-size: $font-size-medium;
+      font-size: $font-size-large;
       margin-bottom:0;
     }
   }
@@ -416,6 +418,5 @@ main {
 
 .caption, .credit{
   margin: 0;
-  font-family: $font-family;
-  text-transform:uppercase;
+  font-family: $font-serif;
 }
