@@ -1,15 +1,38 @@
 // _variables.scss
 
 // General
-$font-display: "Barlow Condensed",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-$font-serif: "Source Serif 4",Georgia,Times,serif;
-$font-sans: "Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-$font-mono: "Source Code Pro",Menlo,Consolas,Monaco,"Liberation Mono","Lucida Console",monospace;
+$font-display:
+    "Barlow Condensed",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+$font-serif: "Source Serif 4", Georgia, Times, serif;
+$font-sans:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+$font-mono: "Source Code Pro", Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
 
 $font-family: var(--font-sans);
-$base-font-size: .8rem;
+$base-font-size: 0.8rem;
 $base-line-height: 165%;
-$base-color: #F7F7F7;
+$base-color: #f7f7f7;
 $base-background-color: #111;
 $base-transition-duration: 0.5s;
 
@@ -21,7 +44,6 @@ $font-size-x-large: clamp(1.3rem, 1.3rem + ((0.1rem - 0.2rem) * 0.342), 3rem);
 $font-size-heading: clamp(1.8rem, 1.8rem + ((0.1rem - 0.2rem) * 0.342), 4.2rem);
 $font-size-h1: clamp(3rem, 3rem + ((0.1rem - 0.2rem) * 0.342), 7rem);
 $font-size-h2: clamp(2.4rem, 2.4rem + ((0.1rem - 0.2rem) * 0.342), 5.5rem);
-
 
 // Grid
 $grid-gutter: 10px;
@@ -36,10 +58,10 @@ $column-width: calc(100% / 12);
 
 // Colors
 $primary-color: #12110c;
-$accent-color: #BFBFBF;
-$link-color: #6B49DC;
-$focus-color: #6B49DC;
-$error-color: #6B49DC;
+$accent-color: #bfbfbf;
+$link-color: #6b49dc;
+$focus-color: #6b49dc;
+$error-color: #6b49dc;
 
 // Typography
 $heading-font-size: 1.6rem;
