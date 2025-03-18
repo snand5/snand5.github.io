@@ -85,16 +85,17 @@ html {
 body {
   background-color: #111; }
 
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 165%;
-  color: #F7F7F7;
+  color: #f7f7f7;
   text-rendering: optimizelegibility;
-  font-feature-settings: "liga","kern";
+  font-feature-settings: "liga", "kern";
   print-color-adjust: exact; }
 
 @media (min-width: 750px) {
@@ -129,15 +130,17 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
-    color: #BFBFBF;
+    color: #bfbfbf;
     opacity: 0.8;
     transition-duration: 0.5s; }
   .navmenu li a::before {
     content: ""; }
-  .navmenu li a:focus-within, .navmenu li a:hover {
+  .navmenu li a:focus-within,
+  .navmenu li a:hover {
     outline: none;
     opacity: 1; }
-  .navmenu li a:focus-within::before, .navmenu li a:hover::before {
+  .navmenu li a:focus-within::before,
+  .navmenu li a:hover::before {
     content: ">_"; }
 
 /* Post */
@@ -148,7 +151,7 @@ a {
   grid-template-columns: minmax(250px, 1fr) 1fr;
   grid-gap: 2rem; }
   .post a:hover {
-    color: #6B49DC;
+    color: #6b49dc;
     text-decoration-line: none; }
   .post img {
     width: 100%; }
@@ -160,16 +163,16 @@ a {
 
 .post__title h2 {
   display: block;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 0.685)), 2rem);
   line-height: 1.3; }
   .post__title h2::after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #6B49DC;
+    background-color: #6b49dc;
     transition: transform 0.25s ease-out;
     transform-origin: bottom right; }
 
@@ -195,7 +198,7 @@ section {
     grid-column: 1 / -1; }
 
 .post *:focus {
-  outline: 3px solid #6B49DC;
+  outline: 3px solid #6b49dc;
   outline-offset: 2px; }
 
 /* Article Header */
@@ -215,7 +218,7 @@ section {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #6B49DC; }
+  color: #6b49dc; }
   @media (min-width: 750px) {
     .article-header-eyebrow {
       margin-top: 0;
@@ -260,16 +263,18 @@ section {
       display: inline-block;
       margin: 0;
       padding: 6px 12px;
-      border: 1px solid #12110c;
+      border: 1px solid #bfbfbf;
       border-radius: 1000px;
-      color: #12110c; }
+      color: #bfbfbf; }
       .article-header-tag ul li a:focus, .article-header-tag ul li a:hover {
         outline-offset: 4px;
-        color: #111;
-        background-color: #12110c; }
+        color: #bfbfbf;
+        background-color: #6b49dc; }
 
 /* Utility */
-span, h1, article {
+span,
+h1,
+article {
   margin: 0;
   padding: 0;
   border: 0;
@@ -340,37 +345,37 @@ main {
         line-height: 170%; } }
   main article h2 {
     font-size: clamp(3rem, 2.9658rem, 7rem);
-    letter-spacing: -.02em;
+    letter-spacing: -0.02em;
     line-height: 2.75rem;
     font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 500;
-    color: #F7F7F7; }
+    color: #f7f7f7; }
   main article h3 {
     font-size: clamp(2.4rem, 2.3658rem, 5.5rem);
-    letter-spacing: -.02em;
+    letter-spacing: -0.02em;
     line-height: 2.75rem;
     font-family: "Barlow Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 500;
-    color: #F7F7F7; }
+    color: #f7f7f7; }
   main iframe {
     width: 100%;
     height: auto;
     max-width: 100%;
     aspect-ratio: 16 / 9; }
   main code {
-    background-color: #6B49DC;
+    background-color: #6b49dc;
     font-family: "Source Code Pro", Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
-    border-radius: .25em;
-    font-size: .95em;
+    border-radius: 0.25em;
+    font-size: 0.95em;
     font-weight: 400;
     line-height: 1em;
-    padding: .08em .1em;
+    padding: 0.08em 0.1em;
     vertical-align: baseline;
     margin: 0 2px;
     white-space: break-spaces;
-    letter-spacing: -.01em; }
+    letter-spacing: -0.01em; }
   main a {
-    color: #6B49DC; }
+    color: #6b49dc; }
   main ul {
     font-family: "Source Serif 4", Georgia, Times, serif;
     list-style-type: circle; }
@@ -398,6 +403,7 @@ main {
       font-size: clamp(1.1rem, 1.0658rem, 2.7rem);
       margin-bottom: 0; }
 
-.caption, .credit {
+.caption,
+.credit {
   margin: 0;
   font-family: "Source Serif 4", Georgia, Times, serif; }

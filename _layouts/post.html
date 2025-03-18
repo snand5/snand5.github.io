@@ -23,7 +23,7 @@ layout: default
                     <ul>
                         {% for tag in page.tags %}
                         <li>
-                            <a href="AHHHHHHHHHH">{{ tag }}</a>
+                            <a href='/tags?tagName={{- tag -}}'>{{ tag }}</a>
                         </li>
                         {% endfor %}
                     </ul>
