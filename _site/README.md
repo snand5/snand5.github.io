@@ -1,3 +1,3 @@
-# snand5.github.io
+# [shavon.gg](https://shavon.gg/)
 
-[shavon.gg](https://shavon.gg/)
+A [Jekyll](https://github.com/jekyll/jekyll) blog.
