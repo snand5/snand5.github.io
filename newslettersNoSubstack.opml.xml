@@ -1,6 +1,6 @@
 ---
 layout: opml
-title: Newsletters (no Substack)
+title: Newsletters
 data_file: newslettersBlogroll
 hide_substack: true
 permalink: /newslettersNoSubstack.opml.xml

@@ -3,36 +3,23 @@ layout: default
 title: Shavon Nand
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-  <main>
-    <section class="about">
-      <h1 class="title">I'm <span class="p-name">Shavon Nand</span>.</h1>
-      <p>
-        Hi!
-      </p>
-    </section>
-    <section class="feed">
-      <h2>Recent Activity</h2>
-      {% for post in site.posts limit:5 %}
-      <article class="h-entry">
-        <header>
-          <h3 class="p-name"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-        </header>
-        <div class="e-content">
-          {{ post.excerpt  | strip_html | truncatewords: 10}}
-        </div>
-      </article>
-      {% endfor %}
-    </section>
-  </main>
-</body>
-</html>
+<section class="about">
+  <h1 class="title">I'm <span class="p-name">Shavon Nand</span>.</h1>
+  <p>
+    Hi!
+  </p>
+</section>
+<section class="feed">
+  <h2>Recent Activity</h2>
+  {% for post in site.posts limit:5 %}
+  <article class="h-entry">
+    <header>
+      <h3 class="p-name"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+    </header>
+    <div class="e-content">
+      {{ post.excerpt  | strip_html | truncatewords: 10}}
+    </div>
+  </article>
+  {% endfor %}
+</section>
