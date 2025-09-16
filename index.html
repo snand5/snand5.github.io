@@ -1,23 +1,38 @@
 ---
 layout: default
-title: Latest Posts
+title: Shavon Nand
 ---
 
-<section>
-{% for post in site.posts %}
-<article class="post">
-  <a href="{{ post.url }}" class="post__thumb" aria-hidden="true" tabindex="-1">
-    {%- if post.image -%}
-    <img src="{{- post.image | relative_url -}}" />
-    {%- else -%}
-    <img src="/assets/images/default.jpg" />
-    {%- endif -%}
-  </a>
-  <div class="post__content">
-    <a href="{{ post.url }}" class="post__title"><h2>{{ post.title }}</h2></a>
-    <div class="post__meta"><p>{{ post.date | date: "%B %-d, %Y" }}</p></div>
-    <div class="post__desc">{{ post.excerpt }}</div>
-  </div>
-</article>
-{% endfor %}
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <main>
+    <section class="about">
+      <h1 class="title">I'm <span class="p-name">Shavon Nand</span>.</h1>
+      <p>
+        Hi!
+      </p>
+    </section>
+    <section class="feed">
+      <h2>Recent Activity</h2>
+      {% for post in site.posts limit:5 %}
+      <article class="h-entry">
+        <header>
+          <h3 class="p-name"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        </header>
+        <div class="e-content">
+          {{ post.excerpt  | strip_html | truncatewords: 10}}
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+  </main>
+</body>
+</html>

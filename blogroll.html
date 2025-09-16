@@ -1,0 +1,181 @@
+---
+layout: default
+title: Blogroll
+---
+
+<h1>Blogroll</h1>
+
+<p>
+  This is an incomplete list of some of the blogs, newsletters, and news sites I
+  like to read. They change often. The lists overlap somewhat.
+</p>
+<p>
+  If you want to add these to your RSS reader,<sup
+    ><a href="#footnote1">1</a></sup
+  >
+  download and import the corresponding OPML file.
+</p>
+<div class="blogroll">
+<p class="hide-toggle">
+  <input type="checkbox" id="toggle-substack" />
+  <label for="toggle-substack">Omit Substack Blogs</label
+  ><sup><a href="#footnote2">2</a></sup>
+</p>
+
+<h2>Blogs</h2>
+(<a class="opml-link" href="/blogs.opml.xml">OPML</a>)
+
+  <ul class="blog-list">
+    {% assign sorted_blogs = site.data.blogsBlogroll | sort: 'name' %}
+    {% for blog in sorted_blogs %}
+      <li data-is-substack="{{ blog.is_substack | default: false }}">
+        <span class="h-card">
+          {% if blog.profile %}
+            <a href="{{ blog.profile }}" class="u-url">
+              <span class="p-name">{{ blog.name }}</span>&rsquo;s
+            </a>
+          {% else %}
+            {% if blog.name %}
+            <span class="p-name">{{ blog.name }}</span>&rsquo;s
+            {% endif %}
+          {% endif %}
+          {% if blog.url %}
+            <a href="{{ blog.url }}" class="u-url">
+              {% if blog.title %}
+                <i>{{ blog.title }}</i>
+              {% else %}
+                blog
+              {% endif %}
+            </a>
+          {% endif %}
+
+          {% if blog.rss %}
+            (<a href="{{ blog.rss }}" class="u-url" rel="alternate">RSS</a>)
+          {% endif %}
+        </span>
+
+        {% if blog.tags %}
+          <span class="blog-tags">
+            {% for tag in blog.tags %}
+              <span class="blog-tag">{{ tag }}</span>
+            {% endfor %}
+          </span>
+        {% else %}
+          <span class="blog-tags"></span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<h2>News</h2>
+(<a class="opml-link" href="/news.opml.xml">OPML</a>)
+<div class="blogroll">
+  <ul class="blog-list">
+    {% assign sorted_news = site.data.newsBlogroll | sort: 'name' %}
+    {% for blog in sorted_news %}
+      <li data-is-substack="{{ blog.is_substack | default: false }}">
+        <span class="h-card">
+          {% if blog.profile %}
+            <a href="{{ blog.profile }}" class="u-url">
+              <span class="p-name">{{ blog.name }}</span>&rsquo;s
+            </a>
+          {% else %}
+            {% if blog.name %}
+            <span class="p-name">{{ blog.name }}</span>&rsquo;s
+            {% endif %}
+          {% endif %}
+
+          {% if blog.url %}
+            <i><a href="{{ blog.url }}" class="u-url">
+              {% if blog.title %}
+                {{ blog.title }}
+              {% else %}
+                site
+              {% endif %}
+            </a></i>
+          {% endif %}
+
+          {% if blog.rss %}
+            (<a href="{{ blog.rss }}" class="u-url" rel="alternate">RSS</a>)
+          {% endif %}
+        </span>
+
+        {% if blog.tags %}
+          <span class="blog-tags">
+            {% for tag in blog.tags %}
+              <span class="blog-tag">{{ tag }}</span>
+            {% endfor %}
+          </span>
+        {% else %}
+          <span class="blog-tags"></span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<h2>Newsletters</h2>
+(<a class="opml-link" href="/newsletters.opml.xml">OPML</a>)
+<div class="blogroll">
+  <ul class="blog-list">
+    {% assign sorted_newsletters = site.data.newslettersBlogroll | sort: 'name' %}
+    {% for blog in sorted_newsletters %}
+      <li data-is-substack="{{ blog.is_substack | default: false }}">
+        <span class="h-card">
+          {% if blog.profile %}
+            <a href="{{ blog.profile }}" class="u-url">
+              <span class="p-name">{{ blog.name }}</span>&rsquo;s
+            </a>
+          {% else %}
+            {% if blog.name %}
+            <span class="p-name">{{ blog.name }}</span>&rsquo;s
+            {% endif %}
+          {% endif %}
+
+          {% if blog.url %}
+            <i><a href="{{ blog.url }}" class="u-url">
+              {% if blog.title %}
+                {{ blog.title }}
+              {% else %}
+                newsletter
+              {% endif %}
+            </a></i>
+          {% endif %}
+
+          {% if blog.rss %}
+            (<a href="{{ blog.rss }}" class="u-url" rel="alternate">RSS</a>)
+          {% endif %}
+        </span>
+
+        {% if blog.tags %}
+          <span class="blog-tags">
+            {% for tag in blog.tags %}
+              <span class="blog-tag">{{ tag }}</span>
+            {% endfor %}
+          </span>
+        {% else %}
+          <span class="blog-tags"></span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<p>
+  <sup>
+    <a id="footnote1">[1]</a>
+  </sup>
+  I use <a href="https://www.inoreader.com">Inoreader</a>.<br />
+  <sup>
+    <a id="footnote2">[2]</a>
+  </sup>
+  I know some prefer not to follow blogs on Substack due to some of the
+  company's
+  <a href="https://www.citationneeded.news/substackers-against-nazis/"
+    >practices</a
+  >. Checking this box will remove Substacks from the list and from the OPML
+  files.
+</p>
+</div>
+<script src="/assets/js/blogroll.js"></script>

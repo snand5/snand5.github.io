@@ -1,0 +1,124 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 20rem;
+  padding: 0 4rem 0 2rem;
+  font-size: 1rem;
+  line-height: 1rem;
+
+  .logo-image {
+    max-width: 100%;
+    border: 3px double var(--accent-color-purple);
+    padding: 0.5rem;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  .logo-text {
+    font-weight: normal;
+    text-align: center;
+    margin: 0.75rem 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+
+    &.top-level {
+      padding: 0;
+    }
+
+    li {
+      padding: 0.25rem 0rem 0.25rem 0.5rem;
+
+      &.nav-header {
+        padding-left: 0;
+        font-weight: 700;
+        font-variant: small-caps;
+      }
+    }
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .menu-toggle {
+    display: none;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid var(--main-text-color);
+    background-color: var(--bg-color);
+    align-self: center;
+    color: var(--main-text-color);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    align-items: center;
+    padding: 0;
+    margin-bottom: 1em;
+    max-width: none;
+    width: 100%;
+
+    .logo-image {
+      margin: 0 auto;
+      border: 0;
+      width: 100%;
+      padding: 0;
+    }
+
+    .menu-toggle {
+      display: block;
+      width: 90%;
+    }
+
+    .nav-links {
+      background-color: var(--bg-color);
+      text-align: center;
+      width: 90%;
+      padding: 0 1rem;
+      border: 1px solid var(--main-text-color);
+
+      &.collapsed {
+        display: none;
+      }
+
+      ul {
+        padding: 0.5rem 0;
+      }
+
+      li:not(.nav-header) {
+        display: inline-block;
+        padding: 0rem;
+        line-height: 1.25rem;
+      }
+
+      li:not(.nav-header):not(:last-child) {
+        margin-right: 0.25rem;
+      }
+
+      li:not(.nav-header):not(:last-child)::after {
+        content: "•";
+        margin-left: 0.25rem;
+      }
+    }
+  }
+
+  .no-js {
+    .menu-toggle {
+      display: none;
+    }
+
+    nav .nav-links.collapsed {
+      display: block;
+    }
+  }
+}

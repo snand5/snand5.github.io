@@ -3,21 +3,36 @@ layout: default
 title: Latest Posts
 ---
 
-<section>
-{% for post in site.posts %}
-<article class="post">
-  <a href="{{ post.url }}" class="post__thumb" aria-hidden="true" tabindex="-1">
-    {%- if post.image -%}
-    <img src="{{- post.image | relative_url -}}" />
-    {%- else -%}
-    <img src="/assets/images/default.jpg" />
-    {%- endif -%}
-  </a>
-  <div class="post__content">
-    <a href="{{ post.url }}" class="post__title"><h2>{{ post.title }}</h2></a>
-    <div class="post__meta"><p>{{ post.date | date: "%B %-d, %Y" }}</p></div>
-    <div class="post__desc">{{ post.excerpt }}</div>
+<section class="projects">
+  <h1>Writing</h1>
+
+  {% for post in site.posts %}
+  <div class="project">
+    <div class="contents-block">
+      <div class="contents">
+        <h2 class="h3">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+
+        <div class="metadata">
+          <span>
+            {{ post.date | date: "%Y" }} • <a href="{{ post.url }}">Read post</a>
+          </span>
+        </div>
+
+        <p>
+          {{ post.excerpt | strip_html | truncatewords: 30}}
+        </p>
+      </div>
+
+      {% if post.image %}
+      <div class="image">
+        <a href="{{ post.url }}">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.alt | default: post.title }}">
+        </a>
+      </div>
+      {% endif %}
+    </div>
   </div>
-</article>
-{% endfor %}
+  {% endfor %}
 </section>

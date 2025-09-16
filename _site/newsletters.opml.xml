@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+  
+  <title>Newsletters feeds for Shavon Nand's blogroll</title>
+  <dateCreated>Tue, 16 Sep 2025 20:33:30 +1000</dateCreated>
+</head>
+<body>
+
+  
+
+  
+    <outline text="Newsletters" title="Newsletters">
+    
+      
+        
+          <outline
+            text="Assigned Media"
+            title="Assigned Media"
+            type="rss"
+            xmlUrl="https://www.assignedmedia.org/breaking-news?format=rss"
+             htmlUrl="https://www.assignedmedia.org/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Where&apos;s Your Ed At"
+            title="Where&apos;s Your Ed At"
+            type="rss"
+            xmlUrl="https://www.wheresyoured.at/rss/"
+             htmlUrl="https://www.wheresyoured.at/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="User Mag"
+            title="User Mag"
+            type="rss"
+            xmlUrl="https://www.usermag.co/feed"
+             htmlUrl="https://www.usermag.co/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="BAD ASIAN"
+            title="BAD ASIAN"
+            type="rss"
+            xmlUrl="https://katyho.substack.com/feed"
+             htmlUrl="https://katyho.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="New Cartographies"
+            title="New Cartographies"
+            type="rss"
+            xmlUrl="https://www.newcartographies.com/feed"
+             htmlUrl="https://www.newcartographies.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Citation Needed"
+            title="Citation Needed"
+            type="rss"
+            xmlUrl="https://www.citationneeded.news/rss/"
+             htmlUrl="https://www.citationneeded.news/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Strength in Numbers"
+            title="Strength in Numbers"
+            type="rss"
+            xmlUrl="https://www.gelliottmorris.com/feed"
+             htmlUrl="https://www.gelliottmorris.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Works in Progress"
+            title="Works in Progress"
+            type="rss"
+            xmlUrl="https://www.worksinprogress.news/feed"
+             htmlUrl="https://www.worksinprogress.news/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="The BS Detector"
+            title="The BS Detector"
+            type="rss"
+            xmlUrl="https://thebsdetector.substack.com/feed"
+             htmlUrl="https://thebsdetector.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Pearls and Irritations"
+            title="Pearls and Irritations"
+            type="rss"
+            xmlUrl="https://johnmenadue.com/feed"
+             htmlUrl="https://johnmenadue.com"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Slow Boring"
+            title="Slow Boring"
+            type="rss"
+            xmlUrl="https://www.slowboring.com/feed"
+             htmlUrl="https://www.slowboring.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Chartbook"
+            title="Chartbook"
+            type="rss"
+            xmlUrl="https://adamtooze.substack.com/feed"
+             htmlUrl="https://adamtooze.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Noahpinion"
+            title="Noahpinion"
+            type="rss"
+            xmlUrl="https://www.noahpinion.blog/feed"
+             htmlUrl="https://www.noahpinion.blog/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Doomberg"
+            title="Doomberg"
+            type="rss"
+            xmlUrl="https://newsletter.doomberg.com/feed"
+             htmlUrl="https://newsletter.doomberg.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Blackbird Spyplane"
+            title="Blackbird Spyplane"
+            type="rss"
+            xmlUrl="https://www.blackbirdspyplane.com/feed"
+             htmlUrl="https://www.blackbirdspyplane.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="HouseFresh"
+            title="HouseFresh"
+            type="rss"
+            xmlUrl="https://housefresh.com/feed/"
+             htmlUrl="https://housefresh.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Volts"
+            title="Volts"
+            type="rss"
+            xmlUrl="https://www.volts.wtf/feed"
+             htmlUrl="https://www.volts.wtf/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="The Up and Up"
+            title="The Up and Up"
+            type="rss"
+            xmlUrl="https://www.theupandup.us/feed"
+             htmlUrl="https://www.theupandup.us/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="ImmunoLogic"
+            title="ImmunoLogic"
+            type="rss"
+            xmlUrl="https://news.immunologic.org/feed"
+             htmlUrl="https://news.immunologic.org/"
+          />
+        
+      
+    
+    </outline>
+  
+</body>
+</opml>

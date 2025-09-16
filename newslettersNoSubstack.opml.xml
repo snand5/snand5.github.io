@@ -1,0 +1,7 @@
+---
+layout: opml
+title: Newsletters (no Substack)
+data_file: newslettersBlogroll
+hide_substack: true
+permalink: /newslettersNoSubstack.opml.xml
+---

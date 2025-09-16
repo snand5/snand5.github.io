@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+  
+  <title>Newsletters (no Substack) feeds for Shavon Nand's blogroll</title>
+  <dateCreated>Tue, 16 Sep 2025 20:33:30 +1000</dateCreated>
+</head>
+<body>
+
+  
+
+  
+    <outline text="Newsletters (no Substack)" title="Newsletters (no Substack)">
+    
+      
+        
+          <outline
+            text="Assigned Media"
+            title="Assigned Media"
+            type="rss"
+            xmlUrl="https://www.assignedmedia.org/breaking-news?format=rss"
+             htmlUrl="https://www.assignedmedia.org/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Where&apos;s Your Ed At"
+            title="Where&apos;s Your Ed At"
+            type="rss"
+            xmlUrl="https://www.wheresyoured.at/rss/"
+             htmlUrl="https://www.wheresyoured.at/"
+          />
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <outline
+            text="Citation Needed"
+            title="Citation Needed"
+            type="rss"
+            xmlUrl="https://www.citationneeded.news/rss/"
+             htmlUrl="https://www.citationneeded.news/"
+          />
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <outline
+            text="Pearls and Irritations"
+            title="Pearls and Irritations"
+            type="rss"
+            xmlUrl="https://johnmenadue.com/feed"
+             htmlUrl="https://johnmenadue.com"
+          />
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <outline
+            text="HouseFresh"
+            title="HouseFresh"
+            type="rss"
+            xmlUrl="https://housefresh.com/feed/"
+             htmlUrl="https://housefresh.com/"
+          />
+        
+      
+    
+      
+    
+      
+    
+      
+    
+    </outline>
+  
+</body>
+</opml>

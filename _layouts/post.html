@@ -1,50 +1,44 @@
 ---
 layout: default
 ---
-<main tabindex="-1">
 <article>
-    <div class="o-grid">
-        <div class="col">
-            <header class="article-header">
-                <div class="article-header-eyebrow">{{ page.collection }}</div>
-                <h1 class="article-header-heading">{{ page.title }}</h1>
-                <ul class="article-header-metadata">
-                    <li>
-                        <span class="metadata-field">POSTED</span>
-                        <span class="metadata-value"><time>{{ page.date | date: "%Y.%m.%d" }}</time></span>
-                    </li>
-                    <li>
-                        <span class="metadata-field">BY</span>
-                        <span class="metadata-value">{{ page.author }}</span>
-                    </li>
-                </ul>
-                {%- if page.tags -%}
-                <div class="article-header-tag">
-                    <ul>
-                        {% for tag in page.tags %}
-                        <li>
-                            <a href='/tags?tagName={{- tag -}}'>{{ tag }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {%- endif -%}
-                {%- if page.image -%}
-                    <figure>
-                        <img alt="{{ page.alt }}" src="{{- page.image | relative_url -}}" loading="lazy"/>
-                        <figcaption>
-                            <p class="caption">{{ page.caption }}</p>
-                            <p class="credit">{{ page.credit }}</p>
-                        </figcaption>
-                    </figure>
-                    {%- else -%}
-                    <img src="/assets/images/default.jpg" loading="lazy"/>
-                {%- endif -%}
-            </header>
+  <header>
+    <h1 class="title">{{ page.title }}</h1>
+
+    <ul>
+      <li>
+        POSTED:
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%Y.%m.%d" }}
+        </time>
+      </li>
+      <li>
+        BY: {{ page.author }}
+      </li>
+    </ul>
+
+    {%- if page.image -%}
+    <figure class="in-text-image bordered">
+      <img alt="{{ page.alt }}" src="{{- page.image | relative_url -}}" loading="lazy"/>
+      <figcaption>
+        {% if page.caption %}
+        <p>{{ page.caption }}</p>
+        {% endif %}
+        {% if page.credit %}
+        <p>{{ page.credit }}</p>
+        {% endif %}
+      </figcaption>
+    </figure>
+    {%- else -%}
+    <figure class="in-text-image">
+      <img src="/assets/images/default.jpg" loading="lazy" alt="default image"/>
+    </figure>
+    {%- endif -%}
+  </header>
+
+  <div>
+    <div class="article-content">
+      {{ content | replace: '<iframe', '<div class="responsive-iframe"><iframe' | replace: '</iframe>', '</iframe></div>' }}
     </div>
-</div>
-<div class="o-grid">
-    <div class="col content">{{ content }}</div>
-</div>
+  </div>
 </article>
-</main>

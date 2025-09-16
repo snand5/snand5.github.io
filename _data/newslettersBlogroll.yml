@@ -1,0 +1,107 @@
+- title: "Assigned Media"
+  url: "https://www.assignedmedia.org/"
+  rss: "https://www.assignedmedia.org/breaking-news?format=rss"
+  is_substack: false
+  tags: ["LGBT"]
+- name: "Ed Zitron"
+  title: "Where's Your Ed At"
+  url: "https://www.wheresyoured.at/"
+  rss: "https://www.wheresyoured.at/rss/"
+  profile: "https://en.wikipedia.org/wiki/Ed_Zitron"
+  is_substack: false
+  tags: ["technology"]
+- name: "Taylor Lorenz"
+  title: "User Mag"
+  url: "https://www.usermag.co/"
+  rss: "https://www.usermag.co/feed"
+  profile: "https://en.wikipedia.org/wiki/Taylor_Lorenz"
+  is_substack: true
+- name: "Katy Ho"
+  title: "BAD ASIAN"
+  url: "https://katyho.substack.com/"
+  rss: "https://katyho.substack.com/feed"
+  is_substack: true
+  tags: ["culture"]
+- name: "Nicholas Carr"
+  title: "New Cartographies"
+  url: "https://www.newcartographies.com/"
+  rss: "https://www.newcartographies.com/feed"
+  profile: "https://en.wikipedia.org/wiki/Nicholas_G._Carr"
+  is_substack: true
+- name: "Molly White"
+  title: "Citation Needed"
+  url: "https://www.citationneeded.news/"
+  rss: "https://www.citationneeded.news/rss/"
+  profile: "https://en.wikipedia.org/wiki/Molly_White_(writer)"
+  is_substack: false
+- name: "G. Elliott Morris"
+  title: "Strength in Numbers"
+  url: "https://www.gelliottmorris.com/"
+  rss: "https://www.gelliottmorris.com/feed"
+  profile: "https://en.wikipedia.org/wiki/G._Elliott_Morris"
+  is_substack: true
+- title: "Works in Progress"
+  url: "https://www.worksinprogress.news/"
+  rss: "https://www.worksinprogress.news/feed"
+  is_substack: true
+- name: "Ben Shindel"
+  title: "The BS Detector"
+  url: "https://thebsdetector.substack.com/"
+  rss: "https://thebsdetector.substack.com/feed"
+  is_substack: true
+- name: "John Menadue"
+  title: "Pearls and Irritations"
+  url: "https://johnmenadue.com"
+  rss: "https://johnmenadue.com/feed"
+  profile: "https://en.wikipedia.org/wiki/John_Menadue"
+  is_substack: false
+- name: "Matthew Yglesias"
+  title: "Slow Boring"
+  url: "https://www.slowboring.com/"
+  rss: "https://www.slowboring.com/feed"
+  profile: "https://en.wikipedia.org/wiki/Matthew_Yglesias"
+  is_substack: true
+  tags: ["economics"]
+- name: "Adam Tooze"
+  title: "Chartbook"
+  url: "https://adamtooze.substack.com/"
+  rss: "https://adamtooze.substack.com/feed"
+  profile: "https://en.wikipedia.org/wiki/Adam_Tooze"
+  is_substack: true
+  tags: ["economics"]
+- name: "Noah Smith"
+  title: "Noahpinion"
+  url: "https://www.noahpinion.blog/"
+  rss: "https://www.noahpinion.blog/feed"
+  is_substack: true
+  tags: ["economics"]
+- title: "Doomberg"
+  url: "https://newsletter.doomberg.com/"
+  rss: "https://newsletter.doomberg.com/feed"
+  is_substack: true
+  tags: ["energy"]
+- title: "Blackbird Spyplane"
+  url: "https://www.blackbirdspyplane.com/"
+  rss: "https://www.blackbirdspyplane.com/feed"
+  is_substack: true
+  tags: ["culture"]
+- title: "HouseFresh"
+  url: "https://housefresh.com/"
+  rss: "https://housefresh.com/feed/"
+  is_substack: false
+- name: "David Roberts"
+  title: "Volts"
+  url: "https://www.volts.wtf/"
+  rss: "https://www.volts.wtf/feed"
+  is_substack: true
+  tags: ["energy"]
+- name: "Rachel Janfaza"
+  title: "The Up and Up"
+  url: "https://www.theupandup.us/"
+  rss: "https://www.theupandup.us/feed"
+  is_substack: true
+- name: "Dr. Andrea Love"
+  title: "ImmunoLogic"
+  url: "https://news.immunologic.org/"
+  rss: "https://news.immunologic.org/feed"
+  is_substack: true

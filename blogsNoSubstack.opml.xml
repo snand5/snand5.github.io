@@ -1,0 +1,7 @@
+---
+layout: opml
+title: Blogs
+data_file: blogsBlogroll
+hide_substack: true
+permalink: /blogsNoSubstack.opml.xml
+---

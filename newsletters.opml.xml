@@ -1,0 +1,7 @@
+---
+layout: opml
+title: Newsletters
+data_file: newslettersBlogroll
+hide_substack: false
+permalink: /newsletters.opml.xml
+---

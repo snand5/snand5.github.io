@@ -1,0 +1,56 @@
+- name: "Erin Reed"
+  title: "Erin In The Morning"
+  url: "https://www.erininthemorning.com/"
+  rss: "https://www.erininthemorning.com/feed"
+  profile: "https://en.wikipedia.org/wiki/Erin_Reed_(journalist)"
+  is_substack: true
+  tags: ["LGBT"]
+- title: "ProPublica"
+  url: "https://www.propublica.org/"
+  rss: "https://feeds.propublica.org/propublica/main"
+  is_substack: false
+- title: "Techdirt"
+  url: "https://www.techdirt.com/"
+  rss: "https://www.techdirt.com/techdirt_rss.xml"
+  is_substack: false
+  tags: ["technology", "law"]
+- title: "The Intercept"
+  url: "https://theintercept.com/"
+  rss: "https://theintercept.com/feed/?lang=en"
+  is_substack: false
+- title: "Wired"
+  url: "https://www.wired.com/"
+  rss: "https://www.wired.com/feed/rss"
+  is_substack: false
+- title: "Retraction Watch"
+  url: "https://retractionwatch.com/"
+  rss: "https://retractionwatch.com/feed"
+  is_substack: false
+- title: "Michael West Media"
+  url: "https://michaelwest.com.au/"
+  rss: "https://michaelwest.com.au/feed"
+  is_substack: false
+- title: "Independent Australia"
+  url: "https://independentaustralia.net/"
+  rss: "http://feeds.feedburner.com/IndependentAustralia"
+  is_substack: false
+- title: "Hindenburg Research"
+  url: "https://hindenburgresearch.com/"
+  rss: "https://hindenburgresearch.com/feed/"
+  is_substack: false
+- title: "IEEE Spectrum"
+  url: "https://spectrum.ieee.org/"
+  rss: "https://spectrum.ieee.org/customfeeds/feed/all-topics/rss"
+  is_substack: false
+- title: "Deeplinks"
+  url: "https://www.eff.org/"
+  rss: "https://www.eff.org/rss/updates.xml"
+  is_substack: false
+- title: "bellingcat"
+  url: "https://www.bellingcat.com/"
+  rss: "https://www.bellingcat.com/feed"
+  is_substack: false
+- title: "The Committee to Protect Journalists"
+  url: "https://cpj.org/blog/"
+  rss: "https://cpj.org/blog/atom.xml"
+  is_substack: false

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+  
+  <title>News feeds for Shavon Nand's blogroll</title>
+  <dateCreated>Tue, 16 Sep 2025 20:33:30 +1000</dateCreated>
+</head>
+<body>
+
+  
+
+  
+    <outline text="News" title="News">
+    
+      
+        
+          <outline
+            text="Erin In The Morning"
+            title="Erin In The Morning"
+            type="rss"
+            xmlUrl="https://www.erininthemorning.com/feed"
+             htmlUrl="https://www.erininthemorning.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="ProPublica"
+            title="ProPublica"
+            type="rss"
+            xmlUrl="https://feeds.propublica.org/propublica/main"
+             htmlUrl="https://www.propublica.org/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Techdirt"
+            title="Techdirt"
+            type="rss"
+            xmlUrl="https://www.techdirt.com/techdirt_rss.xml"
+             htmlUrl="https://www.techdirt.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="The Intercept"
+            title="The Intercept"
+            type="rss"
+            xmlUrl="https://theintercept.com/feed/?lang=en"
+             htmlUrl="https://theintercept.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Wired"
+            title="Wired"
+            type="rss"
+            xmlUrl="https://www.wired.com/feed/rss"
+             htmlUrl="https://www.wired.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Retraction Watch"
+            title="Retraction Watch"
+            type="rss"
+            xmlUrl="https://retractionwatch.com/feed"
+             htmlUrl="https://retractionwatch.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Michael West Media"
+            title="Michael West Media"
+            type="rss"
+            xmlUrl="https://michaelwest.com.au/feed"
+             htmlUrl="https://michaelwest.com.au/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Independent Australia"
+            title="Independent Australia"
+            type="rss"
+            xmlUrl="http://feeds.feedburner.com/IndependentAustralia"
+             htmlUrl="https://independentaustralia.net/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Hindenburg Research"
+            title="Hindenburg Research"
+            type="rss"
+            xmlUrl="https://hindenburgresearch.com/feed/"
+             htmlUrl="https://hindenburgresearch.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="IEEE Spectrum"
+            title="IEEE Spectrum"
+            type="rss"
+            xmlUrl="https://spectrum.ieee.org/customfeeds/feed/all-topics/rss"
+             htmlUrl="https://spectrum.ieee.org/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Deeplinks"
+            title="Deeplinks"
+            type="rss"
+            xmlUrl="https://www.eff.org/rss/updates.xml"
+             htmlUrl="https://www.eff.org/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="bellingcat"
+            title="bellingcat"
+            type="rss"
+            xmlUrl="https://www.bellingcat.com/feed"
+             htmlUrl="https://www.bellingcat.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="The Committee to Protect Journalists"
+            title="The Committee to Protect Journalists"
+            type="rss"
+            xmlUrl="https://cpj.org/blog/atom.xml"
+             htmlUrl="https://cpj.org/blog/"
+          />
+        
+      
+    
+    </outline>
+  
+</body>
+</opml>

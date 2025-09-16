@@ -1,4 +1,6 @@
-- name: Shavon.gg
+- name: Home
   link: /
 - name: Writing
   link: /writing.html
+- name: Blogroll
+  link: /blogroll.html

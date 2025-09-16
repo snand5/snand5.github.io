@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+  {% assign title_text = page.title | default: page.category | default: "Blogroll" %}
+  <title>{{ title_text }} feeds for Shavon Nand's blogroll</title>
+  <dateCreated>{{ 'now' | date: "%a, %d %b %Y %H:%M:%S %z" }}</dateCreated>
+</head>
+<body>
+
+  {% if page.data_file %}
+    {% assign list = site.data[page.data_file] %}
+  {% elsif page.category %}
+    {% assign key_from_category = page.category | downcase | replace: ' ', '' %}
+    {% assign mapping = 
+      '{"blogs":"blogsBlogroll","news":"newsBlogroll","newsletters":"newslettersBlogroll"}' | jsonify | replace: '\"', '"' | parse_json %}
+    {% assign mapped = mapping[key_from_category] %}
+    {% if mapped %}
+      {% assign list = site.data[mapped] %}
+    {% else %}
+      {% assign list = site.data[key_from_category] %}
+    {% endif %}
+  {% else %}
+    {% assign list = nil %}
+  {% endif %}
+
+  {% if list %}
+    <outline text="{{ page.title | default: page.category | default: 'Feeds' }}" title="{{ page.title | default: page.category | default: 'Feeds' }}">
+    {% for blog in list %}
+      {% if page.hide_substack != true or blog.is_substack != true %}
+        {% if blog.rss %}
+          <outline
+            text="{{ blog.title | default: blog.name | xml_escape }}"
+            title="{{ blog.title | default: blog.name | xml_escape }}"
+            type="rss"
+            xmlUrl="{{ blog.rss | xml_escape }}"
+            {% if blog.url %} htmlUrl="{{ blog.url | xml_escape }}"{% endif %}
+          />
+        {% else %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </outline>
+  {% else %}
+    <outline text="{{ page.title | default: page.category | default: 'Feeds' }}" title="{{ page.title | default: page.category | default: 'Feeds' }}">
+      <!-- No data found for data_file="{{ page.data_file }}" or category="{{ page.category }}" -->
+    </outline>
+  {% endif %}
+</body>
+</opml>

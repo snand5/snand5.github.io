@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+  
+  <title>Blogs feeds for Shavon Nand's blogroll</title>
+  <dateCreated>Tue, 16 Sep 2025 20:33:30 +1000</dateCreated>
+</head>
+<body>
+
+  
+
+  
+    <outline text="Blogs" title="Blogs">
+    
+      
+        
+          <outline
+            text="Where&apos;s Your Ed At"
+            title="Where&apos;s Your Ed At"
+            type="rss"
+            xmlUrl="https://www.wheresyoured.at/rss/"
+             htmlUrl="https://www.wheresyoured.at/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Ludicity"
+            title="Ludicity"
+            type="rss"
+            xmlUrl="https://ludic.mataroa.blog/rss/"
+             htmlUrl="https://ludic.mataroa.blog/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Simon Willison"
+            title="Simon Willison"
+            type="rss"
+            xmlUrl="https://simonwillison.net/atom/everything/"
+             htmlUrl="http://simonwillison.net/"
+          />
+        
+      
+    
+      
+    
+      
+        
+          <outline
+            text="Dan Wang"
+            title="Dan Wang"
+            type="rss"
+            xmlUrl="https://danwang.co/?feed=rss"
+             htmlUrl="https://danwang.co/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Siobhan Brier Aguilar"
+            title="Siobhan Brier Aguilar"
+            type="rss"
+            xmlUrl="https://siobhanbrier.com/rss"
+             htmlUrl="https://siobhanbrier.com/"
+          />
+        
+      
+    
+      
+    
+      
+        
+          <outline
+            text="Skepchick"
+            title="Skepchick"
+            type="rss"
+            xmlUrl="https://skepchick.org/feed"
+             htmlUrl="https://skepchick.org/"
+          />
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <outline
+            text="Karl Whelan"
+            title="Karl Whelan"
+            type="rss"
+            xmlUrl="https://karlwhelan.com/blog/?feed=rss2"
+             htmlUrl="https://karlwhelan.com/blog/"
+          />
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <outline
+            text="EconomPic"
+            title="EconomPic"
+            type="rss"
+            xmlUrl="https://econompicdata.blogspot.com/feeds/posts/default"
+             htmlUrl="https://econompicdata.blogspot.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Observations on film art"
+            title="Observations on film art"
+            type="rss"
+            xmlUrl="https://www.davidbordwell.net/blog/feed"
+             htmlUrl="https://www.davidbordwell.net/blog"
+          />
+        
+      
+    
+      
+    
+      
+        
+          <outline
+            text="McMansion Hell"
+            title="McMansion Hell"
+            type="rss"
+            xmlUrl="https://mcmansionhell.com/rss"
+             htmlUrl="https://mcmansionhell.com/"
+          />
+        
+      
+    
+      
+    
+      
+        
+          <outline
+            text="Dayn Broder"
+            title="Dayn Broder"
+            type="rss"
+            xmlUrl="https://www.daynbroder.com/blog-feed.xml"
+             htmlUrl="https://www.daynbroder.com/"
+          />
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <outline
+            text="GenderSci Lab"
+            title="GenderSci Lab"
+            type="rss"
+            xmlUrl="https://www.genderscilab.org/blog?format=rss"
+             htmlUrl="https://www.genderscilab.org/blog/"
+          />
+        
+      
+    
+    </outline>
+  
+</body>
+</opml>

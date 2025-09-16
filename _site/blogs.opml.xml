@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+  
+  <title>Blogs feeds for Shavon Nand's blogroll</title>
+  <dateCreated>Tue, 16 Sep 2025 20:33:30 +1000</dateCreated>
+</head>
+<body>
+
+  
+
+  
+    <outline text="Blogs" title="Blogs">
+    
+      
+        
+          <outline
+            text="Where&apos;s Your Ed At"
+            title="Where&apos;s Your Ed At"
+            type="rss"
+            xmlUrl="https://www.wheresyoured.at/rss/"
+             htmlUrl="https://www.wheresyoured.at/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Ludicity"
+            title="Ludicity"
+            type="rss"
+            xmlUrl="https://ludic.mataroa.blog/rss/"
+             htmlUrl="https://ludic.mataroa.blog/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Simon Willison"
+            title="Simon Willison"
+            type="rss"
+            xmlUrl="https://simonwillison.net/atom/everything/"
+             htmlUrl="http://simonwillison.net/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="BAD ASIAN"
+            title="BAD ASIAN"
+            type="rss"
+            xmlUrl="https://katyho.substack.com/feed"
+             htmlUrl="https://katyho.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Dan Wang"
+            title="Dan Wang"
+            type="rss"
+            xmlUrl="https://danwang.co/?feed=rss"
+             htmlUrl="https://danwang.co/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Siobhan Brier Aguilar"
+            title="Siobhan Brier Aguilar"
+            type="rss"
+            xmlUrl="https://siobhanbrier.com/rss"
+             htmlUrl="https://siobhanbrier.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Grown-Up Gen-Z"
+            title="Grown-Up Gen-Z"
+            type="rss"
+            xmlUrl="https://janicejournal.substack.com/feed"
+             htmlUrl="https://janicejournal.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Skepchick"
+            title="Skepchick"
+            type="rss"
+            xmlUrl="https://skepchick.org/feed"
+             htmlUrl="https://skepchick.org/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="The BS Detector"
+            title="The BS Detector"
+            type="rss"
+            xmlUrl="https://thebsdetector.substack.com/feed"
+             htmlUrl="https://thebsdetector.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Slow Boring"
+            title="Slow Boring"
+            type="rss"
+            xmlUrl="https://www.slowboring.com/feed"
+             htmlUrl="https://www.slowboring.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Karl Whelan"
+            title="Karl Whelan"
+            type="rss"
+            xmlUrl="https://karlwhelan.com/blog/?feed=rss2"
+             htmlUrl="https://karlwhelan.com/blog/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Noahpinion"
+            title="Noahpinion"
+            type="rss"
+            xmlUrl="https://www.noahpinion.blog/feed"
+             htmlUrl="https://www.noahpinion.blog/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="M3_Melody"
+            title="M3_Melody"
+            type="rss"
+            xmlUrl="https://m3melody.substack.com/feed"
+             htmlUrl="https://m3melody.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Yes, I give a fig... thoughts on markets"
+            title="Yes, I give a fig... thoughts on markets"
+            type="rss"
+            xmlUrl="https://www.yesigiveafig.com/feed"
+             htmlUrl="https://www.yesigiveafig.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="The Discourse Lounge"
+            title="The Discourse Lounge"
+            type="rss"
+            xmlUrl="https://darrellowens.substack.com/feed"
+             htmlUrl="https://darrellowens.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="EconomPic"
+            title="EconomPic"
+            type="rss"
+            xmlUrl="https://econompicdata.blogspot.com/feeds/posts/default"
+             htmlUrl="https://econompicdata.blogspot.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Observations on film art"
+            title="Observations on film art"
+            type="rss"
+            xmlUrl="https://www.davidbordwell.net/blog/feed"
+             htmlUrl="https://www.davidbordwell.net/blog"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Midnight Musings"
+            title="Midnight Musings"
+            type="rss"
+            xmlUrl="https://shiyoonk.substack.com/feed"
+             htmlUrl="https://shiyoonk.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="McMansion Hell"
+            title="McMansion Hell"
+            type="rss"
+            xmlUrl="https://mcmansionhell.com/rss"
+             htmlUrl="https://mcmansionhell.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="the late review"
+            title="the late review"
+            type="rss"
+            xmlUrl="https://www.late-review.com/feed"
+             htmlUrl="https://www.late-review.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Dayn Broder"
+            title="Dayn Broder"
+            type="rss"
+            xmlUrl="https://www.daynbroder.com/blog-feed.xml"
+             htmlUrl="https://www.daynbroder.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Kat&apos;s Canvas"
+            title="Kat&apos;s Canvas"
+            type="rss"
+            xmlUrl="https://chuwenjie.substack.com/feed"
+             htmlUrl="https://chuwenjie.substack.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="The Column"
+            title="The Column"
+            type="rss"
+            xmlUrl="https://www.columnblog.com/feed"
+             htmlUrl="https://www.columnblog.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="GenderSci Lab"
+            title="GenderSci Lab"
+            type="rss"
+            xmlUrl="https://www.genderscilab.org/blog?format=rss"
+             htmlUrl="https://www.genderscilab.org/blog/"
+          />
+        
+      
+    
+    </outline>
+  
+</body>
+</opml>

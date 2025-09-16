@@ -1,0 +1,138 @@
+- name: "Ed Zitron"
+  title: "Where's Your Ed At"
+  url: "https://www.wheresyoured.at/"
+  rss: "https://www.wheresyoured.at/rss/"
+  profile: "https://en.wikipedia.org/wiki/Ed_Zitron"
+  is_substack: false
+  tags: ["technology"]
+- name: "Nikhil Suresh"
+  title: "Ludicity"
+  url: "https://ludic.mataroa.blog/"
+  rss: "https://ludic.mataroa.blog/rss/"
+  is_substack: false
+  tags: ["technology"]
+- name: "Simon Willison"
+  url: "http://simonwillison.net/"
+  rss: "https://simonwillison.net/atom/everything/"
+  profile: "https://en.wikipedia.org/wiki/Simon_Willison"
+  is_substack: false
+  tags: ["technology"]
+- name: "Katy Ho"
+  title: "BAD ASIAN"
+  url: "https://katyho.substack.com/"
+  rss: "https://katyho.substack.com/feed"
+  is_substack: true
+  tags: ["culture"]
+- name: "Dan Wang"
+  url: "https://danwang.co/"
+  rss: "https://danwang.co/?feed=rss"
+  profile: "https://en.wikipedia.org/wiki/Dan_Wang_(analyst)"
+  is_substack: false
+  tags: ["economics", "China"]
+- name: "Siobhan Brier Aguilar"
+  url: "https://siobhanbrier.com/"
+  rss: "https://siobhanbrier.com/rss"
+  is_substack: false
+- name: "Janice Journal"
+  title: "Grown-Up Gen-Z"
+  url: "https://janicejournal.substack.com/"
+  rss: "https://janicejournal.substack.com/feed"
+  is_substack: true
+- name: "Rebecca Watson"
+  title: "Skepchick"
+  url: "https://skepchick.org/"
+  rss: "https://skepchick.org/feed"
+  profile: "https://en.wikipedia.org/wiki/Rebecca_Watson"
+  is_substack: false
+  tags: ["skepticism"]
+- name: "Ben Shindel"
+  title: "The BS Detector"
+  url: "https://thebsdetector.substack.com/"
+  rss: "https://thebsdetector.substack.com/feed"
+  is_substack: true
+- name: "Matthew Yglesias"
+  title: "Slow Boring"
+  url: "https://www.slowboring.com/"
+  rss: "https://www.slowboring.com/feed"
+  profile: "https://en.wikipedia.org/wiki/Matthew_Yglesias"
+  is_substack: true
+  tags: "economics"
+- name: "Karl Whelan"
+  url: "https://karlwhelan.com/blog/"
+  rss: "https://karlwhelan.com/blog/?feed=rss2"
+  is_substack: false
+- name: "Noah Smith"
+  title: "Noahpinion"
+  url: "https://www.noahpinion.blog/"
+  rss: "https://www.noahpinion.blog/feed"
+  is_substack: true
+  tags: "economics"
+- name: "Melody Wright"
+  title: "M3_Melody"
+  url: "https://m3melody.substack.com/"
+  rss: "https://m3melody.substack.com/feed"
+  is_substack: true
+- name: "Michael Green"
+  title: "Yes, I give a fig... thoughts on markets"
+  url: "https://www.yesigiveafig.com/"
+  rss: "https://www.yesigiveafig.com/feed"
+  is_substack: true
+  tags: "economics"
+- name: "Darrell Owens"
+  title: "The Discourse Lounge"
+  url: "https://darrellowens.substack.com/"
+  rss: "https://darrellowens.substack.com/feed"
+  is_substack: true
+- name: "Jake"
+  title: "EconomPic"
+  url: "https://econompicdata.blogspot.com/"
+  rss: "https://econompicdata.blogspot.com/feeds/posts/default"
+  is_substack: false
+  tags: "economics"
+- name: "David Bordwell"
+  title: "Observations on film art"
+  url: "https://www.davidbordwell.net/blog"
+  rss: "https://www.davidbordwell.net/blog/feed"
+  profile: "https://en.wikipedia.org/wiki/David_Bordwell"
+  is_substack: false
+  tags: ["film","culture"]
+- name: "Shiyoon Kim"
+  title: "Midnight Musings"
+  url: "https://shiyoonk.substack.com/"
+  rss: "https://shiyoonk.substack.com/feed"
+  profile: "https://en.wikipedia.org/wiki/Shiyoon_Kim"
+  is_substack: true
+  tags: ["art","culture"]
+- name: "Kate Wagner"
+  title: "McMansion Hell"
+  url: "https://mcmansionhell.com/"
+  rss: "https://mcmansionhell.com/rss"
+  profile: "https://en.wikipedia.org/wiki/McMansion_Hell"
+  is_substack: false
+  tags: "culture"
+- name: "Kate Wagner"
+  title: "the late review"
+  url: "https://www.late-review.com/"
+  rss: "https://www.late-review.com/feed"
+  is_substack: true
+  tags: "culture"
+- name: "Dayn Broder"
+  url: "https://www.daynbroder.com/"
+  rss: "https://www.daynbroder.com/blog-feed.xml"
+  is_substack: false
+- name: "Kat Tsai"
+  title: "Kat's Canvas"
+  url: "https://chuwenjie.substack.com/"
+  rss: "https://chuwenjie.substack.com/feed"
+  is_substack: true
+  tags: ["art"]
+- name: "Adam Johnson"
+  title: "The Column"
+  url: "https://www.columnblog.com/"
+  rss: "https://www.columnblog.com/feed"
+  is_substack: true
+- title: "GenderSci Lab"
+  url: "https://www.genderscilab.org/blog/"
+  rss: "https://www.genderscilab.org/blog?format=rss"
+  is_substack: false
+  tags: ["LGBT"]
