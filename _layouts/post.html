@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article>
+<article class="post">
   <header class="post-header" role="region" aria-label="Post header">
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.subtitle %}
@@ -21,32 +21,32 @@ layout: default
       </div>
     </div>
   </header>
-    {%- if page.image -%}
-    <figure class="in-text-image bordered">
-      <a target="_blank" href="{{- page.image | relative_url -}}">
-        <picture>
-          <source type="image/webp" srcset="{{- page.image | relative_url -}}" sizes="100vw">
-          <img src="{{- page.image | relative_url -}}" width="1456" height="819" alt="{{ page.alt }}" loading="lazy" class="sizing-normal">
-        </picture>
-      </a>
-      <figcaption>
-        {% if page.caption %}
-        <p>{{ page.caption }}</p>
-        {% endif %}
-        {% if page.credit %}
-        <p>{{ page.credit }}</p>
-        {% endif %}
-      </figcaption>
-    </figure>
-    {%- else -%}
-    <figure class="in-text-image">
-      <img src="/assets/images/default.jpg" loading="lazy" alt="default image"/>
-    </figure>
-    {%- endif -%}
+  {%- if page.image -%}
+  <figure class="in-text-image bordered">
+    <img src="{{ page.image | relative_url }}" 
+        width="1456" height="819" 
+        alt="{{ page.alt }}" 
+        loading="lazy" 
+        class="clickable-image sizing-normal">
+          <div class="view-image-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-maximize2 lucide-maximize-2">
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <polyline points="9 21 3 21 3 15"></polyline>
+              <line x1="21" x2="14" y1="3" y2="10"></line>
+              <line x1="3" x2="10" y1="21" y2="14"></line>
+            </svg>
+          </div>
+    {% if page.caption %}
+    <figcaption>{{ page.caption }}</figcaption>
+    {% endif %}
+  </figure>
+  {%- endif -%}
 
-  <div>
+
+  <div class="available-content">
     <div class="article-content">
       {{ content | replace: '<iframe', '<div class="responsive-iframe"><iframe' | replace: '</iframe>', '</iframe></div>' }}
     </div>
   </div>
 </article>
+<script src="/assets/js/image-gallery.js"></script>
