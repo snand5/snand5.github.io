@@ -2,24 +2,33 @@
 layout: default
 ---
 <article>
-  <header>
-    <h1 class="title">{{ page.title }}</h1>
-
-    <ul>
-      <li>
-        POSTED:
-        <time datetime="{{ page.date | date_to_xmlschema }}">
+  <header class="post-header" role="region" aria-label="Post header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <h3 class="subtitle">{{ page.subtitle }}</h3>
+    {% endif %}
+    <div class="byline">
+      <a href="/writing.html">
+      <div class="avatar">
+        <img src="/assets/images/avatar.jpeg" alt="{{ page.author }} avatar">
+      </div>
+      </a>
+      <div class="author-meta">
+        <a href="/writing.html" style="text-decoration: none;"><span class="author-name">{{ page.author }}</span></a>
+        <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
           {{ page.date | date: "%Y.%m.%d" }}
         </time>
-      </li>
-      <li>
-        BY: {{ page.author }}
-      </li>
-    </ul>
-
+      </div>
+    </div>
+  </header>
     {%- if page.image -%}
     <figure class="in-text-image bordered">
-      <img alt="{{ page.alt }}" src="{{- page.image | relative_url -}}" loading="lazy"/>
+      <a target="_blank" href="{{- page.image | relative_url -}}">
+        <picture>
+          <source type="image/webp" srcset="{{- page.image | relative_url -}}" sizes="100vw">
+          <img src="{{- page.image | relative_url -}}" width="1456" height="819" alt="{{ page.alt }}" loading="lazy" class="sizing-normal">
+        </picture>
+      </a>
       <figcaption>
         {% if page.caption %}
         <p>{{ page.caption }}</p>
@@ -34,7 +43,6 @@ layout: default
       <img src="/assets/images/default.jpg" loading="lazy" alt="default image"/>
     </figure>
     {%- endif -%}
-  </header>
 
   <div>
     <div class="article-content">

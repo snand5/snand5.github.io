@@ -1,7 +1,8 @@
-@import "normalize.css";
+@import "_normalize.scss";
 @import "_fonts.scss";
 @import "_tokens.scss";
 @import "nav.scss";
+@import "_post-header.scss";
 
 * {
   box-sizing: border-box;
@@ -251,37 +252,6 @@ hr {
   }
 }
 
-// FAQ
-.faq {
-  .faq-link {
-    margin-right: 0.5rem;
-  }
-
-  .faq-accordions {
-    margin: 0.625rem;
-  }
-
-  .accordion {
-    margin: 0.625rem 0;
-
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-  }
-
-  .accordion-panel {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease-out;
-
-    .faq-answer {
-      border-left: 1px solid var(--table-border-color);
-      padding-left: 0.625rem;
-    }
-  }
-}
-
 // BLOGROLL
 .blogroll {
   ul.blog-list {
@@ -431,11 +401,21 @@ hr {
   }
 }
 
+// POST
 .article-content img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 1em auto;
+}
+
+.article-content code {
+  background-color: var(--code-background-color);
+    font-family: var(--monospace-fonts);
+}
+
+.article-content blockquote {
+  color: var(--blockquote-quote-color);
 }
 
 .in-text-image img, .article-content img {
@@ -459,4 +439,16 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: normal;
+  margin-top: 0.5rem;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: center;
+  color: var(--secondary-text-color);
 }

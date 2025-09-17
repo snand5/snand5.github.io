@@ -9,17 +9,19 @@ title: Shavon Nand
     Hi!
   </p>
 </section>
-<section class="feed">
-  <h2>Recent Activity</h2>
+<h2 class="bottom-margin">Recent Activity</h2>
+<section class="speaking">
   {% for post in site.posts limit:5 %}
-  <article class="h-entry">
-    <header>
-      <h3 class="p-name"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-    </header>
-    <div class="e-content">
-      {{ post.excerpt  | strip_html | truncatewords: 10}}
-    </div>
-  </article>
+  <section>
+    <h3>"{{ post.title }}"</h3>
+    {% if page.subtitle %}
+    {{ post.subtitle }}
+    {%- else -%}
+    {{ post.excerpt  | strip_html | truncatewords: 10}}
+    {% endif %}
+    <div class="timestamp"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B, %Y" }}</time></div>
+    <div class="links"><a href="{{ post.url }}">Read post</a></div>
+  </section>
   {% endfor %}
 </section>
+
