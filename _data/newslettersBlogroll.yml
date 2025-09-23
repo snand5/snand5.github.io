@@ -109,9 +109,11 @@
   title: "Big"
   url: "https://www.thebignewsletter.com/"
   rss: "https://www.thebignewsletter.com/feed"
+  profile: "https://en.wikipedia.org/wiki/Matt_Stoller"
   is_substack: true
 - name: "Matt Stoller"
   title: "Big Tech on Trial"
   url: "https://www.bigtechontrial.com/"
   rss: "https://www.bigtechontrial.com/feed"
+  profile: "https://en.wikipedia.org/wiki/Matt_Stoller"
   is_substack: true
