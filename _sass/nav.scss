@@ -122,3 +122,19 @@ nav {
     }
   }
 }
+
+@media print {
+  nav,
+  .menu-toggle,
+  .no-print {
+    display: none !important;
+  }
+  .page-container, main, article, .post {
+    margin:0;
+    padding:0;
+    border:0;
+  }
+  h1.title {
+    margin:0;
+  }
+}
