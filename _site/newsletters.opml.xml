@@ -3,7 +3,7 @@
 <head>
   
   <title>Newsletters feeds for Shavon Nand's blogroll</title>
-  <dateCreated>Tue, 23 Sep 2025 11:42:10 +1000</dateCreated>
+  <dateCreated>Tue, 23 Sep 2025 12:00:08 +1000</dateCreated>
 </head>
 <body>
 
@@ -236,6 +236,30 @@
             type="rss"
             xmlUrl="https://news.immunologic.org/feed"
              htmlUrl="https://news.immunologic.org/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Big"
+            title="Big"
+            type="rss"
+            xmlUrl="https://www.thebignewsletter.com/feed"
+             htmlUrl="https://www.thebignewsletter.com/"
+          />
+        
+      
+    
+      
+        
+          <outline
+            text="Big Tech on Trial"
+            title="Big Tech on Trial"
+            type="rss"
+            xmlUrl="https://www.bigtechontrial.com/feed"
+             htmlUrl="https://www.bigtechontrial.com/"
           />
         
       

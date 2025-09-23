@@ -105,3 +105,13 @@
   url: "https://news.immunologic.org/"
   rss: "https://news.immunologic.org/feed"
   is_substack: true
+- name: "Matt Stoller"
+  title: "Big"
+  url: "https://www.thebignewsletter.com/"
+  rss: "https://www.thebignewsletter.com/feed"
+  is_substack: true
+- name: "Matt Stoller"
+  title: "Big Tech on Trial"
+  url: "https://www.bigtechontrial.com/"
+  rss: "https://www.bigtechontrial.com/feed"
+  is_substack: true
