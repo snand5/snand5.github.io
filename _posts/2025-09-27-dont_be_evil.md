@@ -3,7 +3,7 @@ layout: post
 author: Shavon Nand
 title: Don’t Be Evil
 subtitle: Celebrating Google's 27th birthday
-image: assets\images\dont_be_evil\Screenshot 2025-09-27 at 08-18-20 Google.png
+image: assets/images/dont_be_evil/Screenshot 2025-09-27 at 08-18-20 Google.png
 alt: "Screenshot of Google's homepage from their 27th birthday. The Doodle artwork features Google’s first-ever logo."
 caption: "Screenshot of Google's homepage from their 27th birthday. The Doodle artwork features Google’s first-ever logo."
 ---
