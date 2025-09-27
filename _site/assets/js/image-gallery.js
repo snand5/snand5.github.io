@@ -1,9 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // 1. Early return if no images exist
+document.addEventListener("DOMContentLoaded", () => {
   const images = Array.from(document.querySelectorAll(".in-text-image img, .article-content img"));
-  if (images.length === 0) return;
+  if (!images.length) return;
 
-  // 2. Create overlay
+  // Create overlay
   const overlay = document.createElement("div");
   overlay.className = "image-overlay";
   overlay.innerHTML = `
@@ -41,209 +40,104 @@ document.addEventListener("DOMContentLoaded", function() {
   const loadingIndicator = overlay.querySelector(".loading-indicator");
   let currentIndex = 0;
 
-  // 3. Store image metadata during processing for performance
-  const imageData = [];
+  // Precompute metadata
+  const imageData = images.map((img, index) => {
+    const figure = img.closest("figure");
+    const caption = figure?.querySelector("figcaption")?.textContent || img.alt || "";
+    img.classList.add("clickable-image");
+    img.tabIndex = 0;
+    img.setAttribute("role", "button");
+    img.setAttribute("aria-label", `View image ${index + 1} in gallery`);
+    return { element: img, src: img.src, caption, index };
+  });
+
+  function extractFilename(url) {
+    try {
+      const pathname = new URL(url, window.location.origin).pathname;
+      const clean = pathname.split("/").pop().split("?")[0];
+      return clean.includes(".") ? clean : `${clean}.jpg`;
+    } catch {
+      return "image.jpg";
+    }
+  }
 
   function showOverlay(index) {
     if (index < 0 || index >= imageData.length) return;
-    
     const data = imageData[index];
     currentIndex = index;
-    
-    // Show loading state
+
     overlay.classList.add("loading");
     loadingIndicator.style.display = "block";
-    
-    // Handle image loading
+
     overlayImg.onload = () => {
       overlay.classList.remove("loading");
       loadingIndicator.style.display = "none";
     };
-    
+
     overlayImg.onerror = () => {
       overlay.classList.remove("loading");
       loadingIndicator.style.display = "none";
       console.warn("Failed to load image:", data.src);
-      // Could set a fallback image here if desired
     };
-    
+
     overlayImg.src = data.src;
     overlayCaption.textContent = data.caption;
-    
-    // Show overlay and manage focus
     overlay.classList.add("show");
     overlay.querySelector(".overlay-close").focus();
-    
-    // Announce to screen readers
-    const announcement = document.createElement("div");
-    announcement.setAttribute("aria-live", "polite");
-    announcement.setAttribute("aria-atomic", "true");
-    announcement.className = "sr-only";
+
+    // Update aria-live without stacking elements
+    let announcement = overlay.querySelector(".sr-only");
+    if (!announcement) {
+      announcement = document.createElement("div");
+      announcement.className = "sr-only";
+      announcement.setAttribute("aria-live", "polite");
+      announcement.setAttribute("aria-atomic", "true");
+      overlay.appendChild(announcement);
+    }
     announcement.textContent = `Image ${index + 1} of ${imageData.length}${data.caption ? ': ' + data.caption : ''}`;
-    overlay.appendChild(announcement);
-    setTimeout(() => announcement.remove(), 1000);
   }
 
   function hideOverlay() {
     overlay.classList.remove("show");
-    // Return focus to the image that was clicked
-    if (currentIndex >= 0 && currentIndex < imageData.length) {
-      imageData[currentIndex].element.focus();
-    }
+    imageData[currentIndex]?.element.focus();
   }
 
-  function extractFilename(url) {
-    try {
-      const urlObj = new URL(url, window.location.origin);
-      const pathname = urlObj.pathname;
-      const filename = pathname.split('/').pop() || 'image';
-      // Remove query parameters and ensure it has an extension
-      const cleanFilename = filename.split('?')[0];
-      return cleanFilename.includes('.') ? cleanFilename : `${cleanFilename}.jpg`;
-    } catch (e) {
-      return 'image.jpg';
-    }
-  }
-
-  // 4. Process all images: wrap, add classes, add buttons, store metadata
-  images.forEach((img, index) => {
-    img.classList.add("clickable-image");
-    img.setAttribute("tabindex", "0");
-    img.setAttribute("role", "button");
-    img.setAttribute("aria-label", `View image ${index + 1} in gallery`);
-
-    // Wrap in figure if not already (only for content images, not frontmatter)
-    let figure = img.closest("figure");
-    const isContentImage = img.closest(".article-content");
-    
-    if (!figure && isContentImage) {
-      figure = document.createElement("figure");
-      img.parentNode.insertBefore(figure, img);
-      figure.appendChild(img);
-    }
-    
-    if (figure) {
-      figure.classList.add("in-text-image", "bordered");
-    }
-
-    // Get caption text
-    const caption = figure?.querySelector("figcaption")?.textContent || img.alt || "";
-
-    // Store metadata
-    imageData.push({
-      element: img,
-      src: img.src,
-      caption: caption,
-      index: index
-    });
-
-    // Add zoom button if missing and we have a figure
-    if (figure) {
-      let zoomBtn = figure.querySelector(".view-image-btn");
-      if (!zoomBtn) {
-        zoomBtn = document.createElement("div");
-        zoomBtn.className = "view-image-btn";
-        zoomBtn.setAttribute("role", "button");
-        zoomBtn.setAttribute("tabindex", "0");
-        zoomBtn.setAttribute("aria-label", `Expand image ${index + 1}`);
-        zoomBtn.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-maximize2 lucide-maximize-2">
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <polyline points="9 21 3 21 3 15"></polyline>
-            <line x1="21" x2="14" y1="3" y2="10"></line>
-            <line x1="3" x2="10" y1="21" y2="14"></line>
-          </svg>
-        `;
-        figure.appendChild(zoomBtn);
-      }
-
-      // Add click and keyboard listeners to button
-      const handleButtonActivation = (e) => {
-        e.stopPropagation();
-        showOverlay(index);
-      };
-      
-      zoomBtn.addEventListener("click", handleButtonActivation);
-      zoomBtn.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          handleButtonActivation(e);
-        }
-      });
-    }
-
-    // Add click and keyboard listeners to image
-    const handleImageActivation = () => {
-      showOverlay(index);
-    };
-    
-    img.addEventListener("click", handleImageActivation);
-    img.addEventListener("keydown", (e) => {
+  imageData.forEach((data, index) => {
+    const handleActivate = () => showOverlay(index);
+    data.element.addEventListener("click", handleActivate);
+    data.element.addEventListener("keydown", e => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        handleImageActivation();
+        handleActivate();
       }
     });
   });
 
-  // 5. Overlay button event listeners
   overlay.querySelector(".overlay-close").addEventListener("click", hideOverlay);
-  
-  overlay.querySelector(".overlay-next").addEventListener("click", () => {
-    const nextIndex = (currentIndex + 1) % imageData.length;
-    showOverlay(nextIndex);
-  });
-  
-  overlay.querySelector(".overlay-prev").addEventListener("click", () => {
-    const prevIndex = (currentIndex - 1 + imageData.length) % imageData.length;
-    showOverlay(prevIndex);
-  });
-  
+  overlay.querySelector(".overlay-next").addEventListener("click", () => showOverlay((currentIndex + 1) % imageData.length));
+  overlay.querySelector(".overlay-prev").addEventListener("click", () => showOverlay((currentIndex - 1 + imageData.length) % imageData.length));
   overlay.querySelector(".overlay-download").addEventListener("click", () => {
-    if (currentIndex >= 0 && currentIndex < imageData.length) {
-      const data = imageData[currentIndex];
-      const link = document.createElement("a");
-      link.href = data.src;
-      link.download = extractFilename(data.src);
-      link.style.display = "none";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+    const data = imageData[currentIndex];
+    const link = document.createElement("a");
+    link.href = data.src;
+    link.download = extractFilename(data.src);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
 
-// 6. Close on background click
-overlay.addEventListener("click", (e) => {
-  if (e.target === overlay || e.target === overlayImg) {
-    hideOverlay();
-  }
-});
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay || e.target === overlayImg) hideOverlay();
+  });
 
-  // 7. Keyboard navigation with focus management
-  document.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", e => {
     if (!overlay.classList.contains("show")) return;
-    
-    switch(e.key) {
-      case "Escape":
-        e.preventDefault();
-        hideOverlay();
-        break;
-      case "ArrowRight":
-        e.preventDefault();
-        overlay.querySelector(".overlay-next").click();
-        break;
-      case "ArrowLeft":
-        e.preventDefault();
-        overlay.querySelector(".overlay-prev").click();
-        break;
-      case "Home":
-        e.preventDefault();
-        showOverlay(0);
-        break;
-      case "End":
-        e.preventDefault();
-        showOverlay(imageData.length - 1);
-        break;
+    switch (e.key) {
+      case "Escape": hideOverlay(); break;
+      case "ArrowRight": overlay.querySelector(".overlay-next").click(); break;
+      case "ArrowLeft": overlay.querySelector(".overlay-prev").click(); break;
+      case "Home": showOverlay(0); break;
+      case "End": showOverlay(imageData.length - 1); break;
     }
   });
 });

@@ -17,7 +17,7 @@ title: Shavon Nand
     {% if page.subtitle %}
     {{ post.subtitle }}
     {%- else -%}
-    {{ post.excerpt  | strip_html | truncatewords: 10}}
+    {{ post.excerpt  | strip_html | truncatewords: 12}}
     {% endif %}
     <div class="timestamp"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B, %Y" }}</time></div>
     <div class="links"><a href="{{ post.url }}">Read post</a></div>
