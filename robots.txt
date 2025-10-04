@@ -1,4 +1,9 @@
-Sitemap: http://localhost:4000/sitemap.xml
+---
+layout: null
+sitemap: false
+---
+
+Sitemap: {{ "sitemap.xml" | absolute_url }}
 
 User-agent: archive.org_bot
 Disallow:
