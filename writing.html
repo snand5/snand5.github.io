@@ -16,19 +16,23 @@ title: Latest Posts
 
         <div class="metadata">
           <span>
-            {{ post.date | date: "%Y" }} • <a href="{{ post.url }}">Read post</a>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%-d %B, %Y" }}
+            </time>
+            • <a href="{{ post.url }}">Read post</a>
           </span>
         </div>
 
-        <p>
-          {{ post.excerpt | strip_html | truncatewords: 12}}
-        </p>
+        <p>{{ post.excerpt | strip_html | truncatewords: 12}}</p>
       </div>
 
       {% if post.image %}
       <div class="image">
         <a href="{{ post.url }}">
-          <img src="{{ post.image | relative_url }}" alt="{{ post.alt | default: post.title }}">
+          <img
+            src="{{ post.image | relative_url }}"
+            alt="{{ post.alt | default: post.title }}"
+          />
         </a>
       </div>
       {% endif %}
