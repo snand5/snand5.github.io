@@ -140,6 +140,124 @@ These AI answers are often band-aid fixes that miss the entire point of me askin
   </div>
 </article>
 <script src="/assets/js/image-gallery.js"></script>
+<script>
+  (function() {
+  console.log('Footnote script loaded');
+ 
+  function groupFootnotes() {
+    console.log('groupFootnotes running');
+   
+    const allSups = document.querySelectorAll('sup[role="doc-noteref"]');
+    console.log('Found sups:', allSups.length);
+   
+    if (allSups.length === 0) {
+      console.log('No sups found, exiting');
+      return;
+    }
+   
+    const processed = new Set();
+   
+    allSups.forEach((sup, index) => {
+      if (processed.has(sup)) return;
+     
+      // Check if this sup is already within brackets
+      let prevNode = sup.previousSibling;
+      let foundOpenBracket = false;
+      
+      // Look backwards through siblings to see if we're already in a bracket group
+      while (prevNode) {
+        if (prevNode.nodeType === 3) { // Text node
+          const text = prevNode.textContent.trim();
+          if (text.endsWith('[')) {
+            foundOpenBracket = true;
+            break;
+          }
+          if (text && !text.match(/^[,\s]*$/)) {
+            // Found other text, not in a bracket group
+            break;
+          }
+        } else if (prevNode.tagName === 'SUP') {
+          // Keep looking back
+        } else {
+          break;
+        }
+        prevNode = prevNode.previousSibling;
+      }
+      
+      // If already in brackets, skip
+      if (foundOpenBracket) {
+        processed.add(sup);
+        return;
+      }
+      
+      const group = [sup];
+      processed.add(sup);
+     
+      // Look ahead for consecutive sups (with possible commas/spaces between)
+      let nextNode = sup.nextSibling;
+      while (nextNode) {
+        if (nextNode.nodeType === 3) { // Text node
+          const text = nextNode.textContent;
+          if (text.match(/^[,\s]+$/)) {
+            // Just whitespace/commas, keep going
+            nextNode = nextNode.nextSibling;
+            continue;
+          } else if (text.includes(']')) {
+            // Found closing bracket, stop
+            break;
+          } else {
+            // Other text, stop looking
+            break;
+          }
+        } else if (nextNode.nodeType === 1 && nextNode.tagName === 'SUP') {
+          group.push(nextNode);
+          processed.add(nextNode);
+          nextNode = nextNode.nextSibling;
+        } else {
+          break;
+        }
+      }
+     
+      console.log('Group ' + index + ' has ' + group.length + ' items');
+     
+      // Add opening bracket
+      const openBracket = document.createTextNode('[');
+      group[0].parentNode.insertBefore(openBracket, group[0]);
+     
+      // Add commas between items (only if not already there)
+      for (let i = 0; i < group.length - 1; i++) {
+        const nextSibling = group[i].nextSibling;
+        let needsComma = true;
+        
+        if (nextSibling && nextSibling.nodeType === 3) {
+          const text = nextSibling.textContent;
+          if (text.match(/^[,\s]/)) {
+            needsComma = false;
+          }
+        }
+        
+        if (needsComma) {
+          const comma = document.createTextNode(', ');
+          group[i].parentNode.insertBefore(comma, group[i].nextSibling);
+        }
+      }
+     
+      // Add closing bracket
+      const closeBracket = document.createTextNode(']');
+      const lastSup = group[group.length - 1];
+      lastSup.parentNode.insertBefore(closeBracket, lastSup.nextSibling);
+    });
+   
+    console.log('Finished processing');
+  }
+ 
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', groupFootnotes);
+  } else {
+    groupFootnotes();
+  }
+})();
+</script>
       </main>
     </div>
 

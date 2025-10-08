@@ -602,3 +602,18 @@ figcaption {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+/* General styling for superscript elements */
+sup {
+  vertical-align: baseline;
+  font-size: inherit;
+  position: static;
+  text-decoration: none;
+}
+
+/* Remove any underlines from the footnote links */
+sup a.footnote {
+  text-decoration: none;
+  color: inherit;
+  display: inline;
+}
