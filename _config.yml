@@ -5,12 +5,22 @@ plugins:
 
 locale: en_AU
 
-url: "http://www.shavon.gg" 
+url: "http://www.shavon.gg"
+
+title: "Shavon.gg"   # site title
+author:
+  name: "Shavon Nand"
+  email: "shavonnand@outlook.com"  # your preferred contact email
+
 
 collections:
   post_tags:
     permalink: /tags/:name/
     output: true
+  links:
+    output: true
+    permalink: /links/:name/
+
 
 defaults:
   - scope:

@@ -862,7 +862,8 @@ hr {
 
 .projects .contents-block {
   display: flex;
-  margin-top: 4rem; }
+  margin-top: 4rem;
+  border-bottom: 1px solid var(--hr-color); }
 .projects .image img {
   max-width: 25rem;
   margin-left: 1rem; }
@@ -1156,4 +1157,89 @@ sup {
 sup a.footnote {
   text-decoration: none;
   color: inherit;
-  display: inline; }
+  display: inline;
+  vertical-align: baseline;
+  font-size: inherit;
+  position: static; }
+
+.links-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; }
+
+.links-feed .h-entry {
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--hr-color); }
+
+.links-feed .link-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem; }
+  .links-feed .link-title a {
+    color: var(--main-text-color);
+    text-decoration: none; }
+
+.links-feed .link-content {
+  font-family: var(--serif-fonts);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--secondary-text-color);
+  margin-bottom: 0.75rem; }
+
+.links-feed .external-url {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--note-background-color);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem; }
+  .links-feed .external-url .favicon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0; }
+  .links-feed .external-url .url-text {
+    color: var(--note-text-color);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
+.links-feed .dt-published {
+  display: block;
+  font-family: var(--monospace-fonts);
+  font-size: 0.75rem;
+  color: var(--timestamp-color); }
+
+@media (min-width: 640px) {
+  .links-feed .link-title {
+    font-size: 1.25rem; }
+
+  .links-feed .link-content {
+    font-size: 1rem; } }
+.link-post .post-title a {
+  color: var(--main-text-color);
+  text-decoration: none; }
+  .link-post .post-title a:hover {
+    text-decoration: underline; }
+
+.external-url-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--note-background-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem; }
+  .external-url-box .favicon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0; }
+  .external-url-box .url-text {
+    color: var(--note-text-color);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Shavon.gg</title>
+  <subtitle>Links</subtitle>
+  <author>
+    <name>Shavon Nand</name>
+    <email>shavonnand@outlook.com</email>
+    <uri>http://localhost:4000</uri>
+  </author>
+  <icon>http://localhost:4000/assets/images/avatar.jpeg</icon>
+  <logo>http://localhost:4000/assets/images/avatar.jpeg</logo>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/links"/>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feeds/links"/>
+  <id>http://localhost:4000/feeds/links</id>
+  <updated>2025-10-13T21:15:26+10:00</updated>
+  <rights>© 2025 Shavon Nand</rights>
+
+  
+    <entry>
+      <id>http://localhost:4000/links/2025-09-23-coworker-mansplains-via-chatgpt/</id>
+      <title>my coworker mansplains via ChatGPT</title>
+      <content type="html" xml:lang="en"><![CDATA[<blockquote>
+  <p><strong>Reader writes:</strong>
+These AI answers are often band-aid fixes that miss the entire point of me asking for context or detail on a problem to understand the root cause. Like if I had asked, “I have noticed a hole in the llama containment fence, the damage suggests vandals, has that historically been an issue, and should we look into deterring them or put up cameras?” the ChatGPT guy will reply with, “ChatGPT says we can patch the hole with a fence repair kit.”</p>
+</blockquote>
+]]></content>
+      <published>2025-09-23T00:00:00+10:00</published>
+      <updated>2025-09-23T00:00:00+10:00</updated>
+      <link rel="alternate" type="text/html" href="https://www.askamanager.org/2025/09/my-coworker-mansplains-via-chatgpt.html"/>
+      <link rel="related" type="text/html" href="http://localhost:4000/links/2025-09-23-coworker-mansplains-via-chatgpt/"/>
+    </entry>
+  
+    <entry>
+      <id>http://localhost:4000/links/2025-08-16-gen-z-boomerfication/</id>
+      <title>The Boomerfication of Gen Z | Internet Analysis</title>
+      <content type="html" xml:lang="en"><![CDATA[<p>Tiffany Ferg had some great insight into the online trend of Gen Z supposedly becoming Boomer-like.</p>
+
+]]></content>
+      <published>2025-08-16T00:00:00+10:00</published>
+      <updated>2025-08-16T00:00:00+10:00</updated>
+      <link rel="alternate" type="text/html" href="https://www.youtube.com/watch?v=5JLdu97Pdqk"/>
+      <link rel="related" type="text/html" href="http://localhost:4000/links/2025-08-16-gen-z-boomerfication/"/>
+    </entry>
+  
+    <entry>
+      <id>http://localhost:4000/links/2025-03-19-the-resistance/</id>
+      <title>The Rise and Fall of &apos;the Resistance&apos;</title>
+      <content type="html" xml:lang="en"><![CDATA[<p>In 2017, the Resistance movement exploded across America with massive protests, hashtags, and nonstop anti-Trump content. The Resistance birthed a powerful group of anti-Trump influencers, podcasts, Twitter accounts, and personalities. But fast forward to today and Liberals have all but stopped resisting. Resistance influencers who once railed against Trump now openly support him, and progressive movements have been significantly hollowed out. What happened?</p>
+]]></content>
+      <published>2025-03-19T00:00:00+10:00</published>
+      <updated>2025-03-19T00:00:00+10:00</updated>
+      <link rel="alternate" type="text/html" href="https://www.youtube.com/watch?v=mz3Rf820ozE"/>
+      <link rel="related" type="text/html" href="http://localhost:4000/links/2025-03-19-the-resistance/"/>
+    </entry>
+  
+    <entry>
+      <id>http://localhost:4000/links/2025-03-18-social-content-fracture/</id>
+      <title>What does the Social Content Fracture Mean??</title>
+      <content type="html" xml:lang="en"><![CDATA[<blockquote>
+  <p>Is it a good thing or a bad thing for the sort of health and well-being of culture and humanity for us to move away from super centralized platforms?</p>
+
+  <p>[T]here is also like a chance that there’s going to be good parts to this, that having fringe ideas exist in fringe spaces is how it’s always been and that was better, both because having fringe ideas in normal spaces normalizes them, and that does two things. It makes it so it feels like it’s okay to believe those ideas and, and two, it makes it easy to pull those ideas out and ascribe them to all of your opposition.</p>
+</blockquote>
+]]></content>
+      <published>2025-03-18T00:00:00+10:00</published>
+      <updated>2025-03-18T00:00:00+10:00</updated>
+      <link rel="alternate" type="text/html" href="https://www.youtube.com/watch?v=Ux32Hq6y-nk"/>
+      <link rel="related" type="text/html" href="http://localhost:4000/links/2025-03-18-social-content-fracture/"/>
+    </entry>
+  
+    <entry>
+      <id>http://localhost:4000/links/2025-03-18-monopolistic-product/</id>
+      <title>Steve Jobs on the downfall of dominant companies.</title>
+      <content type="html" xml:lang="en"><![CDATA[<blockquote>
+  <p>If you are a product person at IBM or Xerox, so you make a better copier or a better computer, so what? When you have a monopoly market share the company’s not any more successful. So the people that can make the company more successful are the sales and marketing people, and they end up running the companies. And the product people get driven out of the decision making forums, and the companies forget what it means to make great products. Sort of the product sensibility and the product genius that brought them to that monopolistic position gets rotted out by people running these companies who have no conception of a good product versus a bad product.</p>
+</blockquote>
+]]></content>
+      <published>2025-03-18T00:00:00+10:00</published>
+      <updated>2025-03-18T00:00:00+10:00</updated>
+      <link rel="alternate" type="text/html" href="https://www.youtube.com/watch?v=Qo8zdPNMRdY"/>
+      <link rel="related" type="text/html" href="http://localhost:4000/links/2025-03-18-monopolistic-product/"/>
+    </entry>
+  
+    <entry>
+      <id>http://localhost:4000/links/2025-03-18-free-and-open-access/</id>
+      <title>“Wait, not like that”: Free and open access in the age of generative AI</title>
+      <content type="html" xml:lang="en"><![CDATA[<blockquote>
+  <p>There’s also been an impulse by creators concerned about AI to dramatically limit how people can access their work. Some artists have decided it’s simply not worthwhile to maintain an online gallery of their work when that makes it easily accessible for AI training. Many have implemented restrictive content gates — paywalls, registration-walls, “are you a human”-walls, and similar — to try to fend off scrapers. This too closes off the commons, making it more challenging or expensive for those “every single human beings” described in open access manifestos to access the material that was originally intended to be common goods.</p>
+
+  <p>Often by trying to wall off those considered to be bad actors, people wall off the very people they intended to give access to. People who gate their work behind paywalls likely didn’t set out to create works that only the wealthy could access. People who implement registration walls probably didn’t intend for their work to only be available to those willing to put up with the risk of incessant email spam after they relinquish their personal information. People who try to stave off bots with CAPTCHAs asking “are you a human?” probably didn’t mean to limit their material only to abled people who are willing to abide ever more protracted and irritating riddles.8 And people using any of these strategies likely didn’t want people to struggle to even find their work in the first place after the paywalls and regwalls and anti-bot mechanisms thwarted search engine indexers or social media previews.</p>
+</blockquote>
+]]></content>
+      <published>2025-03-18T00:00:00+10:00</published>
+      <updated>2025-03-18T00:00:00+10:00</updated>
+      <link rel="alternate" type="text/html" href="https://www.citationneeded.news/free-and-open-access-in-the-age-of-generative-ai/"/>
+      <link rel="related" type="text/html" href="http://localhost:4000/links/2025-03-18-free-and-open-access/"/>
+    </entry>
+  
+</feed>

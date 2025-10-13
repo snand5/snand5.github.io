@@ -1,0 +1,32 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }}</title>
+  <subtitle>Links</subtitle>
+  <author>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
+    <uri>{{ site.url }}</uri>
+  </author>
+  <icon>{{ site.url }}/assets/images/avatar.jpeg</icon>
+  <logo>{{ site.url }}/assets/images/avatar.jpeg</logo>
+  <link rel="alternate" type="text/html" href="{{ site.url }}/links"/>
+  <link rel="self" type="application/atom+xml" href="{{ site.url }}/feeds/links"/>
+  <id>{{ site.url }}/feeds/links</id>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <rights>© {{ site.time | date: "%Y" }} {{ site.author.name }}</rights>
+
+  {% for link in site.links reversed %}
+    <entry>
+      <id>{{ site.url }}{{ link.url }}</id>
+      <title>{{ link.title | xml_escape }}</title>
+      <content type="html" xml:lang="en"><![CDATA[{{ link.content | markdownify }}]]></content>
+      <published>{{ link.date | date_to_xmlschema }}</published>
+      <updated>{{ link.date | date_to_xmlschema }}</updated>
+      <link rel="alternate" type="text/html" href="{{ link.external_url | default: link.url }}"/>
+      <link rel="related" type="text/html" href="{{ site.url }}{{ link.url }}"/>
+    </entry>
+  {% endfor %}
+</feed>

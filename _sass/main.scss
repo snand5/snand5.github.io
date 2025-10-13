@@ -246,6 +246,7 @@ hr {
   .contents-block {
     display: flex;
     margin-top: 4rem;
+    border-bottom: 1px solid var(--hr-color);
   }
 
   .image img {
@@ -619,4 +620,119 @@ sup a.footnote {
   vertical-align: baseline;
   font-size: inherit;
   position: static;
+}
+
+
+// Links Feed
+.links-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+// Individual Link Entry
+.links-feed .h-entry {
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+ border-bottom: 1px solid var(--hr-color);
+}
+
+// Link Title
+.links-feed .link-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+
+  a {
+    color: var(--main-text-color);
+    text-decoration: none;
+  }
+}
+
+// Link Content/Summary
+.links-feed .link-content {
+  font-family: var(--serif-fonts);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--secondary-text-color);
+  margin-bottom: 0.75rem;
+}
+
+// External URL Box
+.links-feed .external-url {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--note-background-color);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+
+  .favicon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+
+  .url-text {
+    color: var(--note-text-color);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+// Timestamp
+.links-feed .dt-published {
+  display: block;
+  font-family: var(--monospace-fonts);
+  font-size: 0.75rem;
+  color: var(--timestamp-color);
+}
+
+// Responsive Typography
+@media (min-width: 640px) {
+  .links-feed .link-title {
+    font-size: 1.25rem;
+  }
+
+  .links-feed .link-content {
+    font-size: 1rem;
+  }
+}
+
+// Link post specific styles
+.link-post .post-title a {
+  color: var(--main-text-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.external-url-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--note-background-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+
+  .favicon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+
+  .url-text {
+    color: var(--note-text-color);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
