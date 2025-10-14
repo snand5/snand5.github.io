@@ -2,9 +2,6 @@
 layout: link
 author: Shavon Nand
 title: "Steve Jobs on the downfall of dominant companies."
-image: assets/images/monopolistic_product/Screenshot 2025-03-18 at 19-19-38 Apple (Australia).png
-alt: "A screenshot of Apple's website showcasing the iPhone 16 and iPhone 16 Pro. The iPhone 16 Pro is presented with a gold design against a dark background with glowing 'PRO' text, while the iPhone 16 is displayed in blue against a gradient blue background."
-caption: "A screenshot of Apple's website featuring the iPhone 16 and iPhone 16 Pro."
 external_url: https://www.youtube.com/watch?v=Qo8zdPNMRdY
 ---
 

@@ -2,9 +2,6 @@
 layout: link
 author: Shavon Nand
 title: "“Wait, not like that”: Free and open access in the age of generative AI"
-image: assets/images/free_and_open_access/Screenshot 2025-03-18 at 18-52-04 “Wait not like that” Free and open access in the age of generative AI.png
-alt: "Screenshot of a blog post from the newsletter [citation needed] by Molly White. The article, titled 'Wait, not like that': Free and open access in the age of generative AI, discusses the challenges posed by AI companies using freely available knowledge without contributing back to open projects. The page has a blue header, black text on a white background, and an embedded audio version of the article."
-caption: "A screenshot of Molly White's article on [citation needed], discussing how AI companies exploit open knowledge without reciprocating, threatening the sustainability of free and open-access projects."
 external_url: https://www.citationneeded.news/free-and-open-access-in-the-age-of-generative-ai/
 ---
 

@@ -39,7 +39,7 @@ title: Links
 
         <time class="dt-published"
             datetime="{{ link.date | date_to_xmlschema }}">
-            <a href="{{ link.url }}">{{ link.date | date: "%b %-d, %Y" }}</a>
+            <a href="{{ link.url }}">{{ link.date | date: "%-d %b, %Y" }}</a>
         </time>
     </article>
     {% endfor %}

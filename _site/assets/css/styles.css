@@ -597,8 +597,6 @@ nav {
     /* replaced card-text-color-tertiary */ }
   .search-form input {
     padding: 40px 20px 20px;
-    border-radius: 8px;
-    /* fallback if --card-border-radius is undefined */
     background-color: var(--note-background-color);
     /* replaced card-background */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -652,8 +650,6 @@ nav {
       flex-direction: row;
       background-color: var(--note-background-color);
       /* replaced card-background */
-      border-radius: 8px;
-      /* fallback if --card-border-radius undefined */
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       /* replaced shadow-l1 */
       overflow: hidden;
@@ -1230,7 +1226,6 @@ sup a.footnote {
   gap: 0.5rem;
   background-color: var(--note-background-color);
   padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
   font-size: 0.875rem;
   margin-bottom: 1rem; }
   .external-url-box .favicon {

@@ -2,9 +2,6 @@
 layout: link
 author: Shavon Nand
 title: "my coworker mansplains via ChatGPT"
-image: assets/images/coworker_mansplains_via_chatgpt/Screenshot 2025-09-23 at 11-25-22 my coworker mansplains via ChatGPT - Ask a Manager.png
-alt: "Screenshot of a blog post from the newsletter Ask a Manager by Alison Green."
-caption: "Screenshot of a blog post from the newsletter Ask a Manager by Alison Green."
 external_url: https://www.askamanager.org/2025/09/my-coworker-mansplains-via-chatgpt.html
 ---
 

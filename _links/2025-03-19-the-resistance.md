@@ -2,9 +2,6 @@
 layout: link
 author: Shavon Nand
 title: "The Rise and Fall of 'the Resistance'"
-image: assets/images/the-resistance/The Rise and Fall of 'the Resistance' - YouTube - 0-24-30.jpeg
-alt: "A screenshot showing Taylor Lorenz"
-caption: "A screenshot showing Taylor Lorenz"
 external_url: https://www.youtube.com/watch?v=mz3Rf820ozE
 ---
 
