@@ -7,9 +7,9 @@ alt: "Screenshot of Google's AI Summary from a Google search of 'glb file format
 caption: "Screenshot of Google's AI Summary from a Google search of 'glb file format'"
 ---
 
-I wanted to look at the quality of Google's first page of search results, using search operators to exclude AI written articles and remove Google's AI Summary. 
+I wanted to look at the quality of Google's first page of search results, using search operators to exclude AI-written articles and remove Google's AI Summary. I used the search operators `before:` and `-ai`.
 
-Basically, using search operators, specifically `before:` and `-ai`. ChatGPT launched in 2022, so by using `before:` we can filter out results published before then, this will exclude newer articles which might be AI written. To remove the AI Overview that now appears at the top of search results we will use `-ai`.
+ChatGPT launched in 2022, so by using `before:` we can filter out results published before then. This will exclude newer articles that might be AI-written. To remove the AI Overview that now appears at the top of search results, we use `-ai`.
 
 The idea came from this video:
 
@@ -17,38 +17,38 @@ The idea came from this video:
 
 ---
 
-Going through and using the search operators we can see that the link for <https://www.khronos.org/Gltf>, which are the people behind glTF, isn't on the first page of Google results. It only appears after I use the `-ai` search operator to remove the AI Summary.
+Going through and using the search operators, we can see that the link for <https://www.khronos.org/Gltf>, which is the organization behind glTF, isn't on the first page of Google results. It only appears after using the `-ai` search operator to remove the AI Summary.
 
 ![Screenshots of Google's search results for 'glb file format' with different search operators, highlighting the links to 'glTF Overview - The Khronos Group Inc'](</assets/images/glb_file_format/glTF Overview - The Khronos Group Inc.png>)
 
-If we highlight any links from khronos.org we get links to <https://www.khronos.org/files/gltf20-reference-guide.pdf> for our `before:2018 -ai` search, and links to <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html> for our `before:2022 -ai` and `before:2023 -ai` searches.
+If we highlight any links from khronos.org, we get links to <https://www.khronos.org/files/gltf20-reference-guide.pdf> for our `before:2018 -ai` search, and links to <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html> for our `before:2022 -ai` and `before:2023 -ai` searches.
 
 ![Screenshots of Google's search results for 'glb file format' with different search operators, highlighting any links to khronos.org](</assets/images/glb_file_format/The Khronos Group Inc additional.png>)
 
-The featured snippet also doesn't use the direct source <https://www.khronos.org/Gltf>, unless we search `before:2018 -ai` and earlier years.
+The featured snippet also doesn't use the direct source <https://www.khronos.org/glTF>, unless we search `before:2018 -ai` or earlier years.
 
 ![Screenshots of Google's search results for 'glb file format' with different search operators, highlighting the featured snippets; khronos.org in blue, other sites in red](</assets/images/glb_file_format/featured snippet.png>)
 
-ChatGPT written articles have pushed out the actual useful results, and now Google is using those poorly written AI articles as sources for it's AI Overview.
+ChatGPT-written articles have pushed out the actually useful results, and now Google is using those poorly written AI articles as sources for its AI Overview.
 
 ![Screenshot of Google's AI Summary from a Google search of 'glb file format'](</assets/images/glb_file_format/Screenshot 2025-01-04 065807.png>)
 
 ---
 
-Anyways, heres some information about the "glb file format".
+Anyway, here's some information about the "glb file format."
 
 * `.glb` is the filename extension for Binary glTF ([1]).
 * glTF stands for Graphics Language Transmission Format or GL Transmission Format ([2]).
-* Binary glTF is a binary option for storing the content for a glTF asset ([2]).
-* A glTF asset is represented by a JSON-formatted file `.gltf`, binary files `.bin` and image files `.jpg`, `.png` ([3]).
-* glTF files are stored in GLB container `.glb` ([4]).
-* Link to the  IANA registration: <https://www.iana.org/assignments/media-types/model/gltf-binary>
+* Binary glTF is a binary option for storing the content of a glTF asset ([2]).
+* A glTF asset is represented by a JSON-formatted file `.gltf`, binary files `.bin`, and image files `.jpg`, `.png` ([3]).
+* glTF files are stored in a GLB container `.glb` ([4]).
+* Link to the IANA registration: <https://www.iana.org/assignments/media-types/model/gltf-binary>
 * Link to the Specification by the Khronos Group: <https://www.khronos.org/gltf>
 * Link to the GLB File Format Specification: <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#glb-file-format-specification>
 
 ---
 
-[1]: <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#glb-file-format-specification>
-[2]: <https://www.loc.gov/preservation/digital/formats/fdd/fdd000498.shtml>
-[3]: <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#gltf-basics>
+[1]: <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#glb-file-format-specification>  
+[2]: <https://www.loc.gov/preservation/digital/formats/fdd/fdd000498.shtml>  
+[3]: <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#gltf-basics>  
 [4]: <https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#file-extensions-and-media-types>
