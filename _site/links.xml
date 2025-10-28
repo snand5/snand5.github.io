@@ -12,9 +12,22 @@
   <link rel="alternate" type="text/html" href="http://localhost:4000/links"/>
   <link rel="self" type="application/atom+xml" href="http://localhost:4000/feeds/links"/>
   <id>http://localhost:4000/feeds/links</id>
-  <updated>2025-10-21T19:04:54+10:00</updated>
+  <updated>2025-10-28T19:25:33+10:00</updated>
   <rights>© 2025 Shavon Nand</rights>
 
+  
+    <entry>
+      <id>http://localhost:4000/links/2025-10-28-ai-friends-too-cheap-to-meter/</id>
+      <title>🌻 AI friends too cheap to meter)</title>
+      <content type="html" xml:lang="en"><![CDATA[<blockquote>
+  <p>That’s why it bothers me when tech critics describe AI as exclusively foisted upon us by corporate overlords. They deploy violent physical metaphors to make the case: Brian Merchant says tech companies are “force-feeding” us, Cory Doctorow says it’s being “crammed down throats,” and Ted Gioia analogizes AI companies to tyrants telling peons to “shut up, buddy, and chew.” In their story, everyone hates AI and nobody chooses to use it; each one of ChatGPT’s 700 million users is effectively being waterboarded, unable to escape.</p>
+</blockquote>
+]]></content>
+      <published>2025-10-28T00:00:00+10:00</published>
+      <updated>2025-10-28T00:00:00+10:00</updated>
+      <link rel="alternate" type="text/html" href="https://jasmi.news/p/ai-friends"/>
+      <link rel="related" type="text/html" href="http://localhost:4000/links/2025-10-28-ai-friends-too-cheap-to-meter/"/>
+    </entry>
   
     <entry>
       <id>http://localhost:4000/links/2025-10-14-everyone-is-illiterate-now/</id>
