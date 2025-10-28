@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en-AU" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <title>Reading List</title>
+
+    <meta name="author" content="Shavon Nand">
+    <meta name="robots" content="noai, noimageai">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Shavon.gg" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Reading List | Shavon.gg</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Reading List" />
+<meta name="author" content="Shavon Nand" />
+<meta property="og:locale" content="en_AU" />
+<link rel="canonical" href="http://localhost:4000/reading.html" />
+<meta property="og:url" content="http://localhost:4000/reading.html" />
+<meta property="og:site_name" content="Shavon.gg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Reading List" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shavon Nand"},"headline":"Reading List","url":"http://localhost:4000/reading.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <div class="page-container">
+      
+
+<nav role="navigation" data-nosnippet="" aria-label="Main">
+  <!-- Logo block -->
+  <div class="logo-image">
+    <a class="u-url u-uid" href="/">
+      <picture>
+        <source media="(min-width: 769px)" srcset="/assets/images/shavon.webp" type="image/webp">
+        <source media="(max-width: 768px)" srcset="/assets/images/shavon_horizontal.webp" type="image/webp">
+        <img class="u-photo u-logo" src="/assets/images/shavon.jpeg" type="image/webp" alt="A photograph of Shavon Nand as a child sitting in a child safety seat.">
+      </picture>
+    </a>
+  </div>
+
+  <!-- Menu toggle -->
+  <button class="menu-toggle" id="menu-toggle">Menu</button>
+
+  <!-- Navigation links -->
+  <div class="nav-links collapsed" id="nav-links">
+    <ul class="top-level">
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/writing.html">Writing</a></li>
+      
+      <li><a href="/search/" class="button">Search</a></li>
+    </ul>
+
+    <ul>
+      <li class="nav-header">Other Interests</li>
+      <li><a rel="u-url" href="http://localhost:4000/blogroll.html">Blogroll</a></li>
+      <li><a rel="u-url" href="http://localhost:4000/reading.html">Reading lists</a></li>
+      <li><a rel="u-url" href="http://localhost:4000/links.html">Links</a></li>
+    </ul>
+
+    <ul>
+      <li class="nav-header">Social</li>
+      <li><a class="u-url" href="https://www.linkedin.com/in/shavon-nand-a77185245/" rel="me">LinkedIn</a></li>
+      <li><a class="u-url" href="https://letterboxd.com/SCN/" rel="me">Letterboxd</a></li>
+      <li><a class="u-url" href="https://github.com/snand5" rel="me">GitHub</a></li>
+      <li><a class="u-url" href="https://www.youtube.com/@shavon" rel="me">YouTube</a></li>
+      <li><a class="u-url" type="application/rss+xml" href="/feed.xml">Article RSS</a></li>
+      <li><a rel="u-url" type="application/rss+xml" href="http://localhost:4000/links.xml">Links RSS</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+<script src="/assets/js/nav.js"></script>
+
+      <main id="main" tabindex="-1" role="main">
+        <h1>Reading List</h1>
+<div class="reading-container">
+  <div class="filters-section">
+    <div class="filter-group">
+      <h3>Sort</h3>
+      <select id="sort-order">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <h3>Reading Status</h3>
+      <label
+        ><input type="checkbox" name="status" value="currently reading" />
+        Currently Reading</label
+      >
+      <label><input type="checkbox" name="status" value="read" /> Read</label>
+      <label
+        ><input type="checkbox" name="status" value="did not finish" /> Did Not
+        Finish</label
+      >
+    </div>
+
+    <div class="filter-group">
+      <h3>Type</h3>
+      <label><input type="checkbox" id="filter-fiction" /> Fiction</label>
+      <label
+        ><input type="checkbox" id="filter-nonfiction" /> Non-fiction</label
+      >
+    </div>
+
+    <div class="filter-group">
+      <h3>Genre</h3>
+       
+      <label
+        ><input type="checkbox" name="genre" value="China" /> China</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="artificial intelligence" /> Artificial intelligence</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="biography" /> Biography</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="business" /> Business</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="economics" /> Economics</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="history" /> History</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="medicine" /> Medicine</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="memoir" /> Memoir</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="parenting" /> Parenting</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="politics" /> Politics</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="psychology" /> Psychology</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="relationships" /> Relationships</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="science" /> Science</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="self help" /> Self help</label
+      >
+      
+      <label
+        ><input type="checkbox" name="genre" value="technology" /> Technology</label
+      >
+      
+    </div>
+
+    <button id="reset-filters">Reset Filters</button>
+  </div>
+
+  <div id="book-count"></div>
+
+  <ul id="book-list" class="book-list">
+    
+    <li
+      class="book h-entry hentry"
+      data-started="2025-10-19"
+      data-status="currently reading"
+      data-genres="science,medicine,history"
+      data-fiction="false"
+    >
+      <a class="book-cover-link" href="https://www.goodreads.com/book/show/219556828-dangerous-miracle">
+        <img
+          class="u-photo book-cover"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1740385937i/219556828.jpg"
+          alt="Cover image of Dangerous Miracle"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">Dangerous Miracle</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">Liam Shaw</span>. 
+              <div class="format">Audiobook.</div>
+              
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="2025-08-21"
+              >21 August, 2025</time
+            >.  334 pages.
+          </div>
+
+          
+          <div class="tags">
+            
+            <span class="p-category">science</span>,  
+            <span class="p-category">medicine</span>,  
+            <span class="p-category">history</span> 
+          </div>
+          
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="2025-10-19"
+                >19 October, 2025</time
+              >.
+            </div>
+            
+            <div>
+              <div class="p-category status">
+                Currently reading
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+    <li
+      class="book h-entry hentry"
+      data-started="2025-10-13"
+      data-status="read"
+      data-genres="technology,science,artificial intelligence"
+      data-fiction="false"
+    >
+      <a class="book-cover-link" href="https://www.goodreads.com/book/show/212987932-more-everything-forever">
+        <img
+          class="u-photo book-cover"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1719003402i/212987932.jpg"
+          alt="Cover image of More Everything Forever"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">More Everything Forever</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">Adam Becker</span>. 
+              <div class="format">Audiobook.</div>
+              
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="2025-04-22"
+              >22 April, 2025</time
+            >.  290 pages.
+          </div>
+
+          
+          <div class="tags">
+            
+            <span class="p-category">technology</span>,  
+            <span class="p-category">science</span>,  
+            <span class="p-category">artificial intelligence</span> 
+          </div>
+          
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="2025-10-13"
+                >13 October, 2025</time
+              >; completed 25
+              October, 2025.
+            </div>
+            
+            <div>
+              <div class="p-category status">
+                Read
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+    <li
+      class="book h-entry hentry"
+      data-started="2025-09-01"
+      data-status="read"
+      data-genres="China,politics,economics"
+      data-fiction="false"
+    >
+      <a class="book-cover-link" href="https://www.goodreads.com/book/show/223736214-breakneck">
+        <img
+          class="u-photo book-cover"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1751038218i/223736214.jpg"
+          alt="Cover image of Breakneck"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">Breakneck</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">Dan Wang</span>. 
+              <div class="format">Audiobook.</div>
+              
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="2025-08-26"
+              >26 August, 2025</time
+            >.  288 pages.
+          </div>
+
+          
+          <div class="tags">
+            
+            <span class="p-category">China</span>,  
+            <span class="p-category">politics</span>,  
+            <span class="p-category">economics</span> 
+          </div>
+          
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="2025-09-01"
+                >01 September, 2025</time
+              >; completed 10
+              September, 2025.
+            </div>
+            
+            <div>
+              <div class="p-category status">
+                Read
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+    <li
+      class="book h-entry hentry"
+      data-started="2024-05-07"
+      data-status="read"
+      data-genres="memoir,biography"
+      data-fiction="false"
+    >
+      <a class="book-cover-link" href="https://www.goodreads.com/book/show/142601047-they-called-us-exceptional">
+        <img
+          class="u-photo book-cover"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1684816016i/142601047.jpg"
+          alt="Cover image of They Called Us Exceptional"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">They Called Us Exceptional</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">Prachi Gupta</span>. 
+              <div class="format">Audiobook.</div>
+              
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="2023-08-22"
+              >22 August, 2023</time
+            >.  288 pages.
+          </div>
+
+          
+          <div class="tags">
+            
+            <span class="p-category">memoir</span>,  
+            <span class="p-category">biography</span> 
+          </div>
+          
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="2024-05-07"
+                >07 May, 2024</time
+              >; completed 22
+              September, 2024.
+            </div>
+            
+            <div>
+              <div class="p-category status">
+                Read
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+    <li
+      class="book h-entry hentry"
+      data-started="2024-09-08"
+      data-status="read"
+      data-genres="business,memoir"
+      data-fiction="false"
+    >
+      <a class="book-cover-link" href="https://www.goodreads.com/book/show/28114529-to-pixar-and-beyond">
+        <img
+          class="u-photo book-cover"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1455172199i/28114529.jpg"
+          alt="Cover image of To Pixar and Beyond"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">To Pixar and Beyond</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">Lawrence Levy</span>. 
+              <div class="format">Audiobook.</div>
+              
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="2016-11-01"
+              >01 November, 2016</time
+            >.  259 pages.
+          </div>
+
+          
+          <div class="tags">
+            
+            <span class="p-category">business</span>,  
+            <span class="p-category">memoir</span> 
+          </div>
+          
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="2024-09-08"
+                >08 September, 2024</time
+              >; completed 12
+              September, 2024.
+            </div>
+            
+            <div>
+              <div class="p-category status">
+                Read
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+    <li
+      class="book h-entry hentry"
+      data-started="2024-02-14"
+      data-status="read"
+      data-genres="parenting,psychology"
+      data-fiction="false"
+    >
+      <a class="book-cover-link" href="https://www.goodreads.com/book/show/56360648-why-is-my-child-in-charge">
+        <img
+          class="u-photo book-cover"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1614088108i/56360648.jpg"
+          alt="Cover image of Why Is My Child in Charge?"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">Why Is My Child in Charge?</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">Claire Lerner</span>. 
+              <div class="format">Audiobook.</div>
+              
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="2021-09-02"
+              >02 September, 2021</time
+            >.  215 pages.
+          </div>
+
+          
+          <div class="tags">
+            
+            <span class="p-category">parenting</span>,  
+            <span class="p-category">psychology</span> 
+          </div>
+          
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="2024-02-14"
+                >14 February, 2024</time
+              >; completed 13
+              March, 2024.
+            </div>
+            
+            <div>
+              <div class="p-category status">
+                Read
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+    <li
+      class="book h-entry hentry"
+      data-started="2024-02-16"
+      data-status="read"
+      data-genres="relationships,parenting,self help"
+      data-fiction="false"
+    >
+      <a class="book-cover-link" href="https://www.goodreads.com/book/show/849380.The_Seven_Principles_for_Making_Marriage_Work">
+        <img
+          class="u-photo book-cover"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320521960i/849380.jpg"
+          alt="Cover image of The Seven Principles for Making Marriage Work"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">The Seven Principles for Making Marriage Work</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">John M. Gottman, Nan Silver</span>. 
+              <div class="format">Audiobook.</div>
+              
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="1999-01-01"
+              >01 January, 1999</time
+            >.  271 pages.
+          </div>
+
+          
+          <div class="tags">
+            
+            <span class="p-category">relationships</span>,  
+            <span class="p-category">parenting</span>,  
+            <span class="p-category">self help</span> 
+          </div>
+          
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="2024-02-16"
+                >16 February, 2024</time
+              >; completed 28
+              February, 2024.
+            </div>
+            
+            <div>
+              <div class="p-category status">
+                Read
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+    <li
+      class="book h-entry hentry"
+      data-started="2023-12-18"
+      data-status="read"
+      data-genres="parenting,self help"
+      data-fiction="false"
+    >
+      <a class="book-cover-link" href="https://www.goodreads.com/book/show/59627738-good-inside">
+        <img
+          class="u-photo book-cover"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1651574826i/59627738.jpg"
+          alt="Cover image of Good Inside"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">Good Inside</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">Dr Becky Kennedy</span>. 
+              <div class="format">Audiobook.</div>
+              
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="2022-09-13"
+              >13 September, 2022</time
+            >.  336 pages.
+          </div>
+
+          
+          <div class="tags">
+            
+            <span class="p-category">parenting</span>,  
+            <span class="p-category">self help</span> 
+          </div>
+          
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="2023-12-18"
+                >18 December, 2023</time
+              >; completed 19
+              December, 2023.
+            </div>
+            
+            <div>
+              <div class="p-category status">
+                Read
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+    <li
+      class="book h-entry hentry"
+      data-started="2023-09-04"
+      data-status="read"
+      data-genres="memoir,biography"
+      data-fiction="false"
+    >
+      <a class="book-cover-link" href="https://www.goodreads.com/book/show/54814676-crying-in-h-mart">
+        <img
+          class="u-photo book-cover"
+          src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1601937850i/54814676.jpg"
+          alt="Cover image of Crying in H Mart"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">Crying in H Mart</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">Michelle Zauner</span>. 
+              <div class="format">Audiobook.</div>
+              
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="2021-04-20"
+              >20 April, 2021</time
+            >.  256 pages.
+          </div>
+
+          
+          <div class="tags">
+            
+            <span class="p-category">memoir</span>,  
+            <span class="p-category">biography</span> 
+          </div>
+          
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="2023-09-04"
+                >04 September, 2023</time
+              >; completed 12
+              December, 2023.
+            </div>
+            
+            <div>
+              <div class="p-category status">
+                Read
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    
+  </ul>
+</div>
+
+<script src="/assets/js/reading.js"></script>
+
+      </main>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

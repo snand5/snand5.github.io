@@ -1,0 +1,134 @@
+- series: null
+  title: "Dangerous Miracle"
+  subtitle: "A natural history of antibiotics - and how we burned through them"
+  author: "Liam Shaw"
+  pages: 334
+  audio: true
+  published: "2025-08-21"
+  genre: ["science","medicine","history"]
+  started: "2025-10-19"
+  completed: null
+  status: "currently reading"
+  fiction: false
+  link: https://www.goodreads.com/book/show/219556828-dangerous-miracle
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1740385937i/219556828.jpg
+
+- series: null
+  title: "More Everything Forever"
+  subtitle: "AI Overlords, Space Empires, and Silicon Valley's Crusade to Control the Fate of Humanity"
+  author: "Adam Becker"
+  pages: 290
+  audio: true
+  published: "2025-04-22"
+  genre: ["technology", "science", "artificial intelligence"]
+  started: "2025-10-13"
+  completed: "2025-10-25"
+  status: "read"
+  fiction: false
+  link: https://www.goodreads.com/book/show/212987932-more-everything-forever
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1719003402i/212987932.jpg
+
+- series: null
+  title: "Breakneck"
+  subtitle: "China's Quest to Engineer the Future"
+  author: "Dan Wang"
+  pages: 288
+  audio: true
+  published: 2025-08-26
+  genre: ["China", "politics", "economics"]
+  started: "2025-09-01"
+  completed: "2025-09-10"
+  status: "read"
+  fiction: false
+  link: https://www.goodreads.com/book/show/223736214-breakneck
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1751038218i/223736214.jpg
+
+- series: null
+  title: "They Called Us Exceptional"
+  subtitle: "And Other Lies That Raised Us"
+  author: "Prachi Gupta"
+  pages: 288
+  audio: true
+  published: "2023-08-22"
+  genre: ["memoir", "biography"]
+  started: "2024-05-07"
+  completed: "2024-09-22"
+  status: "read"
+  fiction: false
+  link: https://www.goodreads.com/book/show/142601047-they-called-us-exceptional
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1684816016i/142601047.jpg
+
+- series: null
+  title: "To Pixar and Beyond"
+  subtitle: "My Unlikely Journey with Steve Jobs to Make Entertainment History"
+  author: "Lawrence Levy"
+  pages: 259
+  audio: true
+  published: "2016-11-01"
+  genre: ["business", "memoir"]
+  started: "2024-09-08"
+  completed: "2024-09-12"
+  status: "read"
+  fiction: false
+  link: https://www.goodreads.com/book/show/28114529-to-pixar-and-beyond
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1455172199i/28114529.jpg
+
+- series: null
+  title: "Why Is My Child in Charge?"
+  subtitle: "A Roadmap to End Power Struggles, Increase Cooperation, and Find Joy in Parenting Young Children"
+  author: "Claire Lerner"
+  pages: 215
+  audio: true
+  published: "2021-09-02"
+  genre: ["parenting", "psychology"]
+  started: "2024-02-14"
+  completed: "2024-03-13"
+  status: "read"
+  fiction: false
+  link: https://www.goodreads.com/book/show/56360648-why-is-my-child-in-charge
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1614088108i/56360648.jpg
+
+- series: null
+  title: "The Seven Principles for Making Marriage Work"
+  subtitle: "A Practical Guide from the Country's Foremost Relationship Expert"
+  author: "John M. Gottman, Nan Silver"
+  pages: 271
+  audio: true
+  published: "1999-01-01"
+  genre: ["relationships", "parenting", "self help"]
+  started: "2024-02-16"
+  completed: "2024-02-28"
+  status: "read"
+  fiction: false
+  link: https://www.goodreads.com/book/show/849380.The_Seven_Principles_for_Making_Marriage_Work
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320521960i/849380.jpg
+
+- series: null
+  title: "Good Inside"
+  subtitle: "A Practical Guide to Resilient Parenting Prioritizing Connection Over Correction"
+  author: "Dr Becky Kennedy"
+  pages: 336 
+  audio: true
+  published: "2022-09-13"
+  genre: ["parenting", "self help"]
+  started: "2023-12-18"
+  completed: "2023-12-19"
+  status: "read"
+  fiction: false
+  link: https://www.goodreads.com/book/show/59627738-good-inside
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1651574826i/59627738.jpg
+
+- series: null
+  title: "Crying in H Mart"
+  subtitle: null
+  author: "Michelle Zauner"
+  pages: 256
+  audio: true
+  published: "2021-04-20"
+  genre: ["memoir", "biography"]
+  started: "2023-09-04"
+  completed: "2023-12-12"
+  status: "read"
+  fiction: false
+  link: https://www.goodreads.com/book/show/54814676-crying-in-h-mart
+  cover: https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1601937850i/54814676.jpg

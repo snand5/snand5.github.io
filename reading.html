@@ -1,0 +1,131 @@
+---
+layout: default
+title: Reading List
+---
+
+<h1>Reading List</h1>
+<div class="reading-container">
+  <div class="filters-section">
+    <div class="filter-group">
+      <h3>Sort</h3>
+      <select id="sort-order">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <h3>Reading Status</h3>
+      <label
+        ><input type="checkbox" name="status" value="currently reading" />
+        Currently Reading</label
+      >
+      <label><input type="checkbox" name="status" value="read" /> Read</label>
+      <label
+        ><input type="checkbox" name="status" value="did not finish" /> Did Not
+        Finish</label
+      >
+    </div>
+
+    <div class="filter-group">
+      <h3>Type</h3>
+      <label><input type="checkbox" id="filter-fiction" /> Fiction</label>
+      <label
+        ><input type="checkbox" id="filter-nonfiction" /> Non-fiction</label
+      >
+    </div>
+
+    <div class="filter-group">
+      <h3>Genre</h3>
+      {% assign all_genres = site.data.reading | map: "genre" | compact | join:
+      "," | split: "," | uniq | sort %} {% for genre in all_genres %}
+      <label
+        ><input type="checkbox" name="genre" value="{{ genre }}" /> {{ genre |
+        capitalize }}</label
+      >
+      {% endfor %}
+    </div>
+
+    <button id="reset-filters">Reset Filters</button>
+  </div>
+
+  <div id="book-count"></div>
+
+  <ul id="book-list" class="book-list">
+    {% for book in site.data.reading %}
+    <li
+      class="book h-entry hentry"
+      data-started="{{ book.started }}"
+      data-status="{{ book.status }}"
+      data-genres="{{ book.genre | join: ',' }}"
+      data-fiction="{{ book.fiction }}"
+    >
+      <a class="book-cover-link" href="{{ book.link }}">
+        <img
+          class="u-photo book-cover"
+          src="{{ book.cover }}"
+          alt="Cover image of {{ book.title }}"
+        />
+      </a>
+
+      <div class="book-details">
+        <div class="top">
+          {% if book.series %}
+          <div class="series-info">
+            <i>{{ book.series }}</i> series{% if book.series_number %},
+            book&nbsp;<span class="series-number">{{ book.series_number }}</span
+            >{% endif %}.
+          </div>
+          {% endif %}
+
+          <div class="title-and-byline">
+            <div class="title"><i class="p-name">{{ book.title }}</i></div>
+            <div class="byline">
+              by <span class="p-author h-card">{{ book.author }}</span>. {% if
+              book.audio %}
+              <div class="format">Audiobook.</div>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="book-info">
+            Published
+            <time class="dt-published published" datetime="{{ book.published }}"
+              >{{ book.published | date: "%d %B, %Y"}}</time
+            >. {% if book.pages %} {{ book.pages }} pages.{% endif %}
+          </div>
+
+          {% if book.genre %}
+          <div class="tags">
+            {% for g in book.genre %}
+            <span class="p-category">{{ g }}</span>{% unless forloop.last %}, {%
+            endunless %} {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="bottom">
+          <div class="reading-info">
+            {% if book.started %}
+            <div class="reading-dates">
+              Started
+              <time class="dt-accessed accessed" datetime="{{ book.started }}"
+                >{{ book.started | date: "%d %B, %Y"}}</time
+              >{% if book.completed %}; completed {{ book.completed | date: "%d
+              %B, %Y"}}{% endif %}.
+            </div>
+            {% endif %}
+            <div>
+              <div class="p-category status">
+                {{ book.status | capitalize }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script src="{{ '/assets/js/reading.js' | relative_url }}"></script>

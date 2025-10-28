@@ -1,0 +1,139 @@
+.reading-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.filters-section {
+  background: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.filter-group label {
+  display: inline-block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+#sort-order {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#reset-filters {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#book-count {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #666;
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+}
+
+.book.h-entry.hentry {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.book-cover-link {
+  flex-shrink: 0;
+  width: 120px;
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.book-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  margin-bottom: 10px;
+}
+
+.series-info {
+  font-style: italic;
+  line-height: 1.5rem;
+}
+
+.title-and-byline .title {
+  font-feature-settings: "kern" 1, "liga" 1;
+  color: var(--main-text-color);
+  font-family: var(--serif-fonts);
+  font-optical-sizing: auto;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-style: italic;
+}
+
+.book .byline {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.book-info {
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.tags {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-style: italic;
+  color: var(--note-text-color);
+}
+
+.book .reading-dates {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  display: inline-block;
+}
+
+.p-category.status {
+  display: inline-block;
+  padding: 0 0.375rem;
+  margin-right: 0.375rem;
+  font-size: 1rem;
+  background-color: var(--note-background-color);
+}
+
+.book .format {
+  font-size: 0.9rem;
+  font-style: italic;
+}
