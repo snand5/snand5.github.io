@@ -1,159 +1,245 @@
-(function () {
-  var bookList = document.getElementById("book-list");
-  var allBooks = [];
+(() => {
+  const bookList = document.getElementById("articlesContainer");
+  const tagsContainer = document.getElementById("tags");
+  let allBooks = [];
+  let allGenres = new Set();
+  let filteredBooks = [];
+  let currentPage = 1;
+  const booksPerPage = 10;
 
-  // Initialize - store all books with their original order
-  function init() {
-    var books = bookList.getElementsByTagName("li");
-    for (var i = 0; i < books.length; i++) {
-      allBooks.push({
-        element: books[i],
-        started: books[i].dataset.started,
-        status: books[i].dataset.status,
-        genres: books[i].dataset.genres
-          ? books[i].dataset.genres.split(",")
-          : [],
-        fiction: books[i].dataset.fiction === "true",
-      });
+  const formatDate = dateStr => {
+    if (!dateStr) return "";
+    const date = new Date(dateStr);
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    return `${date.getDate()} ${months[date.getMonth()]}, ${date.getFullYear()}`;
+  };
+
+  const escapeHTML = str => {
+    if (!str) return "";
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  };
+
+  const createBookElement = book => {
+    const li = document.createElement("div");
+    li.className = "book h-entry hentry";
+
+    const coverLink = document.createElement("a");
+    coverLink.className = "book-cover-link";
+    coverLink.href = book.link;
+
+    const coverImg = document.createElement("img");
+    coverImg.className = "u-photo book-cover";
+    coverImg.src = book.cover;
+    coverImg.alt = `Cover image of ${book.title}`;
+    coverLink.appendChild(coverImg);
+    li.appendChild(coverLink);
+
+    const details = document.createElement("div");
+    details.className = "book-details";
+
+    const top = document.createElement("div");
+    top.className = "top";
+
+    if (book.series) {
+      const seriesDiv = document.createElement("div");
+      seriesDiv.className = "series-info";
+      let seriesText = `<i>${escapeHTML(book.series)}</i> series`;
+      if (book.series_number) seriesText += `, book&nbsp;<span class="series-number">${escapeHTML(book.series_number)}</span>`;
+      seriesText += ".";
+      seriesDiv.innerHTML = seriesText;
+      top.appendChild(seriesDiv);
     }
-  }
 
-  // Filter and sort books
-  function filterBooks() {
-    var selectedGenres = getSelectedGenres();
-    var selectedStatuses = getSelectedStatuses();
-    var fictionFilter = document.getElementById("filter-fiction").checked;
-    var nonfictionFilter = document.getElementById("filter-nonfiction").checked;
-    var sortOrder = document.getElementById("sort-order").value;
+    const titleByline = document.createElement("div");
+    titleByline.className = "title-and-byline";
 
-    // Filter books
-    var visibleBooks = allBooks.filter(function (book) {
-      // Genre filter
-      var genreMatch =
-        selectedGenres.length === 0 ||
-        selectedGenres.some(function (genre) {
-          return book.genres.indexOf(genre) !== -1;
-        });
+    const titleDiv = document.createElement("div");
+    titleDiv.className = "title";
+    titleDiv.innerHTML = `<i class="p-name">${escapeHTML(book.title)}</i><div class="subtitle"><i>${escapeHTML(book.subtitle)}</i></div>`;
+    titleByline.appendChild(titleDiv);
 
-      // Status filter
-      var statusMatch =
-        selectedStatuses.length === 0 ||
-        selectedStatuses.indexOf(book.status) !== -1;
+    const bylineDiv = document.createElement("div");
+    bylineDiv.className = "byline";
+    bylineDiv.innerHTML = `by <span class="p-author h-card">${escapeHTML(book.author)}</span>. ${book.audio ? '<div class="format">Audiobook.</div>' : ""}`;
+    titleByline.appendChild(bylineDiv);
+    top.appendChild(titleByline);
 
-      // Fiction/Non-fiction filter
-      var fictionMatch = true;
-      if (fictionFilter && !nonfictionFilter) {
-        fictionMatch = book.fiction === true;
-      } else if (!fictionFilter && nonfictionFilter) {
-        fictionMatch = book.fiction === false;
-      }
+    const bookInfo = document.createElement("div");
+    bookInfo.className = "book-info";
+    bookInfo.innerHTML = `Published <time class="dt-published published" datetime="${book.published}">${formatDate(book.published)}</time>. ${book.pages ? book.pages + " pages." : ""}`;
+    top.appendChild(bookInfo);
 
+    if (book.genre?.length) {
+      const tagsDiv = document.createElement("div");
+      tagsDiv.className = "tags";
+      tagsDiv.innerHTML = book.genre.map(g => `<span class="p-category">${escapeHTML(g)}</span>`).join(", ");
+      top.appendChild(tagsDiv);
+    }
+
+    details.appendChild(top);
+
+    const bottom = document.createElement("div");
+    bottom.className = "bottom";
+
+    const readingInfo = document.createElement("div");
+    readingInfo.className = "reading-info";
+
+    if (book.started) {
+      const readingDates = document.createElement("div");
+      readingDates.className = "reading-dates";
+      readingDates.innerHTML = `Started <time class="dt-accessed accessed" datetime="${book.started}">${formatDate(book.started)}</time>${book.completed ? "; completed " + formatDate(book.completed) : ""}.`;
+      readingInfo.appendChild(readingDates);
+    }
+
+    const statusDiv = document.createElement("div");
+    statusDiv.innerHTML = `<div class="p-category status">${escapeHTML(book.status).charAt(0).toUpperCase() + escapeHTML(book.status).slice(1)}</div>`;
+    readingInfo.appendChild(statusDiv);
+
+    bottom.appendChild(readingInfo);
+    details.appendChild(bottom);
+    li.appendChild(details);
+
+    return li;
+  };
+
+  const loadBooks = () => {
+    showLoading();
+    const script = document.querySelector("script[data-json]");
+    const dataUrl = script ? script.dataset.json : "/reading.json";
+    fetch(dataUrl)
+      .then(res => res.ok ? res.json() : Promise.reject("Failed to load"))
+      .then(books => {
+        allBooks = books;
+        books.forEach(book => book.genre?.forEach(g => allGenres.add(g)));
+        populateGenreFilters();
+        setupEventListeners();
+        filterBooks();
+      })
+      .catch(err => showError("Failed to load reading list. Please refresh the page."));
+  };
+
+const populateGenreFilters = () => {
+  Array.from(allGenres).sort().forEach(genre => {
+    const count = allBooks.filter(book => book.genre?.includes(genre)).length;
+
+    const div = document.createElement("div");
+    div.className = "button-group";
+
+    const button = document.createElement("button");
+    button.className = "tag category-tag";
+    button.dataset.tag = genre;
+    button.type = "button";
+    button.setAttribute("aria-pressed", "false");
+    button.textContent = genre;
+
+    const span = document.createElement("span");
+    span.className = "tag-count";
+    span.textContent = `(${count})`; // <-- dynamic count
+
+    div.appendChild(button);
+    div.appendChild(span);
+    tagsContainer.appendChild(div);
+  });
+};
+
+
+  const getSelectedTags = containerId => {
+    const buttons = document.querySelectorAll(`#${containerId} button[aria-pressed="true"]`);
+    return Array.from(buttons).map(btn => btn.dataset.tag);
+  };
+
+  const filterBooks = () => {
+    const selectedGenres = getSelectedTags("tags");
+    const selectedStatuses = getSelectedTags("status");
+    const fictionFilter = document.getElementById("hidefiction")?.checked;
+    const nonfictionFilter = document.getElementById("hidenonfiction")?.checked;
+    const sortOrder = document.getElementById("sort-order")?.value || "newest";
+
+    filteredBooks = allBooks.filter(book => {
+      const genreMatch = !selectedGenres.length || book.genre?.some(g => selectedGenres.includes(g));
+      const statusMatch = !selectedStatuses.length || selectedStatuses.includes(book.status);
+      const fictionMatch = (fictionFilter && !nonfictionFilter && book.fiction) || (!fictionFilter && nonfictionFilter && !book.fiction) || (!fictionFilter && !nonfictionFilter) || (fictionFilter && nonfictionFilter);
       return genreMatch && statusMatch && fictionMatch;
     });
 
-    // Sort books
-    visibleBooks.sort(function (a, b) {
-      var dateA = new Date(a.started);
-      var dateB = new Date(b.started);
-
-      if (sortOrder === "newest") {
-        return dateB - dateA;
-      } else {
-        return dateA - dateB;
-      }
+    filteredBooks.sort((a,b) => {
+      const dateA = new Date(a.started);
+      const dateB = new Date(b.started);
+      return sortOrder === "newest" ? dateB - dateA : dateA - dateB;
     });
 
-    // Clear and repopulate list
+    currentPage = 1;
+    renderCurrentPage();
+  };
+
+  const renderCurrentPage = () => {
+    const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
+    const startIndex = (currentPage - 1) * booksPerPage;
+    const endIndex = startIndex + booksPerPage;
+    renderBooks(filteredBooks.slice(startIndex, endIndex));
+    renderPagination(totalPages);
+    updateBookCount(filteredBooks.length, allBooks.length);
+  };
+
+  const renderBooks = books => {
     bookList.innerHTML = "";
-    visibleBooks.forEach(function (book) {
-      bookList.appendChild(book.element);
+    if (!books.length) {
+      const div = document.createElement("div");
+      div.style.cssText = "padding: 2rem; text-align: center; color: var(--secondary-text-color);";
+      div.textContent = "No books match the selected filters.";
+      bookList.appendChild(div);
+      return;
+    }
+    const frag = document.createDocumentFragment();
+    books.forEach(book => frag.appendChild(createBookElement(book)));
+    bookList.appendChild(frag);
+  };
+
+const renderPagination = totalPages => {
+  const paginator = document.getElementById("paginator");
+  paginator.innerHTML = "";
+  if (totalPages <= 1) return;
+
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+    btn.className = "page-number-button";
+    btn.dataset.pageNumber = i;
+    btn.type = "button";
+    btn.textContent = i;
+    btn.setAttribute("aria-pressed", currentPage === i ? "true" : "false");
+    btn.addEventListener("click", () => { currentPage = i; renderCurrentPage(); });
+    paginator.appendChild(btn);
+  }
+};
+
+  const updateBookCount = (visible,total) => {
+    const el = document.getElementById("book-count");
+    if(el) el.textContent = `${visible} results matching these filters out of ${total} total results.`;
+  };
+
+  const showLoading = () => bookList.innerHTML = '<div style="padding: 2rem; text-align: center; color: var(--secondary-text-color);">Loading books...</div>';
+  const showError = msg => bookList.innerHTML = `<div style="padding: 2rem; text-align: center; color: var(--accent-color-purple);">${escapeHTML(msg)}</div>`;
+
+  const setupEventListeners = () => {
+    document.querySelectorAll("#tags button, #status button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.setAttribute("aria-pressed", btn.getAttribute("aria-pressed")==="true"?"false":"true");
+        filterBooks();
+      });
     });
+    document.getElementById("hidefiction")?.addEventListener("change", filterBooks);
+    document.getElementById("hidenonfiction")?.addEventListener("change", filterBooks);
+    document.getElementById("sort-order")?.addEventListener("change", filterBooks);
+    document.getElementById("clear-filters")?.addEventListener("click", () => {
+      document.querySelectorAll("#tags button, #status button").forEach(btn => btn.setAttribute("aria-pressed","false"));
+      document.getElementById("hidefiction").checked = true;
+      document.getElementById("hidenonfiction").checked = true;
+      document.getElementById("sort-order").value = "newest";
+      filterBooks();
+    });
+  };
 
-    // Update count
-    updateBookCount(visibleBooks.length, allBooks.length);
-  }
-
-  // Get selected genres from checkboxes
-  function getSelectedGenres() {
-    var genreCheckboxes = document.querySelectorAll(
-      'input[name="genre"]:checked'
-    );
-    var genres = [];
-    for (var i = 0; i < genreCheckboxes.length; i++) {
-      genres.push(genreCheckboxes[i].value);
-    }
-    return genres;
-  }
-
-  // Get selected statuses from checkboxes
-  function getSelectedStatuses() {
-    var statusCheckboxes = document.querySelectorAll(
-      'input[name="status"]:checked'
-    );
-    var statuses = [];
-    for (var i = 0; i < statusCheckboxes.length; i++) {
-      statuses.push(statusCheckboxes[i].value);
-    }
-    return statuses;
-  }
-
-  // Update book count display
-  function updateBookCount(visible, total) {
-    var countElement = document.getElementById("book-count");
-    if (countElement) {
-      countElement.textContent =
-        "Showing " + visible + " of " + total + " books";
-    }
-  }
-
-  // Set up event listeners
-  function setupEventListeners() {
-    // Genre filters
-    var genreCheckboxes = document.querySelectorAll('input[name="genre"]');
-    for (var i = 0; i < genreCheckboxes.length; i++) {
-      genreCheckboxes[i].addEventListener("change", filterBooks);
-    }
-
-    // Status filters
-    var statusCheckboxes = document.querySelectorAll('input[name="status"]');
-    for (var i = 0; i < statusCheckboxes.length; i++) {
-      statusCheckboxes[i].addEventListener("change", filterBooks);
-    }
-
-    // Fiction/Non-fiction filters
-    document
-      .getElementById("filter-fiction")
-      .addEventListener("change", filterBooks);
-    document
-      .getElementById("filter-nonfiction")
-      .addEventListener("change", filterBooks);
-
-    // Sort order
-    document
-      .getElementById("sort-order")
-      .addEventListener("change", filterBooks);
-
-    // Reset button
-    var resetButton = document.getElementById("reset-filters");
-    if (resetButton) {
-      resetButton.addEventListener("click", resetFilters);
-    }
-  }
-
-  // Reset all filters
-  function resetFilters() {
-    var allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
-    for (var i = 0; i < allCheckboxes.length; i++) {
-      allCheckboxes[i].checked = false;
-    }
-    document.getElementById("sort-order").value = "newest";
-    filterBooks();
-  }
-
-  // Initialize on page load
-  if (bookList) {
-    init();
-    setupEventListeners();
-    updateBookCount(allBooks.length, allBooks.length);
-  }
+  if(bookList) loadBooks();
 })();

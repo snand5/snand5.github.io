@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /reading.json
+---
+[
+  {% for book in site.data.reading %}
+    {
+      "title": {{ book.title | jsonify }},
+      "subtitle": {{ book.subtitle | jsonify }},
+      "author": {{ book.author | jsonify }},
+      "series": {{ book.series | jsonify }},
+      "series_number": {{ book.series_number | jsonify }},
+      "pages": {{ book.pages | jsonify }},
+      "audio": {{ book.audio | jsonify }},
+      "published": "{{ book.published }}",
+      "genre": {{ book.genre | jsonify }},
+      "started": "{{ book.started }}",
+      "completed": {{ book.completed | jsonify }},
+      "status": {{ book.status | jsonify }},
+      "fiction": {{ book.fiction | jsonify }},
+      "link": {{ book.link | jsonify }},
+      "cover": {{ book.cover | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
