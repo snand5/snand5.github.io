@@ -574,28 +574,28 @@ nav {
   margin-bottom: 1.5rem;
   color: var(--secondary-text-color); }
 
-.search-form {
+.searching .search-form {
   position: relative;
   --button-size: 80px; }
-  .search-form.widget {
+  .searching .search-form.widget {
     --button-size: 60px; }
-    .search-form.widget label {
+    .searching .search-form.widget label {
       font-size: 1.3rem;
       top: 10px; }
-    .search-form.widget input {
+    .searching .search-form.widget input {
       font-size: 1.5rem;
       padding: 30px 20px 15px 20px; }
-  .search-form p {
+  .searching .search-form p {
     position: relative;
     margin: 0; }
-  .search-form label {
+  .searching .search-form label {
     position: absolute;
     top: 15px;
     inset-inline-start: 20px;
     font-size: 1.4rem;
     color: var(--secondary-text-color);
     /* replaced card-text-color-tertiary */ }
-  .search-form input {
+  .searching .search-form input {
     padding: 40px 20px 20px;
     background-color: var(--note-background-color);
     /* replaced card-background */
@@ -608,11 +608,11 @@ nav {
     -webkit-appearance: none;
     transition: box-shadow 0.3s ease;
     font-size: 1.8rem; }
-    .search-form input:focus {
+    .searching .search-form input:focus {
       outline: 0;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       /* replaced shadow-l2 */ }
-  .search-form button {
+  .searching .search-form button {
     position: absolute;
     inset-inline-end: 0;
     top: 0;
@@ -622,13 +622,13 @@ nav {
     background-color: transparent;
     border: 0;
     padding: 0 10px; }
-    .search-form button:focus {
+    .searching .search-form button:focus {
       outline: 0; }
-      .search-form button:focus svg {
+      .searching .search-form button:focus svg {
         stroke-width: 2;
         color: var(--accent-color-purple);
         /* replaced accent-color */ }
-    .search-form button svg {
+    .searching .search-form button svg {
       color: var(--secondary-text-color);
       /* replaced card-text-color-secondary */
       stroke-width: 1.33;

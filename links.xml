@@ -1,32 +1,101 @@
 ---
 layout: null
+permalink: /shortform/feed.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.title }}</title>
-  <subtitle>Links</subtitle>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+  <id>{{ site.url }}{{ page.url }}</id>
+  <title type="html">{{ site.title | xml_escape }} — Reading Feed</title>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
     <uri>{{ site.url }}</uri>
   </author>
-  <icon>{{ site.url }}/assets/images/avatar.jpeg</icon>
-  <logo>{{ site.url }}/assets/images/avatar.jpeg</logo>
-  <link rel="alternate" type="text/html" href="{{ site.url }}/links"/>
-  <link rel="self" type="application/atom+xml" href="{{ site.url }}/feeds/links"/>
-  <id>{{ site.url }}/feeds/links</id>
+  <link rel="self" href="{{ site.url }}{{ page.url }}"/>
+  <link rel="alternate" href="{{ site.url }}/reading"/>
+  <icon>{{ site.url }}/assets/favicon/apple-touch-icon.png</icon>
+  <logo>{{ site.url }}/assets/favicon/shavon_logo.png</logo>
+  <webfeeds:icon>{{ site.url }}/assets/favicon/shavon_logo.png</webfeeds:icon>
+  <webfeeds:cover image="{{ site.url }}/assets/favicon/shavon_logo.png"/>
+  <webfeeds:accentColor>#5948a4</webfeeds:accentColor>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <rights>© {{ site.time | date: "%Y" }} {{ site.author.name }}</rights>
-
-  {% for link in site.links reversed %}
-    <entry>
-      <id>{{ site.url }}{{ link.url }}</id>
-      <title>{{ link.title | xml_escape }}</title>
-      <content type="html" xml:lang="en"><![CDATA[{{ link.content | markdownify }}]]></content>
-      <published>{{ link.date | date_to_xmlschema }}</published>
-      <updated>{{ link.date | date_to_xmlschema }}</updated>
-      <link rel="alternate" type="text/html" href="{{ link.external_url | default: link.url }}"/>
-      <link rel="related" type="text/html" href="{{ site.url }}{{ link.url }}"/>
-    </entry>
-  {% endfor %}
+  <rights type="html">Copyright &amp;amp;copy; {{ site.author.name }} {{ site.time | date: "%Y" }}.</rights>
+  {%- comment -%}
+    Get completed books (status: "read")
+  {%- endcomment -%}
+  {%- assign completed_books = site.data.reading | where: "status", "read" -%}
+  {%- assign shortform_items = site.data.shortform -%}
+  {%- comment -%}
+    Sort each collection by its appropriate date field
+  {%- endcomment -%}
+  {%- assign sorted_books = completed_books | sort: "completed" | reverse -%}
+  {%- assign sorted_shortform = shortform_items | sort: "accessed" | reverse -%}
+  {%- comment -%}
+    Manual merge sort to combine both lists in date order and limit to 10
+  {%- endcomment -%}
+  {%- assign final_items = "" | split: "" -%}
+  {%- assign book_index = 0 -%}
+  {%- assign shortform_index = 0 -%}
+  {%- assign book_count = sorted_books | size -%}
+  {%- assign shortform_count = sorted_shortform | size -%}
+  {%- for i in (1..20) -%}
+    {%- if book_index < book_count -%}
+      {%- assign current_book = sorted_books[book_index] -%}
+      {%- assign book_date = current_book.completed -%}
+    {%- else -%}
+      {%- assign book_date = "1900-01-01" -%}
+    {%- endif -%}
+    {%- if shortform_index < shortform_count -%}
+      {%- assign current_shortform = sorted_shortform[shortform_index] -%}
+      {%- assign shortform_date = current_shortform.accessed -%}
+    {%- else -%}
+      {%- assign shortform_date = "1900-01-01" -%}
+    {%- endif -%}
+    {%- if book_index >= book_count and shortform_index >= shortform_count -%}
+      {%- break -%}
+    {%- endif -%}
+    {%- if book_date > shortform_date -%}
+      {%- assign final_items = final_items | push: current_book -%}
+      {%- assign book_index = book_index | plus: 1 -%}
+    {%- else -%}
+      {%- assign final_items = final_items | push: current_shortform -%}
+      {%- assign shortform_index = shortform_index | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- for item in final_items -%}
+  <entry>
+    {%- if item.status == "read" -%}
+      {%- assign type = "book" -%}
+    {%- else -%}
+      {%- assign type = "shortform" -%}
+    {%- endif -%}
+    {%- if type == "book" -%}
+      <title type="html">{{ item.title | xml_escape }}</title>
+      <link href="{{ site.url }}/reading/books?search={{ item.title | url_encode }}" rel="alternate" type="text/html" title="{{ item.title | xml_escape }}"/>
+      <published>{{ item.completed | date_to_xmlschema }}</published>
+      <updated>{{ item.completed | date_to_xmlschema }}</updated>
+      <id>{{ site.url }}/reading/books?search={{ item.title | url_encode }}</id>
+      <content xml:base="{{ site.url }}/reading/shortform" type="html">
+        <![CDATA[<div class="book h-entry hentry"><a class="book-cover-link" href="{{ item.link }}"><img class="u-photo book-cover" src="{{ item.cover }}" alt="Cover image of {{ item.title }}" style="max-width: 300px;"/></a><div class="book-details"><div class="top">{% if item.series %}<div class="series-info"><i>{{ item.series }}</i> series. </div>{% endif %}<div class="title-and-byline"><div class="title"><i class="p-name">{{ item.title }}</i> </div>{% if item.subtitle %}<div class="subtitle">{{ item.subtitle }}</div>{% endif %}<div class="byline">by <span class="p-author h-card">{{ item.author }}</span>. {% if item.audio %}<div class="format">Audiobook. </div>{% endif %}</div></div><div class="book-info">Published <time class="dt-published published" datetime="{{ item.published }}">{{ item.published | date: "%Y" }}</time>. {{ item.pages }} pages. </div></div><div class="bottom"><div class="reading-info"><div class="reading-dates"> Started <time class="dt-accessed accessed" datetime="{{ item.started }}">{{ item.started | date: "%B %d, %Y" }}</time>; completed {{ item.completed | date: "%B %d, %Y" }}. </div></div></div></div></div>]]>
+      </content>
+      {% for tag in item.genre %}
+        <category term="{{ tag }}" label="{{ tag }}"/>
+      {% endfor %}
+    {%- else -%}
+      <title type="html">{{ item.title | xml_escape }}</title>
+      <link href="{{ site.url }}/reading/shortform?search={{ item.title | url_encode }}" rel="alternate" type="text/html" title="{{ item.title | xml_escape }}"/>
+      <published>{{ item.date | date_to_xmlschema }}</published>
+      <updated>{{ item.accessed | date_to_xmlschema }}</updated>
+      <id>{{ site.url }}/reading/shortform?search={{ item.title | url_encode }}</id>
+      <content xml:base="{{ site.url }}/reading/shortform" type="html">
+        <![CDATA[<div class="article h-entry hentry"><div class="title"><a class="u-url u-repost-of" href="{{ item.external_url }}" rel="bookmark">&amp;ldquo;<span class="p-name">{{ item.title }}</span>&amp;rdquo;</a>. </div><div class="byline"><span class="p-author h-card">{{ item.author }}</span> in <i class="p-publication">{{ item.publication }}</i>. </div><div class="details"><span class="read-date">Published <time class="dt-published published" datetime="{{ item.date }}">{{ item.date | date: "%B %d, %Y" }}</time>. Read on <time class="dt-accessed accessed" datetime="{{ item.accessed }}">{{ item.accessed | date: "%B %d, %Y" }}</time>. </span></div><div class="summary p-summary entry-summary">{{ item.content }}</div><img src="{{ site.url }}/assets/images/placeholder_social.png" alt="Illustration of {{ site.author.name }}" style="display: none;"/></div>]]>
+      </content>
+      <summary type="text">{{ item.title | xml_escape }}. {{ item.author }} in {{ item.publication }} on {{ item.date | date: "%B %d, %Y" }}. {{ item.content | truncatewords: 30 }}</summary>
+      {% for tag in item.tags %}
+        <category term="{{ tag }}" label="{{ tag }}"/>
+      {% endfor %}
+    {%- endif -%}
+  </entry>
+  {%- endfor -%}
 </feed>

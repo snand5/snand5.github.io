@@ -4,6 +4,7 @@
   let allBooks = [];
   let allGenres = new Set();
   let filteredBooks = [];
+  let searchResults = null; // null = no search active, array = search results
   let currentPage = 1;
   const booksPerPage = 10;
 
@@ -115,35 +116,35 @@
         books.forEach(book => book.genre?.forEach(g => allGenres.add(g)));
         populateGenreFilters();
         setupEventListeners();
+        initializeSearch(dataUrl);
         filterBooks();
       })
       .catch(err => showError("Failed to load reading list. Please refresh the page."));
   };
 
-const populateGenreFilters = () => {
-  Array.from(allGenres).sort().forEach(genre => {
-    const count = allBooks.filter(book => book.genre?.includes(genre)).length;
+  const populateGenreFilters = () => {
+    Array.from(allGenres).sort().forEach(genre => {
+      const count = allBooks.filter(book => book.genre?.includes(genre)).length;
 
-    const div = document.createElement("div");
-    div.className = "button-group";
+      const div = document.createElement("div");
+      div.className = "button-group";
 
-    const button = document.createElement("button");
-    button.className = "tag category-tag";
-    button.dataset.tag = genre;
-    button.type = "button";
-    button.setAttribute("aria-pressed", "false");
-    button.textContent = genre;
+      const button = document.createElement("button");
+      button.className = "tag category-tag";
+      button.dataset.tag = genre;
+      button.type = "button";
+      button.setAttribute("aria-pressed", "false");
+      button.textContent = genre;
 
-    const span = document.createElement("span");
-    span.className = "tag-count";
-    span.textContent = `(${count})`; // <-- dynamic count
+      const span = document.createElement("span");
+      span.className = "tag-count";
+      span.textContent = `(${count})`;
 
-    div.appendChild(button);
-    div.appendChild(span);
-    tagsContainer.appendChild(div);
-  });
-};
-
+      div.appendChild(button);
+      div.appendChild(span);
+      tagsContainer.appendChild(div);
+    });
+  };
 
   const getSelectedTags = containerId => {
     const buttons = document.querySelectorAll(`#${containerId} button[aria-pressed="true"]`);
@@ -157,7 +158,10 @@ const populateGenreFilters = () => {
     const nonfictionFilter = document.getElementById("hidenonfiction")?.checked;
     const sortOrder = document.getElementById("sort-order")?.value || "newest";
 
-    filteredBooks = allBooks.filter(book => {
+    // Start with either search results or all books
+    const baseBooks = searchResults !== null ? searchResults : allBooks;
+
+    filteredBooks = baseBooks.filter(book => {
       const genreMatch = !selectedGenres.length || book.genre?.some(g => selectedGenres.includes(g));
       const statusMatch = !selectedStatuses.length || selectedStatuses.includes(book.status);
       const fictionMatch = (fictionFilter && !nonfictionFilter && book.fiction) || (!fictionFilter && nonfictionFilter && !book.fiction) || (!fictionFilter && !nonfictionFilter) || (fictionFilter && nonfictionFilter);
@@ -188,7 +192,9 @@ const populateGenreFilters = () => {
     if (!books.length) {
       const div = document.createElement("div");
       div.style.cssText = "padding: 2rem; text-align: center; color: var(--secondary-text-color);";
-      div.textContent = "No books match the selected filters.";
+      div.textContent = searchResults !== null 
+        ? "No books match your search and filters."
+        : "No books match the selected filters.";
       bookList.appendChild(div);
       return;
     }
@@ -197,26 +203,31 @@ const populateGenreFilters = () => {
     bookList.appendChild(frag);
   };
 
-const renderPagination = totalPages => {
-  const paginator = document.getElementById("paginator");
-  paginator.innerHTML = "";
-  if (totalPages <= 1) return;
+  const renderPagination = totalPages => {
+    const paginator = document.getElementById("paginator");
+    paginator.innerHTML = "";
+    if (totalPages <= 1) return;
 
-  for (let i = 1; i <= totalPages; i++) {
-    const btn = document.createElement("button");
-    btn.className = "page-number-button";
-    btn.dataset.pageNumber = i;
-    btn.type = "button";
-    btn.textContent = i;
-    btn.setAttribute("aria-pressed", currentPage === i ? "true" : "false");
-    btn.addEventListener("click", () => { currentPage = i; renderCurrentPage(); });
-    paginator.appendChild(btn);
-  }
-};
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("button");
+      btn.className = "page-number-button";
+      btn.dataset.pageNumber = i;
+      btn.type = "button";
+      btn.textContent = i;
+      btn.setAttribute("aria-pressed", currentPage === i ? "true" : "false");
+      btn.addEventListener("click", () => { currentPage = i; renderCurrentPage(); });
+      paginator.appendChild(btn);
+    }
+  };
 
-  const updateBookCount = (visible,total) => {
+  const updateBookCount = (visible, total) => {
     const el = document.getElementById("book-count");
-    if(el) el.textContent = `${visible} results matching these filters out of ${total} total results.`;
+    if (el) {
+      const searchText = searchResults !== null 
+        ? ` (${searchResults.length} match search)` 
+        : "";
+      el.textContent = `${visible} results matching these filters${searchText} out of ${total} total results.`;
+    }
   };
 
   const showLoading = () => bookList.innerHTML = '<div style="padding: 2rem; text-align: center; color: var(--secondary-text-color);">Loading books...</div>';
@@ -241,5 +252,23 @@ const renderPagination = totalPages => {
     });
   };
 
-  if(bookList) loadBooks();
+  const initializeSearch = (dataUrl) => {
+    const searchInput = document.getElementById("search-input");
+    if (!searchInput || !window.ReadingSearch) return;
+
+    new window.ReadingSearch({
+      input: searchInput,
+      dataUrl: dataUrl,
+      onSearch: (results, query) => {
+        searchResults = results;
+        filterBooks();
+      },
+      onClear: () => {
+        searchResults = null;
+        filterBooks();
+      }
+    });
+  };
+
+  if (bookList) loadBooks();
 })();

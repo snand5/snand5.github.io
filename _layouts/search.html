@@ -2,6 +2,7 @@
 layout: default
 title: Search
 ---
+<div class="searching">
   <form action="{{ page.url }}" class="search-form" data-json="{{ '/search.json' | relative_url }}">
     <p>
       <label>Search</label>
@@ -21,7 +22,7 @@ title: Search
     <h3 class="search-result--title section-title"></h3>
     <div class="search-result--list article-list--compact"></div>
   </div>
-
+</div>
   <script>
     window.searchResultTitleTemplate = "#PAGES_COUNT pages (#TIME_SECONDS seconds)";
   </script>

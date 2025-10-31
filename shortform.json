@@ -1,0 +1,20 @@
+---
+layout: null
+permalink: /shortform.json
+---
+
+{%- assign links = site.data.shortform -%}
+[
+  {%- for link in links -%}
+  {
+    "title": {{ link.title | jsonify }},
+    "external_url": {{ link.external_url | jsonify }},
+    "author": {{ link.author | default: "" | jsonify }},
+    "publication": {{ link.publication | default: "" | jsonify }},
+    "content": {{ link.content | jsonify }},
+    "tags": {{ link.tags | jsonify }},
+    "date": {{ link.date | jsonify }},
+    "accessed": {{ link.accessed | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {%- endfor -%}
+]

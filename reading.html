@@ -1,107 +1,101 @@
 ---
 layout: default
-title: Reading List
+title: Reading
 ---
 
 <div class="reading">
-  <div class="content-box h-feed hfeed">
-    <h1 class="p-name site-title" aria-sort="descending">Books</h1>
-    <div class="filters">
-      <form class="filter-box" id="filters">
-        <label class="title" for="filters">Filter</label>
+  <div class="content-box">
+    <p>Interested in what I'm reading these days? Check out my reading lists. I
+      also have a <a href="/blogroll">blogroll</a> of sites I read
+      regularly.</p>
+<div class="reading-section">
+  <h3><a href="/reading/shortform">Shortform reading list </a></h3>
 
-        <label for="tags">By tag</label>
-        <fieldset class="tags" id="tags">
-          <!-- Genre buttons will be populated dynamically -->
-        </fieldset>
+  <div class="rss-link">
+    <img class="rss-icon bw-icon" src="{{ '/assets/images/rss.svg' | relative_url }}">  
+    <a href="/shortform/feed.xml" target="_blank">RSS </a>
+  </div>
 
-        <label for="tags">By reading status</label>
-        <fieldset class="tags" id="status">
-          <div class="button-group">
-            <button
-              class="tag status-tag"
-              data-tag="currently reading"
-              aria-pressed="false"
-              type="button"
-            >
-              currently reading
-            </button>
-          </div>
-          <div class="button-group">
-            <button
-              class="tag status-tag"
-              data-tag="read"
-              aria-pressed="false"
-              type="button"
-            >
-              read
-            </button>
-          </div>
-          <div class="button-group">
-            <button
-              class="tag status-tag"
-              data-tag="did not finish"
-              aria-pressed="false"
-              type="button"
-            >
-              did not finish
-            </button>
-          </div>
-        </fieldset>
+<div class="reading-section-body">
+  {% assign sorted_links = site.data.shortform | sort: 'accessed' | reverse %}
+  {% assign recent_link = sorted_links.first %}
 
-        <div class="checkboxes-wrapper">
-          <div class="checkboxes">
-            <div class="checkbox-group">
-              <input
-                type="checkbox"
-                name="ficNonfic"
-                value="hidefiction"
-                checked
-                id="hidefiction"
-              />
-              <label for="hidefiction">Fiction</label>
+  I most recently read 
+  “<a href="{{ recent_link.external_url }}">{{ recent_link.title }}</a>”
+  {% if recent_link.author %} by {{ recent_link.author }}{% endif %}
+  {% if recent_link.publication %} in <i>{{ recent_link.publication }}</i>.{% endif %}
+</div>
+
+</div>
+
+
+<div class="reading-section">
+  <h3><a href="/reading/books">Books </a></h3>
+  <div class="reading-section-body">
+    <div class="currently-reading">
+      <span>I'm currently reading:</span>
+
+      {% assign current_reads = site.data.reading 
+         | where: "status", "currently reading" 
+         | sort: "started" 
+         | reverse %}
+
+      {% for book in current_reads %}
+        <div class="book h-entry hentry">
+          <a class="book-cover-link" href="{{ book.link }}">
+            <img class="u-photo book-cover" 
+                 src="{{ book.cover }}" 
+                 alt="Cover image of {{ book.title }}">
+          </a>
+
+          <div class="book-details">
+            <div class="top">
+              {% if book.series %}
+                <div class="series-info">
+                  <i>{{ book.series }}</i> series{% if book.series_number %}, book&nbsp;<span class="series-number">{{ book.series_number }}</span>{% endif %}.
+                </div>
+              {% endif %}
+
+              <div class="title-and-byline">
+                <div class="title"><i class="p-name">{{ book.title }}</i></div>
+                <div class="subtitle"> <i>{{ book.subtitle }}</i></div>
+                <div class="byline">
+                  by <span class="p-author h-card">{{ book.author }}</span>.
+                  {% if book.audio %}
+                    <div class="format">Audiobook. </div>
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="book-info">
+                Published <time class="dt-published published" datetime="{{ book.published | date: '%Y' }}">{{ book.published | date: '%Y' }}</time>.
+                {{ book.pages }} pages.
+              </div>
+
+              {% if book.genre %}
+                <div class="tags">
+                  {% for tag in book.genre %}
+                    <span class="p-category">{{ tag }}</span>{% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                </div>
+              {% endif %}
             </div>
-            <div class="checkbox-group">
-              <input
-                type="checkbox"
-                name="ficNonfic"
-                value="hidenonfiction"
-                checked
-                id="hidenonfiction"
-              />
-              <label for="hidenonfiction">Non-fiction</label>
+
+            <div class="bottom">
+              <div class="reading-info">
+                <div class="reading-dates">
+                  {% if book.started %}
+                    Started <time class="dt-accessed accessed" datetime="{{ book.started }}">{{ book.started | date: "%B %-d, %Y" }}</time>.
+                  {% endif %}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <button class="link-styled" id="clear-filters" type="button">
-          Clear filters
-        </button>
-      </form>
-      <div class="filter-subtext">
-        <span class="article-count" id="book-count"></span>
-        <select class="link-styled" id="sort-order">
-          <option value="newest">Newest First</option>
-          <option value="oldest">Oldest First</option>
-        </select>
-      </div>
+      {% endfor %}
     </div>
-    <div class="articles">
-      <div id="articlesContainer">
-        <!-- Books will be populated dynamically -->
-      </div>
-    </div>
-
-    <label for="paginator"
-      >Page
-      <fieldset id="paginator">
-        <!-- Pagination will be populated dynamically -->
-      </fieldset></label
-    >
   </div>
+</div>
 
-  <script
-    src="{{ '/assets/js/reading.js' | relative_url }}"
-    data-json="{{ '/reading.json' | relative_url }}"
-  ></script>
+  </div>
 </div>

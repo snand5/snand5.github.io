@@ -1,0 +1,113 @@
+---
+layout: default
+title: Reading List
+---
+
+<div class="reading">
+  <div class="content-box h-feed hfeed">
+        <a href="/reading">&lt; All reading lists</a>
+    <h3 class="p-name site-title" aria-sort="descending">Books</h3>
+    <div class="filters">
+      <form class="filter-box" id="filters">
+        <label class="title" for="filters">Filter</label>
+
+        <label for="tags">By tag</label>
+        <fieldset class="tags" id="tags">
+          <!-- Genre buttons will be populated dynamically -->
+        </fieldset>
+
+        <label for="tags">By reading status</label>
+        <fieldset class="tags" id="status">
+          <div class="button-group">
+            <button
+              class="tag status-tag"
+              data-tag="currently reading"
+              aria-pressed="false"
+              type="button"
+            >
+              currently reading
+            </button>
+          </div>
+          <div class="button-group">
+            <button
+              class="tag status-tag"
+              data-tag="read"
+              aria-pressed="false"
+              type="button"
+            >
+              read
+            </button>
+          </div>
+          <div class="button-group">
+            <button
+              class="tag status-tag"
+              data-tag="did not finish"
+              aria-pressed="false"
+              type="button"
+            >
+              did not finish
+            </button>
+          </div>
+        </fieldset>
+
+        <div class="checkboxes-wrapper">
+          <div class="checkboxes">
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="ficNonfic"
+                value="hidefiction"
+                checked
+                id="hidefiction"
+              />
+              <label for="hidefiction">Fiction</label>
+            </div>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="ficNonfic"
+                value="hidenonfiction"
+                checked
+                id="hidenonfiction"
+              />
+              <label for="hidenonfiction">Non-fiction</label>
+            </div>
+          </div>
+        </div>
+<div class="search-form">
+  <label for="search-input">Search</label>
+  <div class="search-group">
+    <input id="search-input" type="search" aria-label="Search articles on this page">
+  </div>
+</div>
+        <button class="link-styled" id="clear-filters" type="button">
+          Clear filters
+        </button>
+      </form>
+      <div class="filter-subtext">
+        <span class="article-count" id="book-count"></span>
+        <select class="link-styled" id="sort-order">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
+      </div>
+    </div>
+    <div class="articles">
+      <div id="articlesContainer">
+        <!-- Books will be populated dynamically -->
+      </div>
+    </div>
+
+    <label for="paginator"
+      >Page
+      <fieldset id="paginator">
+        <!-- Pagination will be populated dynamically -->
+      </fieldset></label
+    >
+  </div>
+  <script src="{{ '/assets/js/readingsearch.js' | relative_url }}"></script>
+  <script
+    src="{{ '/assets/js/reading.js' | relative_url }}"
+    data-json="{{ '/reading.json' | relative_url }}"
+  ></script>
+</div>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+  <id>http://localhost:4000/shortform/feed.xml</id>
+  <title type="html">Shavon.gg — Reading Feed</title>
+  <author>
+    <name>Shavon Nand</name>
+    <email>shavonnand@outlook.com</email>
+    <uri>http://localhost:4000</uri>
+  </author>
+  <link rel="self" href="http://localhost:4000/shortform/feed.xml"/>
+  <link rel="alternate" href="http://localhost:4000/reading"/>
+  <icon>http://localhost:4000/assets/favicon/apple-touch-icon.png</icon>
+  <logo>http://localhost:4000/assets/favicon/shavon_logo.png</logo>
+  <webfeeds:icon>http://localhost:4000/assets/favicon/shavon_logo.png</webfeeds:icon>
+  <webfeeds:cover image="http://localhost:4000/assets/favicon/shavon_logo.png"/>
+  <webfeeds:accentColor>#5948a4</webfeeds:accentColor>
+  <updated>2025-10-31T19:19:54+10:00</updated>
+  <rights type="html">Copyright &amp;amp;copy; Shavon Nand 2025.</rights><entry><title type="html">🌻 AI friends too cheap to meter</title>
+      <link href="http://localhost:4000/reading/shortform?search=%F0%9F%8C%BB+AI+friends+too+cheap+to+meter" rel="alternate" type="text/html" title="🌻 AI friends too cheap to meter"/>
+      <published>2025-10-28T00:00:00+10:00</published>
+      <updated>2025-10-28T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/shortform?search=%F0%9F%8C%BB+AI+friends+too+cheap+to+meter</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="article h-entry hentry"><div class="title"><a class="u-url u-repost-of" href="https://jasmi.news/p/ai-friends" rel="bookmark">&amp;ldquo;<span class="p-name">🌻 AI friends too cheap to meter</span>&amp;rdquo;</a>. </div><div class="byline"><span class="p-author h-card">Jasmine Sun</span> in <i class="p-publication">Jasmi.news</i>. </div><div class="details"><span class="read-date">Published <time class="dt-published published" datetime="2025-10-28">October 28, 2025</time>. Read on <time class="dt-accessed accessed" datetime="2025-10-28">October 28, 2025</time>. </span></div><div class="summary p-summary entry-summary">We passed the Turing Test years ago and not enough of us are talking about it.</div><img src="http://localhost:4000/assets/images/placeholder_social.png" alt="Illustration of Shavon Nand" style="display: none;"/></div>]]>
+      </content>
+      <summary type="text">🌻 AI friends too cheap to meter. Jasmine Sun in Jasmi.news on October 28, 2025. We passed the Turing Test years ago and not enough of us are talking about it.</summary>
+      
+        <category term="artificial intelligence" label="artificial intelligence"/>
+      
+        <category term="culture" label="culture"/>
+      
+        <category term="technology" label="technology"/>
+      </entry><entry><title type="html">More Everything Forever</title>
+      <link href="http://localhost:4000/reading/books?search=More+Everything+Forever" rel="alternate" type="text/html" title="More Everything Forever"/>
+      <published>2025-10-25T00:00:00+10:00</published>
+      <updated>2025-10-25T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/books?search=More+Everything+Forever</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="book h-entry hentry"><a class="book-cover-link" href="https://www.goodreads.com/book/show/212987932-more-everything-forever"><img class="u-photo book-cover" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1719003402i/212987932.jpg" alt="Cover image of More Everything Forever" style="max-width: 300px;"/></a><div class="book-details"><div class="top"><div class="title-and-byline"><div class="title"><i class="p-name">More Everything Forever</i> </div><div class="subtitle">AI Overlords, Space Empires, and Silicon Valley's Crusade to Control the Fate of Humanity</div><div class="byline">by <span class="p-author h-card">Adam Becker</span>. <div class="format">Audiobook. </div></div></div><div class="book-info">Published <time class="dt-published published" datetime="2025-04-22">2025</time>. 290 pages. </div></div><div class="bottom"><div class="reading-info"><div class="reading-dates"> Started <time class="dt-accessed accessed" datetime="2025-10-13">October 13, 2025</time>; completed October 25, 2025. </div></div></div></div></div>]]>
+      </content>
+      
+        <category term="technology" label="technology"/>
+      
+        <category term="science" label="science"/>
+      
+        <category term="artificial intelligence" label="artificial intelligence"/>
+      </entry><entry><title type="html">Everyone is illiterate now (conference reviewing rant)</title>
+      <link href="http://localhost:4000/reading/shortform?search=Everyone+is+illiterate+now+%28conference+reviewing+rant%29" rel="alternate" type="text/html" title="Everyone is illiterate now (conference reviewing rant)"/>
+      <published>2025-03-25T00:00:00+10:00</published>
+      <updated>2025-10-14T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/shortform?search=Everyone+is+illiterate+now+%28conference+reviewing+rant%29</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="article h-entry hentry"><div class="title"><a class="u-url u-repost-of" href="https://iekumar.com/2025/03/25/everyone-is-illiterate-now-conference-reviewing-rant/" rel="bookmark">&amp;ldquo;<span class="p-name">Everyone is illiterate now (conference reviewing rant)</span>&amp;rdquo;</a>. </div><div class="byline"><span class="p-author h-card">Lizzie Kumar</span> in <i class="p-publication">Lizzie Kumar</i>. </div><div class="details"><span class="read-date">Published <time class="dt-published published" datetime="2025-03-25">March 25, 2025</time>. Read on <time class="dt-accessed accessed" datetime="2025-10-14">October 14, 2025</time>. </span></div><div class="summary p-summary entry-summary">I feel the urge to start by saying I consider myself to be generally off the “AI+Society” beat, to the extent that I was ever on it. </div><img src="http://localhost:4000/assets/images/placeholder_social.png" alt="Illustration of Shavon Nand" style="display: none;"/></div>]]>
+      </content>
+      <summary type="text">Everyone is illiterate now (conference reviewing rant). Lizzie Kumar in Lizzie Kumar on March 25, 2025. I feel the urge to start by saying I consider myself to be generally off the “AI+Society” beat, to the extent that I was ever on it. </summary>
+      
+        <category term="academia" label="academia"/>
+      
+        <category term="research" label="research"/>
+      
+        <category term="writing" label="writing"/>
+      </entry><entry><title type="html">my coworker mansplains via ChatGPT</title>
+      <link href="http://localhost:4000/reading/shortform?search=my+coworker+mansplains+via+ChatGPT" rel="alternate" type="text/html" title="my coworker mansplains via ChatGPT"/>
+      <published>2025-09-03T00:00:00+10:00</published>
+      <updated>2025-09-23T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/shortform?search=my+coworker+mansplains+via+ChatGPT</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="article h-entry hentry"><div class="title"><a class="u-url u-repost-of" href="https://www.askamanager.org/2025/09/my-coworker-mansplains-via-chatgpt.html" rel="bookmark">&amp;ldquo;<span class="p-name">my coworker mansplains via ChatGPT</span>&amp;rdquo;</a>. </div><div class="byline"><span class="p-author h-card">Alison Green</span> in <i class="p-publication">Ask a Manager</i>. </div><div class="details"><span class="read-date">Published <time class="dt-published published" datetime="2025-09-3">September 03, 2025</time>. Read on <time class="dt-accessed accessed" datetime="2025-09-23">September 23, 2025</time>. </span></div><div class="summary p-summary entry-summary"></div><img src="http://localhost:4000/assets/images/placeholder_social.png" alt="Illustration of Shavon Nand" style="display: none;"/></div>]]>
+      </content>
+      <summary type="text">my coworker mansplains via ChatGPT. Alison Green in Ask a Manager on September 03, 2025. </summary>
+      
+        <category term="artificial intelligence" label="artificial intelligence"/>
+      
+        <category term="workplace" label="workplace"/>
+      </entry><entry><title type="html">Breakneck</title>
+      <link href="http://localhost:4000/reading/books?search=Breakneck" rel="alternate" type="text/html" title="Breakneck"/>
+      <published>2025-09-10T00:00:00+10:00</published>
+      <updated>2025-09-10T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/books?search=Breakneck</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="book h-entry hentry"><a class="book-cover-link" href="https://www.goodreads.com/book/show/223736214-breakneck"><img class="u-photo book-cover" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1751038218i/223736214.jpg" alt="Cover image of Breakneck" style="max-width: 300px;"/></a><div class="book-details"><div class="top"><div class="title-and-byline"><div class="title"><i class="p-name">Breakneck</i> </div><div class="subtitle">China's Quest to Engineer the Future</div><div class="byline">by <span class="p-author h-card">Dan Wang</span>. <div class="format">Audiobook. </div></div></div><div class="book-info">Published <time class="dt-published published" datetime="2025-08-26">2025</time>. 288 pages. </div></div><div class="bottom"><div class="reading-info"><div class="reading-dates"> Started <time class="dt-accessed accessed" datetime="2025-09-01">September 01, 2025</time>; completed September 10, 2025. </div></div></div></div></div>]]>
+      </content>
+      
+        <category term="China" label="China"/>
+      
+        <category term="politics" label="politics"/>
+      
+        <category term="economics" label="economics"/>
+      </entry><entry><title type="html">&quot;Wait, not like that&quot;: Free and open access in the age of generative AI</title>
+      <link href="http://localhost:4000/reading/shortform?search=%22Wait%2C+not+like+that%22%3A+Free+and+open+access+in+the+age+of+generative+AI" rel="alternate" type="text/html" title="&quot;Wait, not like that&quot;: Free and open access in the age of generative AI"/>
+      <published>2025-03-14T00:00:00+10:00</published>
+      <updated>2025-03-18T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/shortform?search=%22Wait%2C+not+like+that%22%3A+Free+and+open+access+in+the+age+of+generative+AI</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="article h-entry hentry"><div class="title"><a class="u-url u-repost-of" href="https://www.citationneeded.news/free-and-open-access-in-the-age-of-generative-ai/" rel="bookmark">&amp;ldquo;<span class="p-name">"Wait, not like that": Free and open access in the age of generative AI</span>&amp;rdquo;</a>. </div><div class="byline"><span class="p-author h-card">Molly White</span> in <i class="p-publication">Citation Needed</i>. </div><div class="details"><span class="read-date">Published <time class="dt-published published" datetime="2025-03-14">March 14, 2025</time>. Read on <time class="dt-accessed accessed" datetime="2025-03-18">March 18, 2025</time>. </span></div><div class="summary p-summary entry-summary">The visions of the open access movement have inspired countless people to contribute their work to the commons: a world where “every single human being can freely share in the sum of all knowledge” (Wikimedia), and where “education, culture, and science are equitably shared as a means to benefit humanity” (Creative Commons).</div><img src="http://localhost:4000/assets/images/placeholder_social.png" alt="Illustration of Shavon Nand" style="display: none;"/></div>]]>
+      </content>
+      <summary type="text">&quot;Wait, not like that&quot;: Free and open access in the age of generative AI. Molly White in Citation Needed on March 14, 2025. The visions of the open access movement have inspired countless people to contribute their work to the commons: a world where “every single human being can freely share in the...</summary>
+      
+        <category term="artificial intelligence" label="artificial intelligence"/>
+      
+        <category term="open access" label="open access"/>
+      
+        <category term="digital culture" label="digital culture"/>
+      </entry><entry><title type="html">They Called Us Exceptional</title>
+      <link href="http://localhost:4000/reading/books?search=They+Called+Us+Exceptional" rel="alternate" type="text/html" title="They Called Us Exceptional"/>
+      <published>2024-09-22T00:00:00+10:00</published>
+      <updated>2024-09-22T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/books?search=They+Called+Us+Exceptional</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="book h-entry hentry"><a class="book-cover-link" href="https://www.goodreads.com/book/show/142601047-they-called-us-exceptional"><img class="u-photo book-cover" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1684816016i/142601047.jpg" alt="Cover image of They Called Us Exceptional" style="max-width: 300px;"/></a><div class="book-details"><div class="top"><div class="title-and-byline"><div class="title"><i class="p-name">They Called Us Exceptional</i> </div><div class="subtitle">And Other Lies That Raised Us</div><div class="byline">by <span class="p-author h-card">Prachi Gupta</span>. <div class="format">Audiobook. </div></div></div><div class="book-info">Published <time class="dt-published published" datetime="2023-08-22">2023</time>. 288 pages. </div></div><div class="bottom"><div class="reading-info"><div class="reading-dates"> Started <time class="dt-accessed accessed" datetime="2024-05-07">May 07, 2024</time>; completed September 22, 2024. </div></div></div></div></div>]]>
+      </content>
+      
+        <category term="memoir" label="memoir"/>
+      
+        <category term="biography" label="biography"/>
+      </entry><entry><title type="html">To Pixar and Beyond</title>
+      <link href="http://localhost:4000/reading/books?search=To+Pixar+and+Beyond" rel="alternate" type="text/html" title="To Pixar and Beyond"/>
+      <published>2024-09-12T00:00:00+10:00</published>
+      <updated>2024-09-12T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/books?search=To+Pixar+and+Beyond</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="book h-entry hentry"><a class="book-cover-link" href="https://www.goodreads.com/book/show/28114529-to-pixar-and-beyond"><img class="u-photo book-cover" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1455172199i/28114529.jpg" alt="Cover image of To Pixar and Beyond" style="max-width: 300px;"/></a><div class="book-details"><div class="top"><div class="title-and-byline"><div class="title"><i class="p-name">To Pixar and Beyond</i> </div><div class="subtitle">My Unlikely Journey with Steve Jobs to Make Entertainment History</div><div class="byline">by <span class="p-author h-card">Lawrence Levy</span>. <div class="format">Audiobook. </div></div></div><div class="book-info">Published <time class="dt-published published" datetime="2016-11-01">2016</time>. 259 pages. </div></div><div class="bottom"><div class="reading-info"><div class="reading-dates"> Started <time class="dt-accessed accessed" datetime="2024-09-08">September 08, 2024</time>; completed September 12, 2024. </div></div></div></div></div>]]>
+      </content>
+      
+        <category term="business" label="business"/>
+      
+        <category term="memoir" label="memoir"/>
+      </entry><entry><title type="html">Why Is My Child in Charge?</title>
+      <link href="http://localhost:4000/reading/books?search=Why+Is+My+Child+in+Charge%3F" rel="alternate" type="text/html" title="Why Is My Child in Charge?"/>
+      <published>2024-03-13T00:00:00+10:00</published>
+      <updated>2024-03-13T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/books?search=Why+Is+My+Child+in+Charge%3F</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="book h-entry hentry"><a class="book-cover-link" href="https://www.goodreads.com/book/show/56360648-why-is-my-child-in-charge"><img class="u-photo book-cover" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1614088108i/56360648.jpg" alt="Cover image of Why Is My Child in Charge?" style="max-width: 300px;"/></a><div class="book-details"><div class="top"><div class="title-and-byline"><div class="title"><i class="p-name">Why Is My Child in Charge?</i> </div><div class="subtitle">A Roadmap to End Power Struggles, Increase Cooperation, and Find Joy in Parenting Young Children</div><div class="byline">by <span class="p-author h-card">Claire Lerner</span>. <div class="format">Audiobook. </div></div></div><div class="book-info">Published <time class="dt-published published" datetime="2021-09-02">2021</time>. 215 pages. </div></div><div class="bottom"><div class="reading-info"><div class="reading-dates"> Started <time class="dt-accessed accessed" datetime="2024-02-14">February 14, 2024</time>; completed March 13, 2024. </div></div></div></div></div>]]>
+      </content>
+      
+        <category term="parenting" label="parenting"/>
+      
+        <category term="psychology" label="psychology"/>
+      </entry><entry><title type="html">The Seven Principles for Making Marriage Work</title>
+      <link href="http://localhost:4000/reading/books?search=The+Seven+Principles+for+Making+Marriage+Work" rel="alternate" type="text/html" title="The Seven Principles for Making Marriage Work"/>
+      <published>2024-02-28T00:00:00+10:00</published>
+      <updated>2024-02-28T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/books?search=The+Seven+Principles+for+Making+Marriage+Work</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="book h-entry hentry"><a class="book-cover-link" href="https://www.goodreads.com/book/show/849380.The_Seven_Principles_for_Making_Marriage_Work"><img class="u-photo book-cover" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320521960i/849380.jpg" alt="Cover image of The Seven Principles for Making Marriage Work" style="max-width: 300px;"/></a><div class="book-details"><div class="top"><div class="title-and-byline"><div class="title"><i class="p-name">The Seven Principles for Making Marriage Work</i> </div><div class="subtitle">A Practical Guide from the Country's Foremost Relationship Expert</div><div class="byline">by <span class="p-author h-card">John M. Gottman, Nan Silver</span>. <div class="format">Audiobook. </div></div></div><div class="book-info">Published <time class="dt-published published" datetime="1999-01-01">1999</time>. 271 pages. </div></div><div class="bottom"><div class="reading-info"><div class="reading-dates"> Started <time class="dt-accessed accessed" datetime="2024-02-16">February 16, 2024</time>; completed February 28, 2024. </div></div></div></div></div>]]>
+      </content>
+      
+        <category term="relationships" label="relationships"/>
+      
+        <category term="parenting" label="parenting"/>
+      
+        <category term="self help" label="self help"/>
+      </entry><entry><title type="html">Good Inside</title>
+      <link href="http://localhost:4000/reading/books?search=Good+Inside" rel="alternate" type="text/html" title="Good Inside"/>
+      <published>2023-12-19T00:00:00+10:00</published>
+      <updated>2023-12-19T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/books?search=Good+Inside</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="book h-entry hentry"><a class="book-cover-link" href="https://www.goodreads.com/book/show/59627738-good-inside"><img class="u-photo book-cover" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1651574826i/59627738.jpg" alt="Cover image of Good Inside" style="max-width: 300px;"/></a><div class="book-details"><div class="top"><div class="title-and-byline"><div class="title"><i class="p-name">Good Inside</i> </div><div class="subtitle">A Practical Guide to Resilient Parenting Prioritizing Connection Over Correction</div><div class="byline">by <span class="p-author h-card">Dr Becky Kennedy</span>. <div class="format">Audiobook. </div></div></div><div class="book-info">Published <time class="dt-published published" datetime="2022-09-13">2022</time>. 336 pages. </div></div><div class="bottom"><div class="reading-info"><div class="reading-dates"> Started <time class="dt-accessed accessed" datetime="2023-12-18">December 18, 2023</time>; completed December 19, 2023. </div></div></div></div></div>]]>
+      </content>
+      
+        <category term="parenting" label="parenting"/>
+      
+        <category term="self help" label="self help"/>
+      </entry><entry><title type="html">Crying in H Mart</title>
+      <link href="http://localhost:4000/reading/books?search=Crying+in+H+Mart" rel="alternate" type="text/html" title="Crying in H Mart"/>
+      <published>2023-12-12T00:00:00+10:00</published>
+      <updated>2023-12-12T00:00:00+10:00</updated>
+      <id>http://localhost:4000/reading/books?search=Crying+in+H+Mart</id>
+      <content xml:base="http://localhost:4000/reading/shortform" type="html">
+        <![CDATA[<div class="book h-entry hentry"><a class="book-cover-link" href="https://www.goodreads.com/book/show/54814676-crying-in-h-mart"><img class="u-photo book-cover" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1601937850i/54814676.jpg" alt="Cover image of Crying in H Mart" style="max-width: 300px;"/></a><div class="book-details"><div class="top"><div class="title-and-byline"><div class="title"><i class="p-name">Crying in H Mart</i> </div><div class="byline">by <span class="p-author h-card">Michelle Zauner</span>. <div class="format">Audiobook. </div></div></div><div class="book-info">Published <time class="dt-published published" datetime="2021-04-20">2021</time>. 256 pages. </div></div><div class="bottom"><div class="reading-info"><div class="reading-dates"> Started <time class="dt-accessed accessed" datetime="2023-09-04">September 04, 2023</time>; completed December 12, 2023. </div></div></div></div></div>]]>
+      </content>
+      
+        <category term="memoir" label="memoir"/>
+      
+        <category term="biography" label="biography"/>
+      </entry></feed>

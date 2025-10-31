@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Reading</title>
+    <title>Reading List</title>
 
     <meta name="author" content="Shavon Nand">
     <meta name="robots" content="noai, noimageai">
@@ -22,19 +22,19 @@
 
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Shavon.gg" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Reading | Shavon.gg</title>
+<title>Reading List | Shavon.gg</title>
 <meta name="generator" content="Jekyll v3.9.5" />
-<meta property="og:title" content="Reading" />
+<meta property="og:title" content="Reading List" />
 <meta name="author" content="Shavon Nand" />
 <meta property="og:locale" content="en_AU" />
-<link rel="canonical" href="http://localhost:4000/reading.html" />
-<meta property="og:url" content="http://localhost:4000/reading.html" />
+<link rel="canonical" href="http://localhost:4000/reading/books.html" />
+<meta property="og:url" content="http://localhost:4000/reading/books.html" />
 <meta property="og:site_name" content="Shavon.gg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Reading" />
+<meta property="twitter:title" content="Reading List" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shavon Nand"},"headline":"Reading","url":"http://localhost:4000/reading.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shavon Nand"},"headline":"Reading List","url":"http://localhost:4000/reading/books.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -90,98 +90,114 @@
 
       <main id="main" tabindex="-1" role="main">
         <div class="reading">
-  <div class="content-box">
-    <p>Interested in what I'm reading these days? Check out my reading lists. I
-      also have a <a href="/blogroll">blogroll</a> of sites I read
-      regularly.</p>
-<div class="reading-section">
-  <h3><a href="/reading/shortform">Shortform reading list </a></h3>
+  <div class="content-box h-feed hfeed">
+        <a href="/reading">&lt; All reading lists</a>
+    <h3 class="p-name site-title" aria-sort="descending">Books</h3>
+    <div class="filters">
+      <form class="filter-box" id="filters">
+        <label class="title" for="filters">Filter</label>
 
-  <div class="rss-link">
-    <img class="rss-icon bw-icon" src="/assets/images/rss.svg">  
-    <a href="/shortform/feed.xml" target="_blank">RSS </a>
-  </div>
+        <label for="tags">By tag</label>
+        <fieldset class="tags" id="tags">
+          <!-- Genre buttons will be populated dynamically -->
+        </fieldset>
 
-<div class="reading-section-body">
-  
-  
+        <label for="tags">By reading status</label>
+        <fieldset class="tags" id="status">
+          <div class="button-group">
+            <button
+              class="tag status-tag"
+              data-tag="currently reading"
+              aria-pressed="false"
+              type="button"
+            >
+              currently reading
+            </button>
+          </div>
+          <div class="button-group">
+            <button
+              class="tag status-tag"
+              data-tag="read"
+              aria-pressed="false"
+              type="button"
+            >
+              read
+            </button>
+          </div>
+          <div class="button-group">
+            <button
+              class="tag status-tag"
+              data-tag="did not finish"
+              aria-pressed="false"
+              type="button"
+            >
+              did not finish
+            </button>
+          </div>
+        </fieldset>
 
-  I most recently read 
-  “<a href="https://jasmi.news/p/ai-friends">🌻 AI friends too cheap to meter</a>”
-   by Jasmine Sun
-   in <i>Jasmi.news</i>.
-</div>
-
-</div>
-
-
-<div class="reading-section">
-  <h3><a href="/reading/books">Books </a></h3>
-  <div class="reading-section-body">
-    <div class="currently-reading">
-      <span>I'm currently reading:</span>
-
-      
-
-      
-        <div class="book h-entry hentry">
-          <a class="book-cover-link" href="https://www.goodreads.com/book/show/219556828-dangerous-miracle">
-            <img class="u-photo book-cover" 
-                 src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1740385937i/219556828.jpg" 
-                 alt="Cover image of Dangerous Miracle">
-          </a>
-
-          <div class="book-details">
-            <div class="top">
-              
-
-              <div class="title-and-byline">
-                <div class="title"><i class="p-name">Dangerous Miracle</i></div>
-                <div class="subtitle"> <i>A natural history of antibiotics - and how we burned through them</i></div>
-                <div class="byline">
-                  by <span class="p-author h-card">Liam Shaw</span>.
-                  
-                    <div class="format">Audiobook. </div>
-                  
-                </div>
-              </div>
-
-              <div class="book-info">
-                Published <time class="dt-published published" datetime="2025">2025</time>.
-                334 pages.
-              </div>
-
-              
-                <div class="tags">
-                  
-                    <span class="p-category">science</span>, 
-                  
-                    <span class="p-category">medicine</span>, 
-                  
-                    <span class="p-category">history</span>
-                  
-                </div>
-              
+        <div class="checkboxes-wrapper">
+          <div class="checkboxes">
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="ficNonfic"
+                value="hidefiction"
+                checked
+                id="hidefiction"
+              />
+              <label for="hidefiction">Fiction</label>
             </div>
-
-            <div class="bottom">
-              <div class="reading-info">
-                <div class="reading-dates">
-                  
-                    Started <time class="dt-accessed accessed" datetime="2025-10-19">October 19, 2025</time>.
-                  
-                </div>
-              </div>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="ficNonfic"
+                value="hidenonfiction"
+                checked
+                id="hidenonfiction"
+              />
+              <label for="hidenonfiction">Non-fiction</label>
             </div>
           </div>
         </div>
-      
-    </div>
+<div class="search-form">
+  <label for="search-input">Search</label>
+  <div class="search-group">
+    <input id="search-input" type="search" aria-label="Search articles on this page">
   </div>
+</div>
+        <button class="link-styled" id="clear-filters" type="button">
+          Clear filters
+        </button>
+      </form>
+      <div class="filter-subtext">
+        <span class="article-count" id="book-count"></span>
+        <select class="link-styled" id="sort-order">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
+      </div>
+    </div>
+    <div class="articles">
+      <div id="articlesContainer">
+        <!-- Books will be populated dynamically -->
+      </div>
+    </div>
+
+    <label for="paginator"
+      >Page
+      <fieldset id="paginator">
+        <!-- Pagination will be populated dynamically -->
+      </fieldset></label
+    >
+  </div>
+  <script src="/assets/js/readingsearch.js"></script>
+  <script
+    src="/assets/js/reading.js"
+    data-json="/reading.json"
+  ></script>
 </div>
 
-  </div>
-</div>
       </main>
     </div>
 
